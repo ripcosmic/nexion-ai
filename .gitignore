@@ -1,0 +1,15 @@
+.env
+data/
+node_modules/
+__pycache__/
+*.pyc
+
+# Private SQL database and its write-ahead log
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+
+# Unsloth / training virtualenv and exported models
+.venv-unsloth/
+models/nexion-unsloth-lora/
+models/nexion-unsloth-merged/

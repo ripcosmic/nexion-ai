@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEXION</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Chat history">
+        <header class="brand-row">
+          <div class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></div>
+          <span>NEXION</span>
+          <button class="icon-button tune" id="open-settings" aria-label="Open settings">☷</button>
+        </header>
+
+        <button class="new-chat" id="new-chat"><span>＋</span> New Chat</button>
+        <div class="history" id="history"></div>
+
+        <footer class="sidebar-footer">
+          <button class="footer-action" id="settings-button"><span>⚙</span>Settings</button>
+          <label class="theme-toggle"><span>☾&nbsp; Dark Mode</span><input id="theme-toggle" type="checkbox" checked /><b></b></label>
+        </footer>
+      </aside>
+
+      <main class="main-panel">
+        <header class="top-bar"><span class="top-brand"><span>NEXION</span><span class="top-brand-mark" aria-hidden="true"></span></span><button class="login-button" id="login-button" type="button">Log in</button></header>
+        <section class="conversation" id="conversation" aria-live="polite"></section>
+        <form class="composer" id="composer">
+          <textarea id="message" rows="1" placeholder="Message Nexion..." aria-label="Message Nexion"></textarea>
+          <div class="composer-controls">
+            <div class="utility-buttons">
+              <button type="button" class="small-icon" id="attach-file" title="Attach a file" aria-label="Attach a file">⌕</button>
+              <button type="button" class="small-icon" id="code-mode" title="Code mode" aria-pressed="false">{ }</button>
+              <button type="button" class="small-icon" id="web-search" title="Search the web" aria-label="Search the web" aria-pressed="false">◎</button>
+              <button type="button" class="small-icon" id="thinking-mode" title="Thinking mode" aria-label="Thinking mode" aria-pressed="false">✦</button>
+              <button type="button" class="small-icon voice-trigger" id="voice-button" title="Speak to Nexion">◉</button>
+            </div>
+            <button class="send-button" id="send-button" aria-label="Send message">➤</button>
+          </div>
+          <input id="file-input" type="file" hidden accept=".js,.jsx,.ts,.tsx,.py,.java,.c,.cpp,.cs,.go,.rs,.php,.rb,.html,.css,.json,.md,.txt,.sql,.xml,.yml,.yaml,.csv,.log,image/*" />
+          <div class="mode-menu" id="mode-menu" hidden>
+            <button type="button" data-mode="normal">💬 Normal</button>
+            <button type="button" data-mode="coding">💻 Coding</button>
+            <button type="button" data-mode="web">🌐 Web search</button>
+            <button type="button" data-mode="thinking">🧠 Thinking</button>
+          </div>
+          <div class="attachment-preview" id="attachment-preview" hidden></div>
+          <div class="generation-timing" id="generation-timing" aria-live="polite">Ready for your message</div>
+        </form>
+        <p class="disclaimer">Nexion can make mistakes. Check important info, especially generated code, before you run it.</p>
+      </main>
+    </div>
+    <div class="modal-backdrop" id="login-modal" hidden>
+      <section class="settings-card login-card" role="dialog" aria-modal="true" aria-labelledby="login-title">
+        <button class="modal-close" id="close-login" aria-label="Close login">×</button>
+        <p class="eyebrow">NEXION ACCOUNT</p>
+        <h2 id="login-title">Welcome to Nexion</h2>
+        <div class="auth-tabs" role="tablist">
+          <button type="button" class="auth-tab active" id="tab-login" role="tab" aria-selected="true">Log in</button>
+          <button type="button" class="auth-tab" id="tab-register" role="tab" aria-selected="false">Create account</button>
+        </div>
+
+        <form id="login-form" class="auth-form">
+          <label>Email address<input id="login-email" type="email" autocomplete="email" required placeholder="you@example.com" /></label>
+          <label>Password<input id="login-password" type="password" autocomplete="current-password" required minlength="8" placeholder="Your password" /></label>
+          <button class="test-voice" type="submit" id="login-submit">Log in</button>
+          <p class="auth-hint">Your password is hashed with scrypt and never stored in plain text.</p>
+        </form>
+
+        <form id="register-form" class="auth-form" hidden>
+          <label>Name (optional)<input id="register-name" type="text" autocomplete="name" maxlength="80" placeholder="Your name" /></label>
+          <label>Email address<input id="register-email" type="email" autocomplete="email" required placeholder="you@example.com" /></label>
+          <label>Password<input id="register-password" type="password" autocomplete="new-password" required minlength="8" placeholder="At least 8 characters" /></label>
+          <label>Confirm password<input id="register-confirm" type="password" autocomplete="new-password" required minlength="8" placeholder="Repeat your password" /></label>
+          <button class="test-voice" type="submit" id="register-submit">Create account</button>
+          <p class="auth-hint">Use at least 8 characters with a letter and a number. Stored securely in Nexion's private database.</p>
+        </form>
+
+        <p class="connection-status" id="login-status" aria-live="polite"></p>
+      </section>
+    </div>
+
+    <div class="modal-backdrop" id="settings-modal" hidden>
+      <section class="settings-card" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+        <button class="modal-close" id="close-settings" aria-label="Close settings">×</button>
+        <p class="eyebrow">NEXION CONFIGURATION</p>
+        <h2 id="settings-title">Nexion configuration</h2>
+        <details class="settings-section">
+          <summary>AI Voice</summary>
+          <section>
+            <label class="voice-master"><span>Voice features</span><input id="voice-enabled" type="checkbox" role="switch" checked /><b aria-hidden="true"></b></label>
+            <p class="voice-help" id="voice-help">Voice input and spoken replies are enabled.</p>
+            <div id="voice-settings">
+              <label>Voice <select id="voice-select"></select></label>
+              <p class="connection-status" id="connection-status">Nexion Brain runs locally in this browser.</p>
+              <label>Speech rate <span id="rate-value">1.0×</span><input id="rate" type="range" min="0.6" max="1.4" step="0.1" value="1" /></label>
+              <label>Pitch <span id="pitch-value">1.0</span><input id="pitch" type="range" min="0.6" max="1.4" step="0.1" value="1" /></label>
+              <label class="check-row"><input id="auto-speak" type="checkbox" checked /> Read Nexion replies aloud</label>
+              <button class="test-voice" id="test-voice">Test voice</button>
+            </div>
+          </section>
+        </details>
+        <label class="check-row settings-online-sources"><input id="online-sources" type="checkbox" checked /> Use online reference sources for unknown topics</label>
+        <details class="settings-section">
+          <summary>Terms and Policy</summary>
+          <section class="policy-copy">
+            <p>Nexion runs locally through your selected engine. Responses can be inaccurate, so verify important information and generated code.</p>
+            <p>Account credentials are stored in Nexion's private SQL database. Passwords are salted and hashed with scrypt and are never stored in plain text. Chat history and learned examples are stored in this browser under the signed-in account namespace.</p>
+            <p>Online reference sources, when enabled, send searches to the selected online service.</p>
+          </section>
+        </details>
+      </section>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

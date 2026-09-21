@@ -1,0 +1,9 @@
+# Install the PyTorch build matching your CUDA version first.
+# Example for CUDA 12.1:
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+unsloth
+trl
+datasets
+bitsandbytes
+accelerate
+transformers

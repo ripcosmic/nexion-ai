@@ -1,0 +1,1605 @@
+{
+  "format": "nexion-brain-v1",
+  "trained_at": "2026-09-20T17:32:18.084923+00:00",
+  "examples": [
+    {
+      "prompt": "write a python hello world",
+      "response": "A minimal Python program:\n\n```python\nprint(\"Hello, world\")\n```\n\nRun it with `python hello.py`.",
+      "vector": {
+        "write": 0.44514570402004316,
+        "python": 0.3500433796394079,
+        "hello": 0.5449908560311246,
+        "world": 0.6183040525547148
+      }
+    },
+    {
+      "prompt": "python hello world code",
+      "response": "```python\ndef main():\n    print(\"Hello from Nexion\")\n\nif __name__ == \"__main__\":\n    main()\n```",
+      "vector": {
+        "python": 0.34158906001799677,
+        "hello": 0.5318281249079707,
+        "world": 0.6033706460469379,
+        "code": 0.4862300105112745
+      }
+    },
+    {
+      "prompt": "write a python function that reverses a string",
+      "response": "```python\ndef reverse_string(text):\n    return text[::-1]\n\nprint(reverse_string(\"nexion\"))\n```",
+      "vector": {
+        "write": 0.35318194734599256,
+        "python": 0.27772704838021334,
+        "function": 0.4062778711668941,
+        "reverses": 0.5626137618593255,
+        "string": 0.5626137618593255
+      }
+    },
+    {
+      "prompt": "python function add two numbers",
+      "response": "```python\ndef add(a, b):\n    return a + b\n\nprint(add(2, 3))\n```",
+      "vector": {
+        "python": 0.26474164127470556,
+        "function": 0.38728194122117765,
+        "add": 0.4961340979916452,
+        "two": 0.4961340979916452,
+        "numbers": 0.5363081903151999
+      }
+    },
+    {
+      "prompt": "python for loop example",
+      "response": "```python\nfor index, name in enumerate([\"Nexion\", \"Python\", \"Code\"], start=1):\n    print(f\"{index}. {name}\")\n```",
+      "vector": {
+        "python": 0.4096059999059784,
+        "loop": 0.7676144270951714,
+        "example": 0.4929411893485627
+      }
+    },
+    {
+      "prompt": "python list comprehension",
+      "response": "```python\nsquares = [n * n for n in range(1, 11) if n % 2 == 0]\nprint(squares)\n```",
+      "vector": {
+        "python": 0.34870893778776496,
+        "list": 0.6159469423999122,
+        "comprehension": 0.706407418459863
+      }
+    },
+    {
+      "prompt": "python dictionary example",
+      "response": "```python\nuser = {\"name\": \"Avighn\", \"role\": \"engineer\"}\nprint(user.get(\"name\", \"unknown\"))\nfor key, value in user.items():\n    print(f\"{key}: {value}\")\n```",
+      "vector": {
+        "python": 0.3906703228507955,
+        "dictionary": 0.7914119322111468,
+        "example": 0.4701530095590949
+      }
+    },
+    {
+      "prompt": "python class example",
+      "response": "```python\nclass Counter:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self):\n        self.value += 1\n        return self.value\n\ncount = Counter()\nprint(count.increment())\n```",
+      "vector": {
+        "python": 0.42377679109094196,
+        "class": 0.7485441021055197,
+        "example": 0.5099950573639959
+      }
+    },
+    {
+      "prompt": "python read a file",
+      "response": "```python\nfrom pathlib import Path\n\ntext = Path(\"notes.txt\").read_text(encoding=\"utf-8\")\nprint(text)\n```",
+      "vector": {
+        "python": 0.35302456001514415,
+        "read": 0.6615790429064822,
+        "file": 0.6615790429064822
+      }
+    },
+    {
+      "prompt": "python write a json file",
+      "response": "```python\nimport json\nfrom pathlib import Path\n\ndata = {\"name\": \"Nexion\", \"theme\": \"purple\"}\nPath(\"config.json\").write_text(json.dumps(data, indent=2), encoding=\"utf-8\")\n```",
+      "vector": {
+        "python": 0.32205869606677195,
+        "write": 0.4095579386306454,
+        "json": 0.6035480474628293,
+        "file": 0.6035480474628293
+      }
+    },
+    {
+      "prompt": "python http request example",
+      "response": "Use the standard library so you do not need extra packages:\n\n```python\nfrom urllib.request import urlopen\nimport json\n\nwith urlopen(\"https://httpbin.org/get\") as response:\n    payload = json.loads(response.read().decode(\"utf-8\"))\nprint(payload[\"url\"])\n```",
+      "vector": {
+        "python": 0.32154305017792617,
+        "http": 0.5679620942999075,
+        "request": 0.6513753201764609,
+        "example": 0.38696165001941923
+      }
+    },
+    {
+      "prompt": "python flask hello route",
+      "response": "```python\nfrom flask import Flask\n\napp = Flask(__name__)\n\n@app.get(\"/\")\ndef home():\n    return {\"app\": \"Nexion\", \"status\": \"ok\"}\n\nif __name__ == \"__main__\":\n    app.run(debug=True)\n```",
+      "vector": {
+        "python": 0.29321130030365056,
+        "flask": 0.5939814420151889,
+        "hello": 0.45650764118178355,
+        "route": 0.5939814420151889
+      }
+    },
+    {
+      "prompt": "python error handling",
+      "response": "```python\ndef parse_int(value):\n    try:\n        return int(value)\n    except (TypeError, ValueError):\n        return None\n\nprint(parse_int(\"42\"))\nprint(parse_int(\"nexion\"))\n```",
+      "vector": {
+        "python": 0.32955476766234515,
+        "error": 0.6676052932350888,
+        "handling": 0.6676052932350888
+      }
+    },
+    {
+      "prompt": "javascript hello world",
+      "response": "```javascript\nconsole.log(\"Hello, world\");\n```",
+      "vector": {
+        "javascript": 0.46148965846184303,
+        "hello": 0.5866087431186561,
+        "world": 0.6655204562066609
+      }
+    },
+    {
+      "prompt": "write javascript function",
+      "response": "```javascript\nfunction greet(name) {\n  return `Hello, ${name}`;\n}\n\nconsole.log(greet(\"Nexion\"));\n```",
+      "vector": {
+        "write": 0.5546184140161391,
+        "javascript": 0.5341887720568516,
+        "function": 0.637997469150635
+      }
+    },
+    {
+      "prompt": "javascript array map filter",
+      "response": "```javascript\nconst numbers = [1, 2, 3, 4, 5, 6];\nconst evenSquares = numbers.filter((n) => n % 2 === 0).map((n) => n * n);\nconsole.log(evenSquares);\n```",
+      "vector": {
+        "javascript": 0.33687464855390475,
+        "array": 0.5154236705121698,
+        "map": 0.5571597217304234,
+        "filter": 0.5571597217304234
+      }
+    },
+    {
+      "prompt": "javascript fetch api example",
+      "response": "```javascript\nasync function loadStatus(url) {\n  const response = await fetch(url);\n  if (!response.ok) throw new Error(`Request failed: ${response.status}`);\n  return response.json();\n}\n\nloadStatus(\"/api/health\").then(console.log).catch(console.error);\n```",
+      "vector": {
+        "javascript": 0.4018037944059556,
+        "fetch": 0.6147663156828378,
+        "api": 0.5520506195104397,
+        "example": 0.3947862730653962
+      }
+    },
+    {
+      "prompt": "javascript debounce function",
+      "response": "```javascript\nfunction debounce(fn, wait = 250) {\n  let timer;\n  return (...args) => {\n    clearTimeout(timer);\n    timer = setTimeout(() => fn(...args), wait);\n  };\n}\n```",
+      "vector": {
+        "javascript": 0.44014718290933086,
+        "debounce": 0.7279630064265636,
+        "function": 0.5256808144220017
+      }
+    },
+    {
+      "prompt": "html starter page",
+      "response": "```html\n<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Nexion</title>\n  </head>\n  <body>\n    <h1>Nexion</h1>\n    <p>Purple local AI.</p>\n  </body>\n</html>\n```",
+      "vector": {
+        "html": 0.4909813341618163,
+        "starter": 0.6160102797456724,
+        "page": 0.6160102797456724
+      }
+    },
+    {
+      "prompt": "css purple button",
+      "response": "```css\n.button {\n  background: linear-gradient(180deg, #a855f7, #7c3aed);\n  color: #faf5ff;\n  border: 0;\n  border-radius: 12px;\n  padding: 10px 16px;\n  cursor: pointer;\n  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);\n}\n```",
+      "vector": {
+        "css": 0.5202764612813304,
+        "purple": 0.6038677023308071,
+        "button": 0.6038677023308071
+      }
+    },
+    {
+      "prompt": "css flexbox center",
+      "response": "```css\n.center {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  min-height: 100vh;\n}\n```",
+      "vector": {
+        "css": 0.4909813341618163,
+        "flexbox": 0.6160102797456724,
+        "center": 0.6160102797456724
+      }
+    },
+    {
+      "prompt": "react component example",
+      "response": "```jsx\nexport function Greeting({ name }) {\n  return <h1>Hello, {name}</h1>;\n}\n```",
+      "vector": {
+        "react": 0.6519235138695225,
+        "component": 0.6519235138695225,
+        "example": 0.38728731470063543
+      }
+    },
+    {
+      "prompt": "sql select example",
+      "response": "```sql\nSELECT id, name, created_at\nFROM users\nWHERE active = TRUE\nORDER BY created_at DESC\nLIMIT 20;\n```",
+      "vector": {
+        "sql": 0.5998153098104282,
+        "select": 0.6879066286212445,
+        "example": 0.408663754712812
+      }
+    },
+    {
+      "prompt": "git commit commands",
+      "response": "```bash\ngit status\ngit add .\ngit commit -m \"Describe why this change exists\"\n```\n\nOnly commit when you intend to save a snapshot. Review `git diff` first.",
+      "vector": {
+        "git": 0.5474206800000271,
+        "commit": 0.5917476654403919,
+        "commands": 0.5917476654403919
+      }
+    },
+    {
+      "prompt": "node http server",
+      "response": "```javascript\nconst http = require(\"http\");\n\nconst server = http.createServer((req, res) => {\n  res.writeHead(200, { \"Content-Type\": \"application/json\" });\n  res.end(JSON.stringify({ app: \"Nexion\", path: req.url }));\n});\n\nserver.listen(4173, () => console.log(\"http://localhost:4173\"));\n```",
+      "vector": {
+        "node": 0.6018982505873596,
+        "http": 0.5248209141028508,
+        "server": 0.6018982505873596
+      }
+    },
+    {
+      "prompt": "write a python calculator",
+      "response": "```python\ndef calculate(left, operator, right):\n    ops = {\n        \"+\": left + right,\n        \"-\": left - right,\n        \"*\": left * right,\n        \"/\": left / right if right else None,\n    }\n    return ops.get(operator, \"Unknown operator\")\n\nprint(calculate(12, \"*\", 4))\n```",
+      "vector": {
+        "write": 0.4905285680205354,
+        "python": 0.38573050623410293,
+        "calculator": 0.7814049529636382
+      }
+    },
+    {
+      "prompt": "python palindrome check",
+      "response": "```python\ndef is_palindrome(text):\n    cleaned = \"\".join(ch.lower() for ch in text if ch.isalnum())\n    return cleaned == cleaned[::-1]\n\nprint(is_palindrome(\"Never odd or even\"))\n```",
+      "vector": {
+        "python": 0.34068484224255946,
+        "palindrome": 0.6901523701794148,
+        "check": 0.6384540266940905
+      }
+    },
+    {
+      "prompt": "javascript todo array",
+      "response": "```javascript\nconst todos = [];\n\nfunction addTodo(title) {\n  todos.push({ id: crypto.randomUUID(), title, done: false });\n}\n\nfunction toggleTodo(id) {\n  const item = todos.find((todo) => todo.id === id);\n  if (item) item.done = !item.done;\n}\n```",
+      "vector": {
+        "javascript": 0.41952054973931774,
+        "todo": 0.6418732383993044,
+        "array": 0.6418732383993044
+      }
+    },
+    {
+      "prompt": "html form example",
+      "response": "```html\n<form method=\"post\" action=\"/login\">\n  <label>Email <input type=\"email\" name=\"email\" required /></label>\n  <label>Password <input type=\"password\" name=\"password\" required /></label>\n  <button type=\"submit\">Sign in</button>\n</form>\n```",
+      "vector": {
+        "html": 0.5652610159463556,
+        "form": 0.7092053655295917,
+        "example": 0.42131666636311954
+      }
+    },
+    {
+      "prompt": "python unittest example",
+      "response": "```python\nimport unittest\n\ndef add(a, b):\n    return a + b\n\nclass AddTests(unittest.TestCase):\n    def test_adds_positive_numbers(self):\n        self.assertEqual(add(2, 3), 5)\n\nif __name__ == \"__main__\":\n    unittest.main()\n```",
+      "vector": {
+        "python": 0.3906703228507955,
+        "unittest": 0.7914119322111468,
+        "example": 0.4701530095590949
+      }
+    },
+    {
+      "prompt": "javascript sort objects",
+      "response": "```javascript\nconst people = [\n  { name: \"Ada\", score: 91 },\n  { name: \"Linus\", score: 88 }\n];\npeople.sort((a, b) => b.score - a.score);\nconsole.log(people);\n```",
+      "vector": {
+        "javascript": 0.40567494989765507,
+        "sort": 0.6206892463076865,
+        "objects": 0.6709490998157245
+      }
+    },
+    {
+      "prompt": "css grid two columns",
+      "response": "```css\n.layout {\n  display: grid;\n  grid-template-columns: 280px 1fr;\n  min-height: 100vh;\n}\n```",
+      "vector": {
+        "css": 0.42657804685934536,
+        "grid": 0.5352066233389287,
+        "two": 0.4951150478484271,
+        "columns": 0.5352066233389287
+      }
+    },
+    {
+      "prompt": "python argparse cli",
+      "response": "```python\nimport argparse\n\nparser = argparse.ArgumentParser(description=\"Nexion CLI\")\nparser.add_argument(\"name\")\nargs = parser.parse_args()\nprint(f\"Hello, {args.name}\")\n```",
+      "vector": {
+        "python": 0.32955476766234515,
+        "argparse": 0.6676052932350888,
+        "cli": 0.6676052932350888
+      }
+    },
+    {
+      "prompt": "how do i write a rest api in python",
+      "response": "A small Flask API:\n\n```python\nfrom flask import Flask, request\n\napp = Flask(__name__)\nitems = []\n\n@app.get(\"/items\")\ndef list_items():\n    return {\"items\": items}\n\n@app.post(\"/items\")\ndef create_item():\n    payload = request.get_json(force=True) or {}\n    items.append(payload)\n    return payload, 201\n```",
+      "vector": {
+        "write": 0.4248131859889282,
+        "rest": 0.626029054148815,
+        "api": 0.5621643840237422,
+        "python": 0.33405476453222893
+      }
+    },
+    {
+      "prompt": "give me javascript code for a timer",
+      "response": "```javascript\nfunction startTimer(seconds, onTick, onDone) {\n  let remaining = seconds;\n  const id = setInterval(() => {\n    remaining -= 1;\n    onTick(remaining);\n    if (remaining <= 0) {\n      clearInterval(id);\n      onDone();\n    }\n  }, 1000);\n  return () => clearInterval(id);\n}\n```",
+      "vector": {
+        "give": 0.5387300728517874,
+        "javascript": 0.373569820438837,
+        "code": 0.43413900013473095,
+        "timer": 0.6178501650274273
+      }
+    },
+    {
+      "prompt": "write sql insert and update",
+      "response": "```sql\nINSERT INTO notes (title, body)\nVALUES ('Nexion', 'Purple local AI');\n\nUPDATE notes\nSET body = 'Updated notes'\nWHERE title = 'Nexion';\n```",
+      "vector": {
+        "write": 0.3534538507867969,
+        "sql": 0.4909447544004736,
+        "insert": 0.5630469001293957,
+        "update": 0.5630469001293957
+      }
+    },
+    {
+      "prompt": "python binary search",
+      "response": "```python\ndef binary_search(values, target):\n    low, high = 0, len(values) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if values[mid] == target:\n            return mid\n        if values[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n```",
+      "vector": {
+        "python": 0.32955476766234515,
+        "binary": 0.6676052932350888,
+        "search": 0.6676052932350888
+      }
+    },
+    {
+      "prompt": "javascript localstorage example",
+      "response": "```javascript\nfunction saveTheme(theme) {\n  localStorage.setItem(\"nexion-theme\", theme);\n}\n\nfunction loadTheme() {\n  return localStorage.getItem(\"nexion-theme\") || \"dark\";\n}\n```",
+      "vector": {
+        "javascript": 0.46122698734167206,
+        "localstorage": 0.7628270664621635,
+        "example": 0.45317163726391246
+      }
+    },
+    {
+      "prompt": "write html css landing card",
+      "response": "```html\n<article class=\"card\">\n  <h2>Nexion</h2>\n  <p>Local AI with a purple theme.</p>\n</article>\n```\n\n```css\n.card {\n  max-width: 360px;\n  padding: 24px;\n  border-radius: 20px;\n  background: #1a0b2e;\n  color: #f4eaff;\n  border: 1px solid rgba(192, 132, 252, 0.35);\n}\n```",
+      "vector": {
+        "write": 0.32792524639472403,
+        "html": 0.41635494769378,
+        "css": 0.41635494769378,
+        "landing": 0.5223802005430426,
+        "card": 0.5223802005430426
+      }
+    },
+    {
+      "prompt": "debug javascript undefined",
+      "response": "Check the name, then guard missing values:\n\n```javascript\nconst user = data && data.user;\nconst name = user?.name ?? \"guest\";\nconsole.log(name);\n```\n\nOpen DevTools, set a breakpoint, and inspect the object before you read a nested property.",
+      "vector": {
+        "debug": 0.6501769689916282,
+        "javascript": 0.393115527530672,
+        "undefined": 0.6501769689916282
+      }
+    },
+    {
+      "prompt": "python generate password",
+      "response": "```python\nimport secrets\nimport string\n\nalphabet = string.ascii_letters + string.digits\npassword = \"\".join(secrets.choice(alphabet) for _ in range(16))\nprint(password)\n```",
+      "vector": {
+        "python": 0.34068484224255946,
+        "generate": 0.6901523701794148,
+        "password": 0.6384540266940905
+      }
+    },
+    {
+      "prompt": "code mode python fibonacci",
+      "response": "```python\ndef fibonacci(count):\n    sequence = [0, 1]\n    while len(sequence) < count:\n        sequence.append(sequence[-1] + sequence[-2])\n    return sequence[:count]\n\nprint(fibonacci(10))\n```",
+      "vector": {
+        "code": 0.4246936233228002,
+        "mode": 0.6044078628611015,
+        "python": 0.29835816887141453,
+        "fibonacci": 0.6044078628611015
+      }
+    },
+    {
+      "prompt": "write a javascript promise example",
+      "response": "```javascript\nfunction wait(ms) {\n  return new Promise((resolve) => setTimeout(resolve, ms));\n}\n\nasync function run() {\n  await wait(200);\n  return \"ready\";\n}\n\nrun().then(console.log);\n```",
+      "vector": {
+        "write": 0.4318998180411211,
+        "javascript": 0.41599057589936134,
+        "promise": 0.6880101975779269,
+        "example": 0.4087252817819644
+      }
+    },
+    {
+      "prompt": "python csv read write",
+      "response": "```python\nimport csv\nfrom pathlib import Path\n\npath = Path(\"rows.csv\")\nwith path.open(\"w\", newline=\"\", encoding=\"utf-8\") as handle:\n    writer = csv.DictWriter(handle, fieldnames=[\"name\", \"score\"])\n    writer.writeheader()\n    writer.writerow({\"name\": \"Nexion\", \"score\": 100})\n```",
+      "vector": {
+        "python": 0.31260741568184996,
+        "csv": 0.6332736949737371,
+        "read": 0.5858360530592975,
+        "write": 0.3975388658369507
+      }
+    },
+    {
+      "prompt": "give me code for a rest fetch in browser",
+      "response": "```javascript\nasync function createNote(title, body) {\n  const response = await fetch(\"/api/notes\", {\n    method: \"POST\",\n    headers: { \"Content-Type\": \"application/json\" },\n    body: JSON.stringify({ title, body })\n  });\n  if (!response.ok) throw new Error(await response.text());\n  return response.json();\n}\n```",
+      "vector": {
+        "give": 0.437858055795298,
+        "code": 0.35285065401612514,
+        "rest": 0.464547298267012,
+        "fetch": 0.464547298267012,
+        "browser": 0.5021636728012033
+      }
+    },
+    {
+      "prompt": "python sort a list of dicts",
+      "response": "```python\npeople = [{\"name\": \"Ada\", \"score\": 91}, {\"name\": \"Linus\", \"score\": 88}]\npeople.sort(key=lambda row: row[\"score\"], reverse=True)\nprint(people)\n```",
+      "vector": {
+        "python": 0.2919062030747271,
+        "sort": 0.5470413345755851,
+        "list": 0.5156126321054526,
+        "dicts": 0.59133760280025
+      }
+    },
+    {
+      "prompt": "html accessibility button",
+      "response": "```html\n<button type=\"button\" aria-pressed=\"false\" aria-label=\"Toggle code mode\">{ }</button>\n```",
+      "vector": {
+        "html": 0.5049927211953308,
+        "accessibility": 0.6335896821497881,
+        "button": 0.5861283700803649
+      }
+    },
+    {
+      "prompt": "javascript event listener",
+      "response": "```javascript\ndocument.querySelector(\"#send-button\").addEventListener(\"click\", (event) => {\n  event.preventDefault();\n  console.log(\"send\");\n});\n```",
+      "vector": {
+        "javascript": 0.393115527530672,
+        "event": 0.6501769689916282,
+        "listener": 0.6501769689916282
+      }
+    },
+    {
+      "prompt": "python type hints function",
+      "response": "```python\ndef title_case(value: str) -> str:\n    return value.strip().title()\n```",
+      "vector": {
+        "python": 0.2968581760168439,
+        "type": 0.6013692080826271,
+        "hints": 0.6013692080826271,
+        "function": 0.43426417590229616
+      }
+    },
+    {
+      "prompt": "write bash loop",
+      "response": "```bash\nfor file in *.jsonl; do\n  echo \"training file: $file\"\ndone\n```",
+      "vector": {
+        "write": 0.41851376471999147,
+        "bash": 0.6666864071859101,
+        "loop": 0.6167458659881252
+      }
+    },
+    {
+      "prompt": "sql join example",
+      "response": "```sql\nSELECT users.name, orders.total\nFROM users\nJOIN orders ON orders.user_id = users.id\nWHERE orders.total > 50\nORDER BY orders.total DESC;\n```",
+      "vector": {
+        "sql": 0.5998153098104282,
+        "join": 0.6879066286212445,
+        "example": 0.408663754712812
+      }
+    },
+    {
+      "prompt": "javascript regex email check",
+      "response": "```javascript\nfunction looksLikeEmail(value) {\n  return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(value);\n}\n```",
+      "vector": {
+        "javascript": 0.33687464855390475,
+        "regex": 0.5571597217304234,
+        "email": 0.5571597217304234,
+        "check": 0.5154236705121698
+      }
+    },
+    {
+      "prompt": "python recursive factorial",
+      "response": "```python\ndef factorial(n):\n    if n < 0:\n        raise ValueError(\"n must be >= 0\")\n    if n in (0, 1):\n        return 1\n    return n * factorial(n - 1)\n```",
+      "vector": {
+        "python": 0.32955476766234515,
+        "recursive": 0.6676052932350888,
+        "factorial": 0.6676052932350888
+      }
+    },
+    {
+      "prompt": "code a dark purple webpage",
+      "response": "```html\n<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <title>Nexion</title>\n    <style>\n      body { margin:0; min-height:100vh; display:grid; place-items:center; background:#12081f; color:#f4eaff; font-family:sans-serif; }\n      h1 { color:#d8b4fe; }\n    </style>\n  </head>\n  <body>\n    <h1>Nexion</h1>\n  </body>\n</html>\n```",
+      "vector": {
+        "code": 0.3839316818823194,
+        "dark": 0.5463970132529724,
+        "purple": 0.5054671813911126,
+        "webpage": 0.5463970132529724
+      }
+    },
+    {
+      "prompt": "how do i copy text in javascript",
+      "response": "```javascript\nasync function copyText(value) {\n  await navigator.clipboard.writeText(value);\n}\n```",
+      "vector": {
+        "copy": 0.6501769689916282,
+        "text": 0.6501769689916282,
+        "javascript": 0.393115527530672
+      }
+    },
+    {
+      "prompt": "python set unique values",
+      "response": "```python\nvalues = [\"nexion\", \"purple\", \"nexion\"]\nunique = sorted(set(values))\nprint(unique)\n```",
+      "vector": {
+        "python": 0.274087345591292,
+        "set": 0.5552405265548495,
+        "unique": 0.5552405265548495,
+        "values": 0.5552405265548495
+      }
+    },
+    {
+      "prompt": "give me python code for a todo list",
+      "response": "```python\ntodos = []\n\ndef add(title):\n    todos.append({\"title\": title, \"done\": False})\n\ndef complete(index):\n    todos[index][\"done\"] = True\n\nadd(\"Train Nexion\")\ncomplete(0)\nprint(todos)\n```",
+      "vector": {
+        "give": 0.49413384895516044,
+        "python": 0.27974631860784516,
+        "code": 0.39820085406135836,
+        "todo": 0.5242533315904442,
+        "list": 0.49413384895516044
+      }
+    },
+    {
+      "prompt": "javascript switch statement",
+      "response": "```javascript\nfunction statusLabel(code) {\n  switch (code) {\n    case 200: return \"ok\";\n    case 404: return \"missing\";\n    default: return \"unknown\";\n  }\n}\n```",
+      "vector": {
+        "javascript": 0.393115527530672,
+        "switch": 0.6501769689916282,
+        "statement": 0.6501769689916282
+      }
+    },
+    {
+      "prompt": "python datetime now",
+      "response": "```python\nfrom datetime import datetime, timezone\n\nprint(datetime.now(timezone.utc).isoformat())\n```",
+      "vector": {
+        "python": 0.32955476766234515,
+        "datetime": 0.6676052932350888,
+        "now": 0.6676052932350888
+      }
+    },
+    {
+      "prompt": "write a python script that counts words",
+      "response": "```python\nfrom collections import Counter\nimport re\n\ndef count_words(text):\n    words = re.findall(r\"[a-z0-9']+\", text.lower())\n    return Counter(words)\n\nprint(count_words(\"Nexion writes code and answers questions\"))\n```",
+      "vector": {
+        "write": 0.32913320947781977,
+        "python": 0.25881615829767446,
+        "script": 0.5243044683587527,
+        "counts": 0.5243044683587527,
+        "words": 0.5243044683587527
+      }
+    },
+    {
+      "prompt": "java class example",
+      "response": "```java\npublic final class Greeting {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, Nexion\");\n    }\n}\n```",
+      "vector": {
+        "java": 0.6879066286212445,
+        "class": 0.5998153098104282,
+        "example": 0.408663754712812
+      }
+    },
+    {
+      "prompt": "c++ vector example",
+      "response": "```cpp\n#include <iostream>\n#include <vector>\n\nint main() {\n    const std::vector<int> values{1, 2, 3};\n    for (const int value : values) std::cout << value << '\\n';\n}\n```",
+      "vector": {
+        "vector": 0.8597344610805685,
+        "example": 0.5107412813064012
+      }
+    },
+    {
+      "prompt": "c sharp async method",
+      "response": "```csharp\npublic async Task<string> LoadAsync(HttpClient client, string url)\n{\n    using HttpResponseMessage response = await client.GetAsync(url);\n    response.EnsureSuccessStatusCode();\n    return await response.Content.ReadAsStringAsync();\n}\n```",
+      "vector": {
+        "sharp": 0.6018982505873596,
+        "async": 0.6018982505873596,
+        "method": 0.5248209141028508
+      }
+    },
+    {
+      "prompt": "go http handler",
+      "response": "```go\npackage main\n\nimport (\n    \"fmt\"\n    \"net/http\"\n)\n\nfunc handler(w http.ResponseWriter, r *http.Request) {\n    fmt.Fprintln(w, \"Hello, Nexion\")\n}\n\nfunc main() {\n    http.HandleFunc(\"/\", handler)\n    http.ListenAndServe(\":8080\", nil)\n}\n```",
+      "vector": {
+        "go": 0.6018982505873596,
+        "http": 0.5248209141028508,
+        "handler": 0.6018982505873596
+      }
+    },
+    {
+      "prompt": "rust function example",
+      "response": "```rust\nfn square(value: i32) -> i32 {\n    value * value\n}\n\nfn main() {\n    println!(\"{}\", square(4));\n}\n```",
+      "vector": {
+        "rust": 0.7304169093465372,
+        "function": 0.5274528408493011,
+        "example": 0.43391777933227665
+      }
+    },
+    {
+      "prompt": "kotlin data class",
+      "response": "```kotlin\ndata class User(val id: Int, val name: String)\n\nfun main() {\n    println(User(1, \"Nexion\"))\n}\n```",
+      "vector": {
+        "kotlin": 0.6018982505873596,
+        "data": 0.6018982505873596,
+        "class": 0.5248209141028508
+      }
+    },
+    {
+      "prompt": "swift function example",
+      "response": "```swift\nfunc greeting(_ name: String) -> String {\n    \"Hello, \\(name)\"\n}\n\nprint(greeting(\"Nexion\"))\n```",
+      "vector": {
+        "swift": 0.7304169093465372,
+        "function": 0.5274528408493011,
+        "example": 0.43391777933227665
+      }
+    },
+    {
+      "prompt": "php json response",
+      "response": "```php\n<?php\nheader('Content-Type: application/json');\necho json_encode(['status' => 'ok']);\n```",
+      "vector": {
+        "php": 0.5917476654403919,
+        "json": 0.5474206800000271,
+        "response": 0.5917476654403919
+      }
+    },
+    {
+      "prompt": "ruby method example",
+      "response": "```ruby\ndef greeting(name)\n  \"Hello, #{name}\"\nend\n\nputs greeting(\"Nexion\")\n```",
+      "vector": {
+        "ruby": 0.6879066286212445,
+        "method": 0.5998153098104282,
+        "example": 0.408663754712812
+      }
+    },
+    {
+      "prompt": "powershell get files",
+      "response": "```powershell\nGet-ChildItem -File | ForEach-Object {\n    Write-Output $_.FullName\n}\n```",
+      "vector": {
+        "powershell": 0.5773502691896257,
+        "get": 0.5773502691896257,
+        "files": 0.5773502691896257
+      }
+    },
+    {
+      "prompt": "dart flutter widget",
+      "response": "```dart\nimport 'package:flutter/material.dart';\n\nclass Greeting extends StatelessWidget {\n  const Greeting({super.key});\n\n  @override\n  Widget build(BuildContext context) => const Text('Hello, Nexion');\n}\n```",
+      "vector": {
+        "dart": 0.5773502691896257,
+        "flutter": 0.5773502691896257,
+        "widget": 0.5773502691896257
+      }
+    },
+    {
+      "prompt": "what is the solar system",
+      "response": "The Solar System is the Sun and the objects bound to it by gravity, including eight planets, dwarf planets, moons, asteroids, and comets.",
+      "vector": {
+        "solar": 0.7340659912641422,
+        "system": 0.6790781401793113
+      }
+    },
+    {
+      "prompt": "what are the planets in order",
+      "response": "From the Sun outward: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.",
+      "vector": {
+        "planets": 0.7071067811865475,
+        "order": 0.7071067811865475
+      }
+    },
+    {
+      "prompt": "what is photosynthesis",
+      "response": "Photosynthesis is the process by which plants, algae, and some bacteria use light energy to turn water and carbon dioxide into chemical energy, releasing oxygen.",
+      "vector": {
+        "photosynthesis": 1.0
+      }
+    },
+    {
+      "prompt": "what is climate change",
+      "response": "Climate change describes long-term shifts in climate patterns. Current warming is primarily driven by heat-trapping greenhouse gases emitted through human activities, especially burning fossil fuels and land-use change.",
+      "vector": {
+        "climate": 0.7071067811865475,
+        "change": 0.7071067811865475
+      }
+    },
+    {
+      "prompt": "what is machine learning",
+      "response": "Machine learning is a way to build programs that learn patterns from examples so they can make predictions, classifications, or decisions on new inputs.",
+      "vector": {
+        "machine": 0.7071067811865475,
+        "learning": 0.7071067811865475
+      }
+    },
+    {
+      "prompt": "what is a neural network",
+      "response": "A neural network is a machine-learning model made of layers of adjustable numerical units. Training changes its parameters to reduce error on examples.",
+      "vector": {
+        "neural": 0.7071067811865475,
+        "network": 0.7071067811865475
+      }
+    },
+    {
+      "prompt": "what is a database",
+      "response": "A database is an organized collection of data managed so it can be stored, queried, updated, and protected reliably.",
+      "vector": {
+        "database": 1.0
+      }
+    },
+    {
+      "prompt": "what is an api",
+      "response": "An API, or application programming interface, is a defined way for software systems to request data or actions from one another.",
+      "vector": {
+        "api": 1.0
+      }
+    },
+    {
+      "prompt": "what is encryption",
+      "response": "Encryption transforms readable data into ciphertext using a key so that only someone with the appropriate key can recover the original data.",
+      "vector": {
+        "encryption": 1.0
+      }
+    },
+    {
+      "prompt": "how do i protect api keys",
+      "response": "Keep API keys out of source code and client-side applications, store only hashes when possible, use one key per user, rotate compromised keys, limit permissions, and use HTTPS in production.",
+      "vector": {
+        "protect": 0.6097003391010448,
+        "api": 0.5064888873412149,
+        "keys": 0.6097003391010448
+      }
+    },
+    {
+      "prompt": "what is a strong password",
+      "response": "Use a long, unique passphrase for every account and keep it in a reputable password manager. Turn on multi-factor authentication where available.",
+      "vector": {
+        "strong": 0.7340659912641422,
+        "password": 0.6790781401793113
+      }
+    },
+    {
+      "prompt": "what is phishing",
+      "response": "Phishing is a social-engineering attack that tries to trick people into revealing information or running harmful actions. Verify unexpected links, senders, and requests through an independent channel.",
+      "vector": {
+        "phishing": 1.0
+      }
+    },
+    {
+      "prompt": "what is version control",
+      "response": "Version control records changes to files over time, helping people review history, collaborate safely, and recover from mistakes. Git is a common version-control system.",
+      "vector": {
+        "version": 0.7071067811865475,
+        "control": 0.7071067811865475
+      }
+    },
+    {
+      "prompt": "what is git",
+      "response": "Git is a distributed version-control system. A practical flow is: inspect changes, create a focused commit with a clear message, then push it to a shared remote when ready.",
+      "vector": {
+        "git": 1.0
+      }
+    },
+    {
+      "prompt": "what is debugging",
+      "response": "Debugging is the disciplined process of reproducing a problem, narrowing its cause, fixing it, and adding a check so it does not return unnoticed.",
+      "vector": {
+        "debugging": 1.0
+      }
+    },
+    {
+      "prompt": "how do i write good code",
+      "response": "Start with a clear behavior, keep functions small and named for their purpose, validate inputs, handle failure paths, write tests for key cases, and prefer simple designs over clever ones.",
+      "vector": {
+        "write": 0.4568878627458163,
+        "good": 0.7278157933578412,
+        "code": 0.5114075202951716
+      }
+    },
+    {
+      "prompt": "what is a function in programming",
+      "response": "A function is a named, reusable piece of code that accepts inputs, performs a focused task, and may return an output.",
+      "vector": {
+        "function": 0.615325483055524,
+        "programming": 0.7882731442225379
+      }
+    },
+    {
+      "prompt": "what is a variable",
+      "response": "A variable is a named reference to a value used by a program. Its value can often change while the program runs.",
+      "vector": {
+        "variable": 1.0
+      }
+    },
+    {
+      "prompt": "what is python",
+      "response": "Python is a high-level general-purpose programming language known for readable syntax and a broad ecosystem.",
+      "vector": {
+        "python": 1.0
+      }
+    },
+    {
+      "prompt": "how do i learn programming",
+      "response": "Choose one language, build small projects, read error messages carefully, practice regularly, and explain your solution in your own words. Consistent feedback beats passive watching.",
+      "vector": {
+        "learn": 0.7071067811865476,
+        "programming": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "what is an algorithm",
+      "response": "An algorithm is a finite, unambiguous sequence of steps for solving a problem or performing a computation.",
+      "vector": {
+        "algorithm": 1.0
+      }
+    },
+    {
+      "prompt": "what is big o notation",
+      "response": "Big O notation describes how an algorithm's time or memory needs grow as input size grows. It is useful for comparing scalability, not for measuring one exact runtime.",
+      "vector": {
+        "big": 0.7071067811865475,
+        "notation": 0.7071067811865475
+      }
+    },
+    {
+      "prompt": "what is a test",
+      "response": "A software test checks that a behavior matches an expected result. Good tests are focused, repeatable, and include important edge cases.",
+      "vector": {
+        "test": 1.0
+      }
+    },
+    {
+      "prompt": "how do i plan a project",
+      "response": "Define the desired outcome, list constraints, break work into small deliverables, choose a first milestone, identify risks, and review progress at regular intervals.",
+      "vector": {
+        "plan": 0.7071067811865475,
+        "project": 0.7071067811865475
+      }
+    },
+    {
+      "prompt": "how do i make a decision",
+      "response": "Clarify the goal, gather the few facts that matter, list options and trade-offs, decide by a deadline, then revisit if new evidence changes the assumptions.",
+      "vector": {
+        "make": 0.7071067811865475,
+        "decision": 0.7071067811865475
+      }
+    },
+    {
+      "prompt": "what is critical thinking",
+      "response": "Critical thinking means examining claims, evidence, assumptions, alternatives, and uncertainty before reaching a conclusion.",
+      "vector": {
+        "critical": 0.7071067811865475,
+        "thinking": 0.7071067811865475
+      }
+    },
+    {
+      "prompt": "what is probability",
+      "response": "Probability quantifies uncertainty on a scale from 0 to 1, where 0 means impossible and 1 means certain under a stated model.",
+      "vector": {
+        "probability": 1.0
+      }
+    },
+    {
+      "prompt": "what is compound interest",
+      "response": "Compound interest means interest is calculated on both the original amount and previously accumulated interest. Its effect depends on rate, time, deposits, fees, and compounding frequency.",
+      "vector": {
+        "compound": 0.7340659912641422,
+        "interest": 0.6790781401793113
+      }
+    },
+    {
+      "prompt": "how do i stay productive",
+      "response": "Choose one important next action, remove obvious distractions, work in a time-bounded focus block, take a short break, and review the result before starting the next task.",
+      "vector": {
+        "stay": 0.7071067811865475,
+        "productive": 0.7071067811865475
+      }
+    },
+    {
+      "prompt": "how do i communicate clearly",
+      "response": "Lead with the main point, use concrete language, separate facts from opinions, give necessary context, and state the requested next action.",
+      "vector": {
+        "communicate": 0.7071067811865475,
+        "clearly": 0.7071067811865475
+      }
+    },
+    {
+      "prompt": "what is democracy",
+      "response": "Democracy is a system in which political authority ultimately comes from the people, commonly through elections, representative institutions, rule of law, and protected rights.",
+      "vector": {
+        "democracy": 1.0
+      }
+    },
+    {
+      "prompt": "what is the rule of law",
+      "response": "Rule of law means laws are public, applied consistently, and constrain both citizens and government officials through fair procedures.",
+      "vector": {
+        "rule": 0.7071067811865475,
+        "law": 0.7071067811865475
+      }
+    },
+    {
+      "prompt": "what is inflation",
+      "response": "Inflation is a sustained increase in the general price level. It reduces the purchasing power of a unit of currency over time.",
+      "vector": {
+        "inflation": 1.0
+      }
+    },
+    {
+      "prompt": "what causes inflation",
+      "response": "Inflation can arise when demand grows faster than supply, production costs rise, money and credit expand too quickly, or inflation expectations become entrenched. The cause varies by situation.",
+      "vector": {
+        "causes": 0.7340659912641422,
+        "inflation": 0.6790781401793113
+      }
+    },
+    {
+      "prompt": "what is gross domestic product",
+      "response": "Gross domestic product, or GDP, is the market value of final goods and services produced within an economy over a specified period. It is useful but does not measure every aspect of wellbeing.",
+      "vector": {
+        "gross": 0.5773502691896257,
+        "domestic": 0.5773502691896257,
+        "product": 0.5773502691896257
+      }
+    },
+    {
+      "prompt": "what is unemployment",
+      "response": "Unemployment measures people who are actively seeking work but do not currently have it. Different countries use specific survey definitions, so comparisons need context.",
+      "vector": {
+        "unemployment": 1.0
+      }
+    },
+    {
+      "prompt": "what is a budget",
+      "response": "A budget is a plan for income, spending, saving, and debt payments. A useful first step is to track actual spending and give each important expense a category.",
+      "vector": {
+        "budget": 1.0
+      }
+    },
+    {
+      "prompt": "what is an emergency fund",
+      "response": "An emergency fund is cash set aside for unexpected necessary expenses or income loss. The appropriate amount depends on stability, obligations, insurance, and access to support.",
+      "vector": {
+        "emergency": 0.7071067811865475,
+        "fund": 0.7071067811865475
+      }
+    },
+    {
+      "prompt": "what is diversification",
+      "response": "Diversification means spreading investments across assets, sectors, or regions so one failure has less impact. It reduces some risk but cannot remove all risk.",
+      "vector": {
+        "diversification": 1.0
+      }
+    },
+    {
+      "prompt": "what is a supply and demand",
+      "response": "Supply is how much sellers are willing to provide at different prices; demand is how much buyers want. Their interaction influences prices and quantities in a market.",
+      "vector": {
+        "supply": 0.7071067811865475,
+        "demand": 0.7071067811865475
+      }
+    },
+    {
+      "prompt": "what is interest rate",
+      "response": "An interest rate is the cost of borrowing or the return paid for lending, expressed as a percentage over a period. Real returns also depend on inflation, fees, and taxes.",
+      "vector": {
+        "interest": 0.6790781401793113,
+        "rate": 0.7340659912641422
+      }
+    },
+    {
+      "prompt": "what is a cell",
+      "response": "A cell is the smallest unit of life. Cells use energy, maintain internal conditions, process information, and reproduce or contribute to an organism's reproduction.",
+      "vector": {
+        "cell": 1.0
+      }
+    },
+    {
+      "prompt": "what is dna",
+      "response": "DNA, deoxyribonucleic acid, stores genetic instructions used in the development and operation of living organisms.",
+      "vector": {
+        "dna": 1.0
+      }
+    },
+    {
+      "prompt": "what is evolution",
+      "response": "Evolution is the change in heritable traits of populations across generations. Natural selection is one process that can make traits linked to reproductive success more common.",
+      "vector": {
+        "evolution": 1.0
+      }
+    },
+    {
+      "prompt": "what is a vaccine",
+      "response": "A vaccine prepares the immune system to recognize a disease-causing agent or part of it, helping reduce the risk or severity of future infection. Medical decisions should use current guidance from qualified professionals.",
+      "vector": {
+        "vaccine": 1.0
+      }
+    },
+    {
+      "prompt": "what is a virus",
+      "response": "A virus is an infectious agent that relies on host cells to reproduce. Different viruses spread and affect people in different ways.",
+      "vector": {
+        "virus": 1.0
+      }
+    },
+    {
+      "prompt": "what is nutrition",
+      "response": "Nutrition is the process of obtaining and using food and nutrients. Healthful eating patterns generally emphasize varied minimally processed foods, adequate protein and fiber, and moderation; individual needs vary.",
+      "vector": {
+        "nutrition": 1.0
+      }
+    },
+    {
+      "prompt": "how do i exercise safely",
+      "response": "Begin at an appropriate level, progress gradually, use sound technique, rest, and stop for concerning symptoms. Seek qualified medical guidance for injuries, symptoms, or conditions that could make exercise risky.",
+      "vector": {
+        "exercise": 0.7071067811865475,
+        "safely": 0.7071067811865475
+      }
+    },
+    {
+      "prompt": "what is mental health",
+      "response": "Mental health includes emotional, psychological, and social wellbeing. Persistent distress, impaired daily functioning, or thoughts of self-harm deserve prompt support from trusted people and qualified professionals or local emergency services.",
+      "vector": {
+        "mental": 0.7071067811865475,
+        "health": 0.7071067811865475
+      }
+    },
+    {
+      "prompt": "what is physics",
+      "response": "Physics studies matter, energy, motion, forces, and the fundamental rules that describe natural phenomena.",
+      "vector": {
+        "physics": 1.0
+      }
+    },
+    {
+      "prompt": "what is energy",
+      "response": "Energy is the capacity to do work or cause change. It can take forms such as kinetic, thermal, chemical, electrical, and radiant energy, and is conserved in closed systems.",
+      "vector": {
+        "energy": 1.0
+      }
+    },
+    {
+      "prompt": "what is gravity",
+      "response": "Gravity is the attraction between masses. Near Earth's surface it gives objects weight and causes them to accelerate downward when unsupported.",
+      "vector": {
+        "gravity": 1.0
+      }
+    },
+    {
+      "prompt": "what is electricity",
+      "response": "Electricity involves electric charge and its movement or effects. Electric current is the flow of charge, while voltage is a difference in electric potential.",
+      "vector": {
+        "electricity": 1.0
+      }
+    },
+    {
+      "prompt": "what is chemistry",
+      "response": "Chemistry studies substances, their properties, and the changes that occur when atoms and molecules interact.",
+      "vector": {
+        "chemistry": 1.0
+      }
+    },
+    {
+      "prompt": "what is an atom",
+      "response": "An atom is a basic unit of ordinary matter made of a nucleus containing protons and neutrons, with electrons occupying regions around the nucleus.",
+      "vector": {
+        "atom": 1.0
+      }
+    },
+    {
+      "prompt": "what is a molecule",
+      "response": "A molecule is a group of two or more atoms held together by chemical bonds.",
+      "vector": {
+        "molecule": 1.0
+      }
+    },
+    {
+      "prompt": "what is mathematics",
+      "response": "Mathematics studies quantity, structure, space, change, and logical relationships. It provides precise tools for reasoning and modeling.",
+      "vector": {
+        "mathematics": 1.0
+      }
+    },
+    {
+      "prompt": "what is algebra",
+      "response": "Algebra uses symbols and rules to represent quantities and relationships, making it possible to solve equations and describe patterns.",
+      "vector": {
+        "algebra": 1.0
+      }
+    },
+    {
+      "prompt": "what is statistics",
+      "response": "Statistics is the science of collecting, analyzing, and interpreting data. Good statistical conclusions consider sampling, uncertainty, confounders, and the limits of the data.",
+      "vector": {
+        "statistics": 1.0
+      }
+    },
+    {
+      "prompt": "what is correlation",
+      "response": "Correlation measures how variables vary together. Correlation alone does not establish that one variable causes the other.",
+      "vector": {
+        "correlation": 1.0
+      }
+    },
+    {
+      "prompt": "what is history",
+      "response": "History is the study of the past through evidence and interpretation. Strong historical reasoning considers sources, context, perspective, and uncertainty.",
+      "vector": {
+        "history": 1.0
+      }
+    },
+    {
+      "prompt": "what is geography",
+      "response": "Geography studies places, environments, people, and the relationships between them across Earth's surface.",
+      "vector": {
+        "geography": 1.0
+      }
+    },
+    {
+      "prompt": "what is culture",
+      "response": "Culture includes shared practices, values, language, art, customs, and institutions that shape how groups make meaning and organize life.",
+      "vector": {
+        "culture": 1.0
+      }
+    },
+    {
+      "prompt": "what is philosophy",
+      "response": "Philosophy examines fundamental questions about knowledge, reality, ethics, reasoning, and meaning through careful argument.",
+      "vector": {
+        "philosophy": 1.0
+      }
+    },
+    {
+      "prompt": "what is ethics",
+      "response": "Ethics is the study of how people ought to act and what makes actions, institutions, or outcomes right, fair, or good.",
+      "vector": {
+        "ethics": 1.0
+      }
+    },
+    {
+      "prompt": "what is bias",
+      "response": "Bias is a systematic tendency that can distort judgment, measurement, or decisions. Looking for disconfirming evidence and diverse perspectives can help reduce it.",
+      "vector": {
+        "bias": 1.0
+      }
+    },
+    {
+      "prompt": "how do i evaluate a source",
+      "response": "Check who created it, their expertise and incentives, the date, the evidence and links, agreement with independent reliable sources, and whether the claim is presented with appropriate uncertainty.",
+      "vector": {
+        "evaluate": 0.7071067811865475,
+        "source": 0.7071067811865475
+      }
+    },
+    {
+      "prompt": "what is copyright",
+      "response": "Copyright is a legal framework that generally gives creators control over copying and certain uses of original expression. Rules and exceptions differ by jurisdiction.",
+      "vector": {
+        "copyright": 1.0
+      }
+    },
+    {
+      "prompt": "what is privacy",
+      "response": "Privacy is the ability to control access to personal information, communications, and aspects of one's life. Good digital practice includes minimizing collection and securing sensitive data.",
+      "vector": {
+        "privacy": 1.0
+      }
+    },
+    {
+      "prompt": "what is the internet",
+      "response": "The internet is a global network of interconnected networks that exchange data using standardized protocols, including the Internet Protocol suite.",
+      "vector": {
+        "internet": 1.0
+      }
+    },
+    {
+      "prompt": "what is a website",
+      "response": "A website is a collection of web pages and resources typically served under a domain name and accessed with a browser.",
+      "vector": {
+        "website": 1.0
+      }
+    },
+    {
+      "prompt": "what is html",
+      "response": "HTML, HyperText Markup Language, defines the structure and meaning of content on a web page.",
+      "vector": {
+        "html": 1.0
+      }
+    },
+    {
+      "prompt": "what is css",
+      "response": "CSS, Cascading Style Sheets, controls the presentation and layout of web content.",
+      "vector": {
+        "css": 1.0
+      }
+    },
+    {
+      "prompt": "what is javascript",
+      "response": "JavaScript is a programming language commonly used to add behavior and interactivity to web applications, and it can also run on servers.",
+      "vector": {
+        "javascript": 1.0
+      }
+    },
+    {
+      "prompt": "what is an operating system",
+      "response": "An operating system manages hardware resources and provides common services and interfaces for programs, users, storage, networking, and security.",
+      "vector": {
+        "operating": 0.7340659912641422,
+        "system": 0.6790781401793113
+      }
+    },
+    {
+      "prompt": "what is cloud computing",
+      "response": "Cloud computing provides computing resources such as servers, storage, databases, and software over a network. It involves trade-offs in cost, control, reliability, and data protection.",
+      "vector": {
+        "cloud": 0.7071067811865475,
+        "computing": 0.7071067811865475
+      }
+    },
+    {
+      "prompt": "what is backup",
+      "response": "A backup is a separate recoverable copy of important data. A practical strategy keeps multiple copies on different media, including one offline or offsite, and tests restoration.",
+      "vector": {
+        "backup": 1.0
+      }
+    },
+    {
+      "prompt": "what is a spreadsheet",
+      "response": "A spreadsheet organizes data in rows and columns and can calculate, summarize, visualize, and model information using formulas.",
+      "vector": {
+        "spreadsheet": 1.0
+      }
+    },
+    {
+      "prompt": "what is a resume",
+      "response": "A resume is a concise record of relevant experience, skills, education, and achievements tailored to a specific opportunity.",
+      "vector": {
+        "resume": 1.0
+      }
+    },
+    {
+      "prompt": "how do i prepare for an interview",
+      "response": "Study the role and organization, prepare concrete examples of your work using situation-action-result structure, practice thoughtful questions, and be honest about what you know and want to learn.",
+      "vector": {
+        "prepare": 0.7071067811865475,
+        "interview": 0.7071067811865475
+      }
+    },
+    {
+      "prompt": "how do i resolve conflict",
+      "response": "Describe the issue without blame, listen to understand the other perspective, identify shared interests, suggest specific options, and agree on a next step. Step away if safety is at risk.",
+      "vector": {
+        "resolve": 0.7071067811865475,
+        "conflict": 0.7071067811865475
+      }
+    },
+    {
+      "prompt": "how do i learn effectively",
+      "response": "Use active recall, spaced repetition, practice on varied problems, immediate feedback, and short explanations in your own words. Sleep and regular breaks improve retention.",
+      "vector": {
+        "learn": 0.6790781401793113,
+        "effectively": 0.7340659912641422
+      }
+    },
+    {
+      "prompt": "what is scientific method",
+      "response": "Scientific inquiry uses observations, testable questions, evidence, transparent methods, replication, and revision of explanations when evidence changes.",
+      "vector": {
+        "scientific": 0.7537174575426155,
+        "method": 0.6571985957041414
+      }
+    },
+    {
+      "prompt": "what is science",
+      "response": "Science is a systematic way of building knowledge about the natural world through observation, evidence, testable explanations, and revision when better evidence appears.",
+      "vector": {
+        "science": 1.0
+      }
+    },
+    {
+      "prompt": "hello nexion",
+      "response": "Hello. I am Nexion, your local purple-themed assistant. Ask me a question or turn on code mode and I will write examples.",
+      "vector": {
+        "hello": 0.609374280732113,
+        "nexion": 0.7928827063205629
+      }
+    },
+    {
+      "prompt": "hello",
+      "response": "Hi. I am Nexion. I can answer from my trained knowledge and return working code when you ask for it.",
+      "vector": {
+        "hello": 1.0
+      }
+    },
+    {
+      "prompt": "hi",
+      "response": "Hi there. Nexion is ready. What should we work on?",
+      "vector": {
+        "hi": 1.0
+      }
+    },
+    {
+      "prompt": "what is your name",
+      "response": "I am Nexion, a locally trained assistant. I specialize in clear answers and practical code.",
+      "vector": {
+        "name": 1.0
+      }
+    },
+    {
+      "prompt": "how do i add knowledge",
+      "response": "Add prompt and response examples to a .jsonl file in training/, then run python brain.py train. Nexion reloads the model about every 30 seconds.",
+      "vector": {
+        "add": 0.6790781401793113,
+        "knowledge": 0.7340659912641422
+      }
+    },
+    {
+      "prompt": "how do i retrain you",
+      "response": "Edit files in training/ with clear prompt/response pairs, then run python brain.py train. That rebuilds models/nexion-brain.json.",
+      "vector": {
+        "retrain": 1.0
+      }
+    },
+    {
+      "prompt": "are you private",
+      "response": "Yes. The default Nexion Brain runs in your browser. Optional Ollama stays on your computer. Wikipedia is only used if online sources are enabled.",
+      "vector": {
+        "private": 1.0
+      }
+    },
+    {
+      "prompt": "write code",
+      "response": "Turn on code mode with the { } button, then describe what you want. I return a short explanation plus a fenced code block you can copy.",
+      "vector": {
+        "write": 0.6662380624821364,
+        "code": 0.7457391260354046
+      }
+    },
+    {
+      "prompt": "help me code",
+      "response": "Tell me the language and the task. Example: write a Python function that reverses a string. I will answer with runnable code.",
+      "vector": {
+        "help": 0.8182078815483284,
+        "code": 0.5749224839682272
+      }
+    }
+  ],
+  "vocabulary": {
+    "write": 3.3978952727983707,
+    "python": 2.671958269415434,
+    "hello": 4.160035324845268,
+    "world": 4.71965111278069,
+    "code": 3.803360380906535,
+    "function": 3.908720896564361,
+    "reverses": 5.412798293340635,
+    "string": 5.412798293340635,
+    "add": 5.007333185232471,
+    "two": 5.007333185232471,
+    "numbers": 5.412798293340635,
+    "loop": 5.007333185232471,
+    "example": 3.2155737160044158,
+    "list": 4.71965111278069,
+    "comprehension": 5.412798293340635,
+    "dictionary": 5.412798293340635,
+    "class": 4.71965111278069,
+    "read": 5.007333185232471,
+    "file": 5.007333185232471,
+    "json": 5.007333185232471,
+    "http": 4.71965111278069,
+    "request": 5.412798293340635,
+    "flask": 5.412798293340635,
+    "route": 5.412798293340635,
+    "error": 5.412798293340635,
+    "handling": 5.412798293340635,
+    "javascript": 3.2727321298443646,
+    "array": 5.007333185232471,
+    "map": 5.412798293340635,
+    "filter": 5.412798293340635,
+    "fetch": 5.007333185232471,
+    "api": 4.49650756146648,
+    "debounce": 5.412798293340635,
+    "html": 4.314186004672526,
+    "starter": 5.412798293340635,
+    "page": 5.412798293340635,
+    "css": 4.314186004672526,
+    "purple": 5.007333185232471,
+    "button": 5.007333185232471,
+    "flexbox": 5.412798293340635,
+    "center": 5.412798293340635,
+    "react": 5.412798293340635,
+    "component": 5.412798293340635,
+    "sql": 4.71965111278069,
+    "select": 5.412798293340635,
+    "git": 5.007333185232471,
+    "commit": 5.412798293340635,
+    "commands": 5.412798293340635,
+    "node": 5.412798293340635,
+    "server": 5.412798293340635,
+    "calculator": 5.412798293340635,
+    "palindrome": 5.412798293340635,
+    "check": 5.007333185232471,
+    "todo": 5.007333185232471,
+    "form": 5.412798293340635,
+    "unittest": 5.412798293340635,
+    "sort": 5.007333185232471,
+    "objects": 5.412798293340635,
+    "grid": 5.412798293340635,
+    "columns": 5.412798293340635,
+    "argparse": 5.412798293340635,
+    "cli": 5.412798293340635,
+    "rest": 5.007333185232471,
+    "give": 4.71965111278069,
+    "timer": 5.412798293340635,
+    "insert": 5.412798293340635,
+    "update": 5.412798293340635,
+    "binary": 5.412798293340635,
+    "search": 5.412798293340635,
+    "localstorage": 5.412798293340635,
+    "landing": 5.412798293340635,
+    "card": 5.412798293340635,
+    "debug": 5.412798293340635,
+    "undefined": 5.412798293340635,
+    "generate": 5.412798293340635,
+    "password": 5.007333185232471,
+    "mode": 5.412798293340635,
+    "fibonacci": 5.412798293340635,
+    "promise": 5.412798293340635,
+    "csv": 5.412798293340635,
+    "browser": 5.412798293340635,
+    "dicts": 5.412798293340635,
+    "accessibility": 5.412798293340635,
+    "event": 5.412798293340635,
+    "listener": 5.412798293340635,
+    "type": 5.412798293340635,
+    "hints": 5.412798293340635,
+    "bash": 5.412798293340635,
+    "join": 5.412798293340635,
+    "regex": 5.412798293340635,
+    "email": 5.412798293340635,
+    "recursive": 5.412798293340635,
+    "factorial": 5.412798293340635,
+    "dark": 5.412798293340635,
+    "webpage": 5.412798293340635,
+    "copy": 5.412798293340635,
+    "text": 5.412798293340635,
+    "set": 5.412798293340635,
+    "unique": 5.412798293340635,
+    "values": 5.412798293340635,
+    "switch": 5.412798293340635,
+    "statement": 5.412798293340635,
+    "datetime": 5.412798293340635,
+    "now": 5.412798293340635,
+    "script": 5.412798293340635,
+    "counts": 5.412798293340635,
+    "words": 5.412798293340635,
+    "java": 5.412798293340635,
+    "vector": 5.412798293340635,
+    "sharp": 5.412798293340635,
+    "async": 5.412798293340635,
+    "method": 4.71965111278069,
+    "go": 5.412798293340635,
+    "handler": 5.412798293340635,
+    "rust": 5.412798293340635,
+    "kotlin": 5.412798293340635,
+    "data": 5.412798293340635,
+    "swift": 5.412798293340635,
+    "php": 5.412798293340635,
+    "response": 5.412798293340635,
+    "ruby": 5.412798293340635,
+    "powershell": 5.412798293340635,
+    "get": 5.412798293340635,
+    "files": 5.412798293340635,
+    "dart": 5.412798293340635,
+    "flutter": 5.412798293340635,
+    "widget": 5.412798293340635,
+    "solar": 5.412798293340635,
+    "system": 5.007333185232471,
+    "planets": 5.412798293340635,
+    "order": 5.412798293340635,
+    "photosynthesis": 5.412798293340635,
+    "climate": 5.412798293340635,
+    "change": 5.412798293340635,
+    "machine": 5.412798293340635,
+    "learning": 5.412798293340635,
+    "neural": 5.412798293340635,
+    "network": 5.412798293340635,
+    "database": 5.412798293340635,
+    "encryption": 5.412798293340635,
+    "protect": 5.412798293340635,
+    "keys": 5.412798293340635,
+    "strong": 5.412798293340635,
+    "phishing": 5.412798293340635,
+    "version": 5.412798293340635,
+    "control": 5.412798293340635,
+    "debugging": 5.412798293340635,
+    "good": 5.412798293340635,
+    "programming": 5.007333185232471,
+    "variable": 5.412798293340635,
+    "learn": 5.007333185232471,
+    "algorithm": 5.412798293340635,
+    "big": 5.412798293340635,
+    "notation": 5.412798293340635,
+    "test": 5.412798293340635,
+    "plan": 5.412798293340635,
+    "project": 5.412798293340635,
+    "make": 5.412798293340635,
+    "decision": 5.412798293340635,
+    "critical": 5.412798293340635,
+    "thinking": 5.412798293340635,
+    "probability": 5.412798293340635,
+    "compound": 5.412798293340635,
+    "interest": 5.007333185232471,
+    "stay": 5.412798293340635,
+    "productive": 5.412798293340635,
+    "communicate": 5.412798293340635,
+    "clearly": 5.412798293340635,
+    "democracy": 5.412798293340635,
+    "rule": 5.412798293340635,
+    "law": 5.412798293340635,
+    "inflation": 5.007333185232471,
+    "causes": 5.412798293340635,
+    "gross": 5.412798293340635,
+    "domestic": 5.412798293340635,
+    "product": 5.412798293340635,
+    "unemployment": 5.412798293340635,
+    "budget": 5.412798293340635,
+    "emergency": 5.412798293340635,
+    "fund": 5.412798293340635,
+    "diversification": 5.412798293340635,
+    "supply": 5.412798293340635,
+    "demand": 5.412798293340635,
+    "rate": 5.412798293340635,
+    "cell": 5.412798293340635,
+    "dna": 5.412798293340635,
+    "evolution": 5.412798293340635,
+    "vaccine": 5.412798293340635,
+    "virus": 5.412798293340635,
+    "nutrition": 5.412798293340635,
+    "exercise": 5.412798293340635,
+    "safely": 5.412798293340635,
+    "mental": 5.412798293340635,
+    "health": 5.412798293340635,
+    "physics": 5.412798293340635,
+    "energy": 5.412798293340635,
+    "gravity": 5.412798293340635,
+    "electricity": 5.412798293340635,
+    "chemistry": 5.412798293340635,
+    "atom": 5.412798293340635,
+    "molecule": 5.412798293340635,
+    "mathematics": 5.412798293340635,
+    "algebra": 5.412798293340635,
+    "statistics": 5.412798293340635,
+    "correlation": 5.412798293340635,
+    "history": 5.412798293340635,
+    "geography": 5.412798293340635,
+    "culture": 5.412798293340635,
+    "philosophy": 5.412798293340635,
+    "ethics": 5.412798293340635,
+    "bias": 5.412798293340635,
+    "evaluate": 5.412798293340635,
+    "source": 5.412798293340635,
+    "copyright": 5.412798293340635,
+    "privacy": 5.412798293340635,
+    "internet": 5.412798293340635,
+    "website": 5.412798293340635,
+    "operating": 5.412798293340635,
+    "cloud": 5.412798293340635,
+    "computing": 5.412798293340635,
+    "backup": 5.412798293340635,
+    "spreadsheet": 5.412798293340635,
+    "resume": 5.412798293340635,
+    "prepare": 5.412798293340635,
+    "interview": 5.412798293340635,
+    "resolve": 5.412798293340635,
+    "conflict": 5.412798293340635,
+    "effectively": 5.412798293340635,
+    "scientific": 5.412798293340635,
+    "science": 5.412798293340635,
+    "nexion": 5.412798293340635,
+    "hi": 5.412798293340635,
+    "name": 5.412798293340635,
+    "knowledge": 5.412798293340635,
+    "retrain": 5.412798293340635,
+    "private": 5.412798293340635,
+    "help": 5.412798293340635
+  }
+}

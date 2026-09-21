@@ -1,0 +1,56 @@
+NEXION PROPRIETARY LICENSE
+
+Copyright (c) 2026 Nexion. All Rights Reserved.
+
+1. OWNERSHIP
+
+The Nexion software, including its source code, documentation, models, assets, designs, branding, and other original materials, is the property of Nexion and/or its respective copyright owner(s).
+
+2. PERMITTED USE
+
+Permission is granted to individuals to download, install, and use Nexion for personal, educational, testing, and research purposes.
+
+3. RESTRICTIONS
+
+Without prior written permission from Nexion, you may NOT:
+
+* Copy or redistribute the Nexion source code or substantial portions of it.
+* Sell, sublicense, rent, lease, or commercially redistribute Nexion.
+* Publish or upload the proprietary source code to another repository or service.
+* Modify and redistribute Nexion as a competing product.
+* Remove copyright, license, or proprietary notices.
+* Claim Nexion or its original source code as your own.
+* Use the Nexion name, logo, or branding to imply official ownership or endorsement.
+
+4. COMMERCIAL USE
+
+Commercial use, redistribution, hosting, resale, or incorporation of Nexion into another commercial product requires prior written permission from the copyright owner.
+
+5. THIRD-PARTY SOFTWARE
+
+Nexion may use third-party libraries, APIs, models, or other components that are licensed separately. Those components remain subject to their respective licenses.
+
+6. DISCLAIMER
+
+Nexion is provided "AS IS", without warranties of any kind, to the maximum extent permitted by applicable law.
+
+7. TERMINATION
+
+This license terminates automatically if you violate its terms. Upon termination, you must cease any use or distribution that is no longer permitted under this license.
+
+8. COPYRIGHT
+
+Copyright © 2026 Nexion. All Rights Reserved.
+
+Unauthorized copying, reproduction, distribution, or commercial use of Nexion may be subject to applicable law.
+
+9. CONTACT
+
+For permission requests or licensing inquiries:
+
+Nexion Team
+Email: main@nexion.ai
+Website: nexion.ai
+
+License Version: 1.1.2
+Effective Date: 2026

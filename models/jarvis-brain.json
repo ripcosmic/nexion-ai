@@ -1,0 +1,790 @@
+{
+  "format": "jarvis-brain-v1",
+  "trained_at": "2026-09-10T09:57:09.456167+00:00",
+  "examples": [
+    {
+      "prompt": "what is the solar system",
+      "response": "The Solar System is the Sun and the objects bound to it by gravity, including eight planets, dwarf planets, moons, asteroids, and comets.",
+      "vector": {
+        "solar": 0.7375292900949346,
+        "system": 0.6753151458778796
+      }
+    },
+    {
+      "prompt": "what are the planets in order",
+      "response": "From the Sun outward: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.",
+      "vector": {
+        "planets": 0.7071067811865476,
+        "order": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "what is photosynthesis",
+      "response": "Photosynthesis is the process by which plants, algae, and some bacteria use light energy to turn water and carbon dioxide into chemical energy, releasing oxygen.",
+      "vector": {
+        "photosynthesis": 1.0
+      }
+    },
+    {
+      "prompt": "what is climate change",
+      "response": "Climate change describes long-term shifts in climate patterns. Current warming is primarily driven by heat-trapping greenhouse gases emitted through human activities, especially burning fossil fuels and land-use change.",
+      "vector": {
+        "climate": 0.7071067811865476,
+        "change": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "what is machine learning",
+      "response": "Machine learning is a way to build programs that learn patterns from examples so they can make predictions, classifications, or decisions on new inputs.",
+      "vector": {
+        "machine": 0.7071067811865476,
+        "learning": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "what is a neural network",
+      "response": "A neural network is a machine-learning model made of layers of adjustable numerical units. Training changes its parameters to reduce error on examples.",
+      "vector": {
+        "neural": 0.7071067811865476,
+        "network": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "what is a database",
+      "response": "A database is an organized collection of data managed so it can be stored, queried, updated, and protected reliably.",
+      "vector": {
+        "database": 1.0
+      }
+    },
+    {
+      "prompt": "what is an api",
+      "response": "An API, or application programming interface, is a defined way for software systems to request data or actions from one another.",
+      "vector": {
+        "api": 1.0
+      }
+    },
+    {
+      "prompt": "what is encryption",
+      "response": "Encryption transforms readable data into ciphertext using a key so that only someone with the appropriate key can recover the original data.",
+      "vector": {
+        "encryption": 1.0
+      }
+    },
+    {
+      "prompt": "how do i protect api keys",
+      "response": "Keep API keys out of source code and client-side applications, store only hashes when possible, use one key per user, rotate compromised keys, limit permissions, and use HTTPS in production.",
+      "vector": {
+        "protect": 0.5935574131179971,
+        "api": 0.5434879894398243,
+        "keys": 0.5935574131179971
+      }
+    },
+    {
+      "prompt": "what is a strong password",
+      "response": "Use a long, unique passphrase for every account and keep it in a reputable password manager. Turn on multi-factor authentication where available.",
+      "vector": {
+        "strong": 0.7071067811865476,
+        "password": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "what is phishing",
+      "response": "Phishing is a social-engineering attack that tries to trick people into revealing information or running harmful actions. Verify unexpected links, senders, and requests through an independent channel.",
+      "vector": {
+        "phishing": 1.0
+      }
+    },
+    {
+      "prompt": "what is version control",
+      "response": "Version control records changes to files over time, helping people review history, collaborate safely, and recover from mistakes. Git is a common version-control system.",
+      "vector": {
+        "version": 0.7071067811865476,
+        "control": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "what is git",
+      "response": "Git is a distributed version-control system. A practical flow is: inspect changes, create a focused commit with a clear message, then push it to a shared remote when ready.",
+      "vector": {
+        "git": 1.0
+      }
+    },
+    {
+      "prompt": "what is debugging",
+      "response": "Debugging is the disciplined process of reproducing a problem, narrowing its cause, fixing it, and adding a check so it does not return unnoticed.",
+      "vector": {
+        "debugging": 1.0
+      }
+    },
+    {
+      "prompt": "how do i write good code",
+      "response": "Start with a clear behavior, keep functions small and named for their purpose, validate inputs, handle failure paths, write tests for key cases, and prefer simple designs over clever ones.",
+      "vector": {
+        "write": 0.5773502691896257,
+        "good": 0.5773502691896257,
+        "code": 0.5773502691896257
+      }
+    },
+    {
+      "prompt": "what is a function in programming",
+      "response": "A function is a named, reusable piece of code that accepts inputs, performs a focused task, and may return an output.",
+      "vector": {
+        "function": 0.7375292900949346,
+        "programming": 0.6753151458778796
+      }
+    },
+    {
+      "prompt": "what is a variable",
+      "response": "A variable is a named reference to a value used by a program. Its value can often change while the program runs.",
+      "vector": {
+        "variable": 1.0
+      }
+    },
+    {
+      "prompt": "what is python",
+      "response": "Python is a high-level general-purpose programming language known for readable syntax and a broad ecosystem.",
+      "vector": {
+        "python": 1.0
+      }
+    },
+    {
+      "prompt": "how do i learn programming",
+      "response": "Choose one language, build small projects, read error messages carefully, practice regularly, and explain your solution in your own words. Consistent feedback beats passive watching.",
+      "vector": {
+        "learn": 0.7071067811865475,
+        "programming": 0.7071067811865475
+      }
+    },
+    {
+      "prompt": "what is an algorithm",
+      "response": "An algorithm is a finite, unambiguous sequence of steps for solving a problem or performing a computation.",
+      "vector": {
+        "algorithm": 1.0
+      }
+    },
+    {
+      "prompt": "what is big o notation",
+      "response": "Big O notation describes how an algorithm's time or memory needs grow as input size grows. It is useful for comparing scalability, not for measuring one exact runtime.",
+      "vector": {
+        "big": 0.7071067811865476,
+        "notation": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "what is a test",
+      "response": "A software test checks that a behavior matches an expected result. Good tests are focused, repeatable, and include important edge cases.",
+      "vector": {
+        "test": 1.0
+      }
+    },
+    {
+      "prompt": "how do i plan a project",
+      "response": "Define the desired outcome, list constraints, break work into small deliverables, choose a first milestone, identify risks, and review progress at regular intervals.",
+      "vector": {
+        "plan": 0.7071067811865476,
+        "project": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "how do i make a decision",
+      "response": "Clarify the goal, gather the few facts that matter, list options and trade-offs, decide by a deadline, then revisit if new evidence changes the assumptions.",
+      "vector": {
+        "make": 0.7071067811865476,
+        "decision": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "what is critical thinking",
+      "response": "Critical thinking means examining claims, evidence, assumptions, alternatives, and uncertainty before reaching a conclusion.",
+      "vector": {
+        "critical": 0.7071067811865476,
+        "thinking": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "what is probability",
+      "response": "Probability quantifies uncertainty on a scale from 0 to 1, where 0 means impossible and 1 means certain under a stated model.",
+      "vector": {
+        "probability": 1.0
+      }
+    },
+    {
+      "prompt": "what is compound interest",
+      "response": "Compound interest means interest is calculated on both the original amount and previously accumulated interest. Its effect depends on rate, time, deposits, fees, and compounding frequency.",
+      "vector": {
+        "compound": 0.7375292900949346,
+        "interest": 0.6753151458778796
+      }
+    },
+    {
+      "prompt": "how do i stay productive",
+      "response": "Choose one important next action, remove obvious distractions, work in a time-bounded focus block, take a short break, and review the result before starting the next task.",
+      "vector": {
+        "stay": 0.7071067811865476,
+        "productive": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "how do i communicate clearly",
+      "response": "Lead with the main point, use concrete language, separate facts from opinions, give necessary context, and state the requested next action.",
+      "vector": {
+        "communicate": 0.7071067811865476,
+        "clearly": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "what is democracy",
+      "response": "Democracy is a system in which political authority ultimately comes from the people, commonly through elections, representative institutions, rule of law, and protected rights.",
+      "vector": {
+        "democracy": 1.0
+      }
+    },
+    {
+      "prompt": "what is the rule of law",
+      "response": "Rule of law means laws are public, applied consistently, and constrain both citizens and government officials through fair procedures.",
+      "vector": {
+        "rule": 0.7071067811865476,
+        "law": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "what is inflation",
+      "response": "Inflation is a sustained increase in the general price level. It reduces the purchasing power of a unit of currency over time.",
+      "vector": {
+        "inflation": 1.0
+      }
+    },
+    {
+      "prompt": "what causes inflation",
+      "response": "Inflation can arise when demand grows faster than supply, production costs rise, money and credit expand too quickly, or inflation expectations become entrenched. The cause varies by situation.",
+      "vector": {
+        "causes": 0.7375292900949346,
+        "inflation": 0.6753151458778796
+      }
+    },
+    {
+      "prompt": "what is gross domestic product",
+      "response": "Gross domestic product, or GDP, is the market value of final goods and services produced within an economy over a specified period. It is useful but does not measure every aspect of wellbeing.",
+      "vector": {
+        "gross": 0.5773502691896257,
+        "domestic": 0.5773502691896257,
+        "product": 0.5773502691896257
+      }
+    },
+    {
+      "prompt": "what is unemployment",
+      "response": "Unemployment measures people who are actively seeking work but do not currently have it. Different countries use specific survey definitions, so comparisons need context.",
+      "vector": {
+        "unemployment": 1.0
+      }
+    },
+    {
+      "prompt": "what is a budget",
+      "response": "A budget is a plan for income, spending, saving, and debt payments. A useful first step is to track actual spending and give each important expense a category.",
+      "vector": {
+        "budget": 1.0
+      }
+    },
+    {
+      "prompt": "what is an emergency fund",
+      "response": "An emergency fund is cash set aside for unexpected necessary expenses or income loss. The appropriate amount depends on stability, obligations, insurance, and access to support.",
+      "vector": {
+        "emergency": 0.7071067811865476,
+        "fund": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "what is diversification",
+      "response": "Diversification means spreading investments across assets, sectors, or regions so one failure has less impact. It reduces some risk but cannot remove all risk.",
+      "vector": {
+        "diversification": 1.0
+      }
+    },
+    {
+      "prompt": "what is a supply and demand",
+      "response": "Supply is how much sellers are willing to provide at different prices; demand is how much buyers want. Their interaction influences prices and quantities in a market.",
+      "vector": {
+        "supply": 0.7071067811865476,
+        "demand": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "what is interest rate",
+      "response": "An interest rate is the cost of borrowing or the return paid for lending, expressed as a percentage over a period. Real returns also depend on inflation, fees, and taxes.",
+      "vector": {
+        "interest": 0.6753151458778796,
+        "rate": 0.7375292900949346
+      }
+    },
+    {
+      "prompt": "what is a cell",
+      "response": "A cell is the smallest unit of life. Cells use energy, maintain internal conditions, process information, and reproduce or contribute to an organism's reproduction.",
+      "vector": {
+        "cell": 1.0
+      }
+    },
+    {
+      "prompt": "what is dna",
+      "response": "DNA, deoxyribonucleic acid, stores genetic instructions used in the development and operation of living organisms.",
+      "vector": {
+        "dna": 1.0
+      }
+    },
+    {
+      "prompt": "what is evolution",
+      "response": "Evolution is the change in heritable traits of populations across generations. Natural selection is one process that can make traits linked to reproductive success more common.",
+      "vector": {
+        "evolution": 1.0
+      }
+    },
+    {
+      "prompt": "what is a vaccine",
+      "response": "A vaccine prepares the immune system to recognize a disease-causing agent or part of it, helping reduce the risk or severity of future infection. Medical decisions should use current guidance from qualified professionals.",
+      "vector": {
+        "vaccine": 1.0
+      }
+    },
+    {
+      "prompt": "what is a virus",
+      "response": "A virus is an infectious agent that relies on host cells to reproduce. Different viruses spread and affect people in different ways.",
+      "vector": {
+        "virus": 1.0
+      }
+    },
+    {
+      "prompt": "what is nutrition",
+      "response": "Nutrition is the process of obtaining and using food and nutrients. Healthful eating patterns generally emphasize varied minimally processed foods, adequate protein and fiber, and moderation; individual needs vary.",
+      "vector": {
+        "nutrition": 1.0
+      }
+    },
+    {
+      "prompt": "how do i exercise safely",
+      "response": "Begin at an appropriate level, progress gradually, use sound technique, rest, and stop for concerning symptoms. Seek qualified medical guidance for injuries, symptoms, or conditions that could make exercise risky.",
+      "vector": {
+        "exercise": 0.7071067811865476,
+        "safely": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "what is mental health",
+      "response": "Mental health includes emotional, psychological, and social wellbeing. Persistent distress, impaired daily functioning, or thoughts of self-harm deserve prompt support from trusted people and qualified professionals or local emergency services.",
+      "vector": {
+        "mental": 0.7071067811865476,
+        "health": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "what is physics",
+      "response": "Physics studies matter, energy, motion, forces, and the fundamental rules that describe natural phenomena.",
+      "vector": {
+        "physics": 1.0
+      }
+    },
+    {
+      "prompt": "what is energy",
+      "response": "Energy is the capacity to do work or cause change. It can take forms such as kinetic, thermal, chemical, electrical, and radiant energy, and is conserved in closed systems.",
+      "vector": {
+        "energy": 1.0
+      }
+    },
+    {
+      "prompt": "what is gravity",
+      "response": "Gravity is the attraction between masses. Near Earth's surface it gives objects weight and causes them to accelerate downward when unsupported.",
+      "vector": {
+        "gravity": 1.0
+      }
+    },
+    {
+      "prompt": "what is electricity",
+      "response": "Electricity involves electric charge and its movement or effects. Electric current is the flow of charge, while voltage is a difference in electric potential.",
+      "vector": {
+        "electricity": 1.0
+      }
+    },
+    {
+      "prompt": "what is chemistry",
+      "response": "Chemistry studies substances, their properties, and the changes that occur when atoms and molecules interact.",
+      "vector": {
+        "chemistry": 1.0
+      }
+    },
+    {
+      "prompt": "what is an atom",
+      "response": "An atom is a basic unit of ordinary matter made of a nucleus containing protons and neutrons, with electrons occupying regions around the nucleus.",
+      "vector": {
+        "atom": 1.0
+      }
+    },
+    {
+      "prompt": "what is a molecule",
+      "response": "A molecule is a group of two or more atoms held together by chemical bonds.",
+      "vector": {
+        "molecule": 1.0
+      }
+    },
+    {
+      "prompt": "what is mathematics",
+      "response": "Mathematics studies quantity, structure, space, change, and logical relationships. It provides precise tools for reasoning and modeling.",
+      "vector": {
+        "mathematics": 1.0
+      }
+    },
+    {
+      "prompt": "what is algebra",
+      "response": "Algebra uses symbols and rules to represent quantities and relationships, making it possible to solve equations and describe patterns.",
+      "vector": {
+        "algebra": 1.0
+      }
+    },
+    {
+      "prompt": "what is statistics",
+      "response": "Statistics is the science of collecting, analyzing, and interpreting data. Good statistical conclusions consider sampling, uncertainty, confounders, and the limits of the data.",
+      "vector": {
+        "statistics": 1.0
+      }
+    },
+    {
+      "prompt": "what is correlation",
+      "response": "Correlation measures how variables vary together. Correlation alone does not establish that one variable causes the other.",
+      "vector": {
+        "correlation": 1.0
+      }
+    },
+    {
+      "prompt": "what is history",
+      "response": "History is the study of the past through evidence and interpretation. Strong historical reasoning considers sources, context, perspective, and uncertainty.",
+      "vector": {
+        "history": 1.0
+      }
+    },
+    {
+      "prompt": "what is geography",
+      "response": "Geography studies places, environments, people, and the relationships between them across Earth's surface.",
+      "vector": {
+        "geography": 1.0
+      }
+    },
+    {
+      "prompt": "what is culture",
+      "response": "Culture includes shared practices, values, language, art, customs, and institutions that shape how groups make meaning and organize life.",
+      "vector": {
+        "culture": 1.0
+      }
+    },
+    {
+      "prompt": "what is philosophy",
+      "response": "Philosophy examines fundamental questions about knowledge, reality, ethics, reasoning, and meaning through careful argument.",
+      "vector": {
+        "philosophy": 1.0
+      }
+    },
+    {
+      "prompt": "what is ethics",
+      "response": "Ethics is the study of how people ought to act and what makes actions, institutions, or outcomes right, fair, or good.",
+      "vector": {
+        "ethics": 1.0
+      }
+    },
+    {
+      "prompt": "what is bias",
+      "response": "Bias is a systematic tendency that can distort judgment, measurement, or decisions. Looking for disconfirming evidence and diverse perspectives can help reduce it.",
+      "vector": {
+        "bias": 1.0
+      }
+    },
+    {
+      "prompt": "how do i evaluate a source",
+      "response": "Check who created it, their expertise and incentives, the date, the evidence and links, agreement with independent reliable sources, and whether the claim is presented with appropriate uncertainty.",
+      "vector": {
+        "evaluate": 0.7071067811865476,
+        "source": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "what is copyright",
+      "response": "Copyright is a legal framework that generally gives creators control over copying and certain uses of original expression. Rules and exceptions differ by jurisdiction.",
+      "vector": {
+        "copyright": 1.0
+      }
+    },
+    {
+      "prompt": "what is privacy",
+      "response": "Privacy is the ability to control access to personal information, communications, and aspects of one's life. Good digital practice includes minimizing collection and securing sensitive data.",
+      "vector": {
+        "privacy": 1.0
+      }
+    },
+    {
+      "prompt": "what is the internet",
+      "response": "The internet is a global network of interconnected networks that exchange data using standardized protocols, including the Internet Protocol suite.",
+      "vector": {
+        "internet": 1.0
+      }
+    },
+    {
+      "prompt": "what is a website",
+      "response": "A website is a collection of web pages and resources typically served under a domain name and accessed with a browser.",
+      "vector": {
+        "website": 1.0
+      }
+    },
+    {
+      "prompt": "what is html",
+      "response": "HTML, HyperText Markup Language, defines the structure and meaning of content on a web page.",
+      "vector": {
+        "html": 1.0
+      }
+    },
+    {
+      "prompt": "what is css",
+      "response": "CSS, Cascading Style Sheets, controls the presentation and layout of web content.",
+      "vector": {
+        "css": 1.0
+      }
+    },
+    {
+      "prompt": "what is javascript",
+      "response": "JavaScript is a programming language commonly used to add behavior and interactivity to web applications, and it can also run on servers.",
+      "vector": {
+        "javascript": 1.0
+      }
+    },
+    {
+      "prompt": "what is an operating system",
+      "response": "An operating system manages hardware resources and provides common services and interfaces for programs, users, storage, networking, and security.",
+      "vector": {
+        "operating": 0.7375292900949346,
+        "system": 0.6753151458778796
+      }
+    },
+    {
+      "prompt": "what is cloud computing",
+      "response": "Cloud computing provides computing resources such as servers, storage, databases, and software over a network. It involves trade-offs in cost, control, reliability, and data protection.",
+      "vector": {
+        "cloud": 0.7071067811865476,
+        "computing": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "what is backup",
+      "response": "A backup is a separate recoverable copy of important data. A practical strategy keeps multiple copies on different media, including one offline or offsite, and tests restoration.",
+      "vector": {
+        "backup": 1.0
+      }
+    },
+    {
+      "prompt": "what is a spreadsheet",
+      "response": "A spreadsheet organizes data in rows and columns and can calculate, summarize, visualize, and model information using formulas.",
+      "vector": {
+        "spreadsheet": 1.0
+      }
+    },
+    {
+      "prompt": "what is a resume",
+      "response": "A resume is a concise record of relevant experience, skills, education, and achievements tailored to a specific opportunity.",
+      "vector": {
+        "resume": 1.0
+      }
+    },
+    {
+      "prompt": "how do i prepare for an interview",
+      "response": "Study the role and organization, prepare concrete examples of your work using situation-action-result structure, practice thoughtful questions, and be honest about what you know and want to learn.",
+      "vector": {
+        "prepare": 0.7071067811865476,
+        "interview": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "how do i resolve conflict",
+      "response": "Describe the issue without blame, listen to understand the other perspective, identify shared interests, suggest specific options, and agree on a next step. Step away if safety is at risk.",
+      "vector": {
+        "resolve": 0.7071067811865476,
+        "conflict": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "how do i learn effectively",
+      "response": "Use active recall, spaced repetition, practice on varied problems, immediate feedback, and short explanations in your own words. Sleep and regular breaks improve retention.",
+      "vector": {
+        "learn": 0.6753151458778796,
+        "effectively": 0.7375292900949346
+      }
+    },
+    {
+      "prompt": "what is scientific method",
+      "response": "Scientific inquiry uses observations, testable questions, evidence, transparent methods, replication, and revision of explanations when evidence changes.",
+      "vector": {
+        "scientific": 0.7071067811865476,
+        "method": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "what is science",
+      "response": "Science is a systematic way of building knowledge about the natural world through observation, evidence, testable explanations, and revision when better evidence appears.",
+      "vector": {
+        "science": 1.0
+      }
+    },
+    {
+      "prompt": "hello jarvis",
+      "response": "Hello. I am JARVIS, your private locally trained assistant. What would you like to work on?",
+      "vector": {
+        "hello": 0.7071067811865476,
+        "jarvis": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "how do i add knowledge",
+      "response": "Add prompt and response examples to training/dataset.jsonl, then run python brain.py train. You can also add factual documents to the protected local knowledge endpoint.",
+      "vector": {
+        "add": 0.7071067811865476,
+        "knowledge": 0.7071067811865476
+      }
+    },
+    {
+      "prompt": "how do i retrain you",
+      "response": "Edit training/dataset.jsonl with clear, high-quality question and answer pairs, then run python brain.py train. This replaces the local model index with one trained from your current dataset.",
+      "vector": {
+        "retrain": 1.0
+      }
+    },
+    {
+      "prompt": "are you private",
+      "response": "Yes. This Jarvis Brain runs locally and does not send prompts to external model providers. Protect your own API keys and server access.",
+      "vector": {
+        "private": 1.0
+      }
+    },
+    {
+      "prompt": "what is your name",
+      "response": "I am JARVIS, a private assistant trained from your own local dataset.",
+      "vector": {
+        "name": 1.0
+      }
+    }
+  ],
+  "vocabulary": {
+    "solar": 4.80666248977032,
+    "system": 4.401197381662156,
+    "planets": 4.80666248977032,
+    "order": 4.80666248977032,
+    "photosynthesis": 4.80666248977032,
+    "climate": 4.80666248977032,
+    "change": 4.80666248977032,
+    "machine": 4.80666248977032,
+    "learning": 4.80666248977032,
+    "neural": 4.80666248977032,
+    "network": 4.80666248977032,
+    "database": 4.80666248977032,
+    "api": 4.401197381662156,
+    "encryption": 4.80666248977032,
+    "protect": 4.80666248977032,
+    "keys": 4.80666248977032,
+    "strong": 4.80666248977032,
+    "password": 4.80666248977032,
+    "phishing": 4.80666248977032,
+    "version": 4.80666248977032,
+    "control": 4.80666248977032,
+    "git": 4.80666248977032,
+    "debugging": 4.80666248977032,
+    "write": 4.80666248977032,
+    "good": 4.80666248977032,
+    "code": 4.80666248977032,
+    "function": 4.80666248977032,
+    "programming": 4.401197381662156,
+    "variable": 4.80666248977032,
+    "python": 4.80666248977032,
+    "learn": 4.401197381662156,
+    "algorithm": 4.80666248977032,
+    "big": 4.80666248977032,
+    "notation": 4.80666248977032,
+    "test": 4.80666248977032,
+    "plan": 4.80666248977032,
+    "project": 4.80666248977032,
+    "make": 4.80666248977032,
+    "decision": 4.80666248977032,
+    "critical": 4.80666248977032,
+    "thinking": 4.80666248977032,
+    "probability": 4.80666248977032,
+    "compound": 4.80666248977032,
+    "interest": 4.401197381662156,
+    "stay": 4.80666248977032,
+    "productive": 4.80666248977032,
+    "communicate": 4.80666248977032,
+    "clearly": 4.80666248977032,
+    "democracy": 4.80666248977032,
+    "rule": 4.80666248977032,
+    "law": 4.80666248977032,
+    "inflation": 4.401197381662156,
+    "causes": 4.80666248977032,
+    "gross": 4.80666248977032,
+    "domestic": 4.80666248977032,
+    "product": 4.80666248977032,
+    "unemployment": 4.80666248977032,
+    "budget": 4.80666248977032,
+    "emergency": 4.80666248977032,
+    "fund": 4.80666248977032,
+    "diversification": 4.80666248977032,
+    "supply": 4.80666248977032,
+    "demand": 4.80666248977032,
+    "rate": 4.80666248977032,
+    "cell": 4.80666248977032,
+    "dna": 4.80666248977032,
+    "evolution": 4.80666248977032,
+    "vaccine": 4.80666248977032,
+    "virus": 4.80666248977032,
+    "nutrition": 4.80666248977032,
+    "exercise": 4.80666248977032,
+    "safely": 4.80666248977032,
+    "mental": 4.80666248977032,
+    "health": 4.80666248977032,
+    "physics": 4.80666248977032,
+    "energy": 4.80666248977032,
+    "gravity": 4.80666248977032,
+    "electricity": 4.80666248977032,
+    "chemistry": 4.80666248977032,
+    "atom": 4.80666248977032,
+    "molecule": 4.80666248977032,
+    "mathematics": 4.80666248977032,
+    "algebra": 4.80666248977032,
+    "statistics": 4.80666248977032,
+    "correlation": 4.80666248977032,
+    "history": 4.80666248977032,
+    "geography": 4.80666248977032,
+    "culture": 4.80666248977032,
+    "philosophy": 4.80666248977032,
+    "ethics": 4.80666248977032,
+    "bias": 4.80666248977032,
+    "evaluate": 4.80666248977032,
+    "source": 4.80666248977032,
+    "copyright": 4.80666248977032,
+    "privacy": 4.80666248977032,
+    "internet": 4.80666248977032,
+    "website": 4.80666248977032,
+    "html": 4.80666248977032,
+    "css": 4.80666248977032,
+    "javascript": 4.80666248977032,
+    "operating": 4.80666248977032,
+    "cloud": 4.80666248977032,
+    "computing": 4.80666248977032,
+    "backup": 4.80666248977032,
+    "spreadsheet": 4.80666248977032,
+    "resume": 4.80666248977032,
+    "prepare": 4.80666248977032,
+    "interview": 4.80666248977032,
+    "resolve": 4.80666248977032,
+    "conflict": 4.80666248977032,
+    "effectively": 4.80666248977032,
+    "scientific": 4.80666248977032,
+    "method": 4.80666248977032,
+    "science": 4.80666248977032,
+    "hello": 4.80666248977032,
+    "jarvis": 4.80666248977032,
+    "add": 4.80666248977032,
+    "knowledge": 4.80666248977032,
+    "retrain": 4.80666248977032,
+    "private": 4.80666248977032,
+    "name": 4.80666248977032
+  }
+}

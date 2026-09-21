@@ -1,0 +1,9 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/ollama/*"
+  to = "/.netlify/functions/ollama"
+  status = 200
+  force = true
