@@ -10,6 +10,8 @@ const apiKey = process.env.OPENROUTER_API_KEY;
 const model = process.env.OPENROUTER_MODEL || 'openrouter/free';
 const variantsPerSeed = Math.min(Math.max(Number(process.env.OPENROUTER_VARIANTS || 2), 1), 10);
 const maxExamples = Math.max(Number(process.env.OPENROUTER_MAX_EXAMPLES || 500), 1);
+const concurrency = Math.min(Math.max(Number(process.env.OPENROUTER_CONCURRENCY || 4), 1), 8);
+const retries = Math.min(Math.max(Number(process.env.OPENROUTER_RETRIES || 2), 0), 4);
 
 function readSeeds() {
   const files = fs.readdirSync(inputDirectory)
@@ -45,7 +47,21 @@ function uniqueRows(rows) {
 }
 
 function parseResponse(content) {
-  const parsed = JSON.parse(content);
+  const cleaned = content
+    .replace(/^```(?:json)?\s*/i, '')
+    .replace(/\s*```$/i, '')
+    .trim();
+  let parsed;
+  try {
+    parsed = JSON.parse(cleaned);
+  } catch (error) {
+    const start = cleaned.indexOf('{');
+    const end = cleaned.lastIndexOf('}');
+    if (start < 0 || end <= start) {
+      throw new Error(`OpenRouter response was not JSON: ${error.message}`);
+    }
+    parsed = JSON.parse(cleaned.slice(start, end + 1));
+  }
   const examples = Array.isArray(parsed) ? parsed : parsed.examples;
   if (!Array.isArray(examples)) throw new Error('OpenRouter response did not contain an examples array.');
   return examples
@@ -54,7 +70,7 @@ function parseResponse(content) {
     .filter(row => row.prompt && row.response);
 }
 
-async function generate(seed) {
+async function generateOnce(seed) {
   const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
     method: 'POST',
     headers: {
@@ -87,6 +103,19 @@ async function generate(seed) {
   return parseResponse(content);
 }
 
+async function generate(seed) {
+  let lastError;
+  for (let attempt = 0; attempt <= retries; attempt += 1) {
+    try {
+      return await generateOnce(seed);
+    } catch (error) {
+      lastError = error;
+      if (attempt < retries) await new Promise((resolve) => setTimeout(resolve, 500 * (attempt + 1)));
+    }
+  }
+  throw lastError;
+}
+
 async function main() {
   if (!apiKey) throw new Error('Set OPENROUTER_API_KEY in .env. Never put the key in source code or chat.');
   const seeds = readSeeds();
@@ -98,12 +127,18 @@ async function main() {
     : { nextSeed: 0, rows: [] };
   const rows = uniqueRows(checkpoint.rows || []);
 
-  for (let index = checkpoint.nextSeed || 0; index < seeds.length && rows.length < maxExamples; index += 1) {
-    const generated = await generate(seeds[index]);
-    rows.push(...generated);
+  let index = checkpoint.nextSeed || 0;
+  while (index < seeds.length && rows.length < maxExamples) {
+    const batch = seeds.slice(index, index + concurrency);
+    const results = await Promise.allSettled(batch.map((seed) => generate(seed)));
+    for (const result of results) {
+      if (result.status === 'fulfilled') rows.push(...result.value);
+      else console.error(`OPENROUTER_SEED_ERROR: ${result.reason?.message || result.reason}`);
+    }
+    index += batch.length;
     const bounded = uniqueRows(rows).slice(0, maxExamples);
-    fs.writeFileSync(checkpointFile, JSON.stringify({ nextSeed: index + 1, rows: bounded }, null, 2));
-    console.log(JSON.stringify({ seed: index + 1, totalSeeds: seeds.length, examples: bounded.length }));
+    fs.writeFileSync(checkpointFile, JSON.stringify({ nextSeed: index, rows: bounded }, null, 2));
+    console.log(JSON.stringify({ processedSeeds: index, totalSeeds: seeds.length, examples: bounded.length, concurrency }));
   }
 
   const finalRows = uniqueRows(rows).slice(0, maxExamples);

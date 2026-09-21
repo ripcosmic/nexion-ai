@@ -112,6 +112,20 @@ def train(dataset=DATASET, output=DEFAULT_MODEL):
 
 def respond(model_path, prompt):
     model = json.loads(Path(model_path).read_text(encoding='utf8'))
+    basic_replies = {
+        'hello': 'Hello! I am Nexion, your AI assistant. How can I help you today?',
+        'hello nexion': 'Hello! I am Nexion, your AI assistant. How can I help you today?',
+        'hi': 'Hi there! I am Nexion, your AI assistant. What can I do for you?',
+        'hey': 'Hey! I am Nexion, your AI assistant. How can I help?',
+        'how are you': 'I’m doing well and ready to help. What would you like to work on?',
+        'how are you doing': 'I’m doing well, thank you! I’m ready to help with questions, ideas, research, or code.',
+        'who are you': 'I am Nexion, your AI assistant. I’m here to answer questions, explain concepts, and help you create practical solutions.',
+        'what is your name': 'My name is Nexion. I am your AI assistant, and I can help with explanations, ideas, planning, and code.',
+    }
+    normalized_prompt = re.sub(r'\s+', ' ', prompt.strip().lower()).strip('!?.,')
+    if normalized_prompt in basic_replies:
+        print(json.dumps({'reply': basic_replies[normalized_prompt], 'confidence': 1.0}))
+        return
     query_counts = Counter(words(prompt))
     weighted = {term: query_counts[term] * model['vocabulary'][term] for term in query_counts if term in model['vocabulary']}
     length = math.sqrt(sum(value * value for value in weighted.values())) or 1

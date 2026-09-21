@@ -182,6 +182,31 @@ Then rebuild:
 python .\brain.py train
 ```
 
+### Source-backed dataset expansion
+
+For large datasets, do not create one giant file or fabricate answers. Put
+licensed JSONL, JSON, or CSV sources in a separate directory and import them
+into bounded shards:
+
+```powershell
+npm run import:source-dataset -- --source .\sources `
+  --output .\training\source-import `
+  --max-records 500000 `
+  --shard-size 10000
+```
+
+JSONL/JSON/CSV rows can use `prompt`/`response`, `question`/`answer`, or
+`instruction`/`output`. Every imported record receives a deterministic ID,
+source, and license field. Duplicate prompt/response pairs are removed and
+`manifest.json` records counts and provenance. Markdown and text documentation
+can be imported as bounded source chunks with `--include-documents`; those
+chunks must still be reviewed before training.
+
+The importer supports a 500,000-record target, but it cannot supply missing
+content or create 1,000 answers per topic. Those records must come from
+authorized source material. Review licenses and quality before copying shards
+into `training/`, because the trainer reads every JSONL file in that directory.
+
 Nexion checks the local model file every 30 seconds. Your next message uses the newest trained model.
 
 Included datasets:
@@ -208,6 +233,26 @@ examples to a JSON file cannot train new neural weights. True weight fine-tuning
 requires a separate training stack, substantial data, and suitable GPU memory.
 
 ## Fine-tune with Unsloth (QLoRA)
+
+### llama.cpp CMake build
+
+The repository includes the upstream `llama.cpp` source under `llama.cpp` and a
+Windows build wrapper at [`scripts/build-llama.ps1`](./scripts/build-llama.ps1).
+The wrapper configures the llama server, common library, and tools with CMake:
+
+```powershell
+.\scripts\build-llama.ps1 -Action Configure
+.\scripts\build-llama.ps1 -Action Build
+```
+
+This requires CMake and the **Visual Studio Build Tools -> Desktop development
+with C++** workload. The installed standalone `llama.exe` can run models, but
+it is not a compiler and cannot build the checked-out source tree.
+
+After a successful build, the server executable is located under
+`llama.cpp/build-nexion/bin/Release/llama-server.exe`. The CMake wrapper does
+not fine-tune by itself: use the Unsloth/QLoRA command below to train weights,
+then export GGUF and run the resulting model with llama.cpp.
 
 The repository also includes [`scripts/finetune_unsloth.py`](./scripts/finetune_unsloth.py)
 for real supervised fine-tuning. It trains a small LoRA adapter on the JSONL

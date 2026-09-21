@@ -1,0 +1,205 @@
+{
+  "nextSeed": 27,
+  "rows": [
+    {
+      "prompt": "Write a minimal Python program that displays the message Hello, world.",
+      "response": "Create a file named `hello.py` with this code:\n\n```python\nprint(\"Hello, world\")\n```\n\nRun it using:\n\n```bash\npython hello.py\n```\n\nThis prints `Hello, world` to the terminal."
+    },
+    {
+      "prompt": "How do I print a greeting from Python? Please include the code and a command to run it.",
+      "response": "Use Python's built-in `print()` function:\n\n```python\nprint(\"Hello, world!\")\n```\n\nSave the code in a file named `hello.py`, then run:\n\n```bash\npython hello.py\n```\n\nThe program outputs:\n\n```text\nHello, world!\n```"
+    },
+    {
+      "prompt": "Provide a simple Python hello world program.",
+      "response": "```python\n\ndef main():\n    print(\"Hello, World!\")\n\nif __name__ == \"__main__\":\n    main()\n```"
+    },
+    {
+      "prompt": "Show me a minimal Python script that prints a greeting using a function.",
+      "response": "```python\n\ndef greet():\n    print(\"Hello from Nexion\")\n\nif __name__ == \"__main__\":\n    greet()\n```"
+    },
+    {
+      "prompt": "Write a Python function that reverses a given string. The function should handle edge cases such as empty strings and return the reversed result.",
+      "response": "```python\ndef reverse_string(s):\n    \"\"\"\n    Reverse a string character by character.\n    \n    Args:\n        s (str): The input string to reverse\n        \n    Returns:\n        str: The reversed string\n        \n    Raises:\n        TypeError: If input is not a string\n    \"\"\"\n    if not isinstance(s, str):\n        raise TypeError(\"Input must be a string\")\n    return s[::-1]\n\n# Test the function\nprint(reverse_string(\"hello\"))  # Output: \"olleh\"\n```"
+    },
+    {
+      "prompt": "Implement a string reversal function in Python. Demonstrate an approach that explicitly iterates through indices rather than using slice notation.",
+      "response": "```python\ndef reverse_string(text):\n    \"\"\"Reverse a string by iterating from the last index to the first.\"\"\"\n    if not isinstance(text, str):\n        raise TypeError(\"Input must be a string\")\n    # Build the reversed string by accessing characters from end to start\n    reversed_chars = []\n    for i in range(len(text) - 1, -1, -1):\n        reversed_chars.append(text[i])\n    return ''.join(reversed_chars)\n\n# Verify with test cases\nprint(reverse_string(\"Nexion\"))  # Output: \"noixen\"\nprint(reverse_string(\"\"))       # Output: \"\"\n```"
+    },
+    {
+      "prompt": "Write a Python function called add_numbers that takes two numeric arguments and returns their sum. Include a brief example call.",
+      "response": "```python\ndef add_numbers(a, b):\n    \"\"\"Return the sum of two numbers.\"\"\"\n    return a + b\n\nprint(add_numbers(2, 3))  # 5\n```"
+    },
+    {
+      "prompt": "Create a reusable Python function for adding two values. Show the result of adding -4 and 7.5.",
+      "response": "```python\ndef add(a, b):\n    return a + b\n\nresult = add(-4, 7.5)\nprint(result)  # 3.5\n```"
+    },
+    {
+      "prompt": "Write a simple Python for loop that prints a numbered list from a list of items.",
+      "response": "```python\nitems = [\"Nexion\", \"Python\", \"Code\"]\n\nfor index, item in enumerate(items, start=1):\n    print(f\"{index}. {item}\")\n```"
+    },
+    {
+      "prompt": "Show how to use a Python for loop to process each item in a list and print it with its position.",
+      "response": "```python\nnames = [\"Nexion\", \"Python\", \"Code\"]\n\nfor i in range(len(names)):\n    print(f\"{i + 1}. {names[i]}\")\n```"
+    },
+    {
+      "prompt": "Give an example of a Python list comprehension that computes the squares of even numbers between 1 and 10.",
+      "response": "```python\nsquares = [n * n for n in range(1, 11) if n % 2 == 0]\nprint(squares)\n```"
+    },
+    {
+      "prompt": "Show how to use a list comprehension to create a list of cubes for numbers from 0 to 9 that are divisible by 3.",
+      "response": "```python\ncubes = [n ** 3 for n in range(0, 10) if n % 3 == 0]\nprint(cubes)\n```"
+    },
+    {
+      "prompt": "Show how to create a Python dictionary, safely get a value with a default, and iterate over its items.",
+      "response": "```python\nuser = {\"name\": \"Avighn\", \"role\": \"engineer\"}\nprint(user.get(\"name\", \"unknown\"))\nfor key, value in user.items():\n    print(f\"{key}: {value}\")\n```"
+    },
+    {
+      "prompt": "Give a simple Python snippet that demonstrates dictionary creation, using .get() to avoid KeyError, and printing each key-value pair.",
+      "response": "```python\nperson = {\"name\": \"Avighn\", \"role\": \"engineer\"}\nprint(person.get(\"name\", \"unknown\"))\nfor k, v in person.items():\n    print(f\"{k}: {v}\")\n```"
+    },
+    {
+      "prompt": "Create a simple Python class named Counter. It should start at zero by default, provide methods to increase and decrease the value, and return the updated value after each operation.",
+      "response": "```python\nclass Counter:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def decrement(self, amount=1):\n        self.value -= amount\n        return self.value\n\n\ncounter = Counter()\nprint(counter.increment())  # 1\nprint(counter.decrement())  # 0\n```"
+    },
+    {
+      "prompt": "Write a Python class that represents a rectangle. Store its width and height, reject non-positive dimensions, and include methods for calculating its area and perimeter.",
+      "response": "```python\nclass Rectangle:\n    def __init__(self, width, height):\n        if width <= 0 or height <= 0:\n            raise ValueError(\"Width and height must be positive.\")\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)\n\n\nrectangle = Rectangle(5, 3)\nprint(rectangle.area())      # 15\nprint(rectangle.perimeter()) # 16\n```"
+    },
+    {
+      "prompt": "How do I read the contents of a text file in Python using a context manager?",
+      "response": "```python\nwith open(\"notes.txt\", \"r\", encoding=\"utf-8\") as f:\n    content = f.read()\nprint(content)\n```"
+    },
+    {
+      "prompt": "What's the Pythonic way to read a file line by line into a list?",
+      "response": "```python\nfrom pathlib import Path\n\nlines = Path(\"notes.txt\").read_text(encoding=\"utf-8\").splitlines()\n# Or using open():\n# with open(\"notes.txt\", encoding=\"utf-8\") as f:\n#     lines = f.readlines()\nprint(lines)\n```"
+    },
+    {
+      "prompt": "Python: write a JSON file",
+      "response": "```python\nimport json\nfrom pathlib import Path\n\ndata = {\n    \"name\": \"Nexion\",\n    \"theme\": \"purple\",\n}\n\noutput_path = Path(\"config.json\")\noutput_path.write_text(\n    json.dumps(data, indent=2, ensure_ascii=False),\n    encoding=\"utf-8\",\n)\n```\n\nThis writes the dictionary as pretty-printed JSON to `config.json` in the current directory. Use `Path(\"subfolder/config.json\")` when the destination is in a subdirectory."
+    },
+    {
+      "prompt": "How can I save a Python object as a JSON file?",
+      "response": "```python\nimport json\nfrom pathlib import Path\n\nrecord = {\n    \"name\": \"Nexion\",\n    \"theme\": \"purple\",\n}\n\nwith Path(\"record.json\").open(\"w\", encoding=\"utf-8\") as file:\n    json.dump(record, file, indent=2, ensure_ascii=False)\n```\n\n`json.dump()` writes the object directly to the file. The dictionary must contain JSON-compatible values; for example, use a `datetime` converted to a string rather than a raw `datetime` object."
+    },
+    {
+      "prompt": "How to send a POST request with form data using Python's standard library urllib?",
+      "response": "Use urllib.request to post data via the requests object:\n\n```python\nfrom urllib.request import urlopen, parse_qs, urlencode\nimport json\n\n# Example: posting form data to a JSON API\nbase_url = \"https://httpbin.org/post\"\ndata = {\"name\": \"Alice\", \"age\": 30}\n\n# Encode form data as application/x-www-form-urlencoded\nform_data = urlencode(data)\n\nwith urlopen(f\"{base_url}?data={form_data}\", timeout=10) as response:\n    result = json.loads(response.read().decode(\"utf-8\"))\n    print(result)\n```\nThis approach avoids external dependencies while correctly encoding multipart/form-data or simple key-value pairs."
+    },
+    {
+      "prompt": "Demonstrate a robust GET request with query parameters and error handling in Python.",
+      "response": "Use urllib with proper exception handling for network issues and missing endpoints:\n\n```python\nfrom urllib.request import urlopen, Request, urlretrieve\nimport json\nimport sys\n\ndef fetch_with_headers(url, params=None):\n    headers = {\"Accept\": \"application/json\"}\n    if params:\n        query_string = urlencode(params)\n        url = f\"{url}?{query_string}\"\n    \n    req = Request(url, headers=headers)\n    try:\n        with urlopen(req, timeout=15) as response:\n            # Read and decode response\n            content = response.read().decode(\"utf-8\")\n            return json.loads(content)\n    except urlopen.error as e:\n        print(f\"HTTP Error: {e.code} - {e.reason}\", file=sys.stderr)\n        raise\n    except TimeoutError:\n        print(\"Request timed out after 15 seconds\", file=sys.stderr)\n        raise\n    except Exception as e:\n        print(f\"Unexpected error: {e}\", file=sys.stderr)\n        raise\n\n# Usage\nresult = fetch_with_headers(\n    \"https://httpbin.org/get\",\n    params={\"page\": 1, \"limit\": 10}\n)\nprint(json.dumps(result, indent=2))\n```\nThe function constructs URLs safely, handles timeouts and HTTP errors gracefully, and returns structured JSON when successful."
+    },
+    {
+      "prompt": "Write a minimal Python script using the Flask framework to create a web server with a single GET endpoint at the root URL that returns a JSON response.",
+      "response": "```python\nfrom flask import Flask, jsonify\n\napp = Flask(__name__)\n\n@app.route('/', methods=['GET'])\ndef index():\n    # Returns a JSON object indicating the server is running\n    return jsonify({\n        \"message\": \"Hello, World!\",\n        \"status\": \"success\"\n    })\n\nif __name__ == '__main__':\n    # Running in debug mode for development convenience\n    app.run(debug=True)\n```"
+    },
+    {
+      "prompt": "How do I set up a basic Flask API route in Python that returns a dictionary as a JSON response when the user visits the home page?",
+      "response": "```python\nfrom flask import Flask\n\napp = Flask(__name__)\n\n@app.route('/')\ndef hello_world():\n    # Flask automatically converts dictionaries to JSON responses\n    return {\n        \"greeting\": \"Hello from Flask\",\n        \"version\": 1.0\n    }\n\nif __name__ == '__main__':\n    app.run(port=5000)\n```"
+    },
+    {
+      "prompt": "Write a Python helper that converts user-provided text to an integer. Return None when the value is not a valid integer instead of allowing TypeError or ValueError to stop the program.",
+      "response": "```python\ndef to_integer(value):\n    try:\n        return int(value)\n    except (TypeError, ValueError):\n        return None\n\nprint(to_integer(\"42\"))    # 42\nprint(to_integer(\"nexion\")) # None\nprint(to_integer(None))     # None\n```"
+    },
+    {
+      "prompt": "A program reads several numeric values from a file, and some lines may contain invalid data. Write Python code that attempts to convert each line to an integer, skips invalid lines, and reports how many were skipped.",
+      "response": "```python\nlines = [\"10\", \"20\", \"invalid\", \"30\", None]\n\nvalid_count = 0\nskipped_count = 0\n\nfor line in lines:\n    try:\n        number = int(line)\n    except (TypeError, ValueError):\n        skipped_count += 1\n        continue\n\n    valid_count += 1\n    print(f\"Processed: {number}\")\n\nprint(f\"Valid values: {valid_count}\")\nprint(f\"Skipped values: {skipped_count}\")\n```\n\nThis keeps processing going after each invalid value. The `continue` statement skips the remaining loop body only for that invalid line."
+    },
+    {
+      "prompt": "Write a minimal JavaScript program that prints \"Hello, world!\" to the console.",
+      "response": "```javascript\nconsole.log(\"Hello, world!\");\n```"
+    },
+    {
+      "prompt": "What JavaScript statement outputs \"Hello, world\" to the console, and how can it be run with Node.js?",
+      "response": "Use the following statement:\n\n```javascript\nconsole.log(\"Hello, world\");\n```\n\nSave it in a `.js` file, then run it with Node.js:\n\n```bash\nnode filename.js\n```"
+    },
+    {
+      "prompt": "How can I create a JavaScript function that takes a person's name as input and returns a greeting message?",
+      "response": "You can define a function using the `function` keyword, accept a parameter for the name, and use a template literal to build the greeting string. Here's an example:\n\n```javascript\nfunction createGreeting(name) {\n  return `Hello, ${name}!`;\n}\n\nconsole.log(createGreeting(\"Nexion\")); // Output: Hello, Nexion!\n```\n\nThis approach uses backticks and `${}` syntax to embed the `name` variable directly into the string, making it easy to read and maintain."
+    },
+    {
+      "prompt": "Write a JavaScript function that returns a personalized greeting when given a name, and show how to call it.",
+      "response": "Below is a simple JavaScript function named `greet` that accepts a `name` argument and returns a greeting using string interpolation:\n\n```javascript\nfunction greet(name) {\n  return `Hello, ${name}`;\n}\n\nconsole.log(greet(\"Nexion\"));\n```\n\nWhen executed, this code logs `Hello, Nexion` to the console. The function uses a template literal to dynamically insert the provided name into the returned message."
+    },
+    {
+      "prompt": "How can I obtain the squares of only the even numbers from a JavaScript array?",
+      "response": "```javascript\nconst numbers = [1, 2, 3, 4, 5, 6];\nconst evenSquares = numbers.filter(n => n % 2 === 0).map(n => n * n);\nconsole.log(evenSquares);\n```"
+    },
+    {
+      "prompt": "Write JavaScript code that filters out odd values from an array and then maps each remaining value to its cube.",
+      "response": "```javascript\nconst values = [1, 2, 3, 4, 5, 6];\nconst cubedEvens = values.filter(v => v % 2 === 0).map(v => Math.pow(v, 3));\nconsole.log(cubedEvens);\n```"
+    },
+    {
+      "prompt": "How do I use the JavaScript fetch API to retrieve JSON data from a server endpoint?",
+      "response": "You can use the `fetch()` function to make HTTP requests. Since `fetch()` returns a Promise, you can use `async/await` for cleaner syntax. Here's an example that fetches JSON data from an API endpoint:\n\n```javascript\nasync function fetchData(url) {\n  try {\n    const response = await fetch(url);\n    if (!response.ok) {\n      throw new Error(`HTTP error! status: ${response.status}`);\n }\n    const data = await response.json();\n    return data;\n  } catch (error) {\n    console.error('Failed to fetch data:', error);\n  }\n}\n\n// Usage\nfetchData('https://api.example.com/data')\n  .then(data => console.log(data))\n  .catch(error => console.error(error));\n```\n\nThis example includes error handling using a try/catch block and checks the response status before parsing the JSON data."
+    },
+    {
+      "prompt": "Show me a practical example of using JavaScript fetch to get data from a REST API.",
+      "response": "Here's a complete example of using the Fetch API to retrieve data from a REST endpoint:\n\n```javascript\nfunction getData(endpoint) {\n  return fetch(endpoint)\n    .then(response => {\n      if (!response.ok) {\n        throw new Error(`Request failed with status ${response.status}`);\n      }\n      return response.json();\n    })\n    .catch(error => {\n      console.error('Error fetching data:', error);\n      return null;\n    });\n}\n\n// Example usage\ngetData('https://jsonplaceholder.typicode.com/posts/1')\n  .then(data => {\n    if (data) {\n      console.log('Received data:', data);\n    } else {\n      console.log('No data received');\n    }\n  });\n```\n\nThis version uses Promise chaining instead of async/await and demonstrates how to handle both network errors and HTTP error statuses when working with REST APIs."
+    },
+    {
+      "prompt": "Explain how to implement a JavaScript debounce function that limits the rate at which a function is called.",
+      "response": "A debounce function wraps another function so that its execution is postponed until a specified delay has passed without any new calls. This is useful for events like typing, resizing, or scrolling where you only want to act after the user has stopped interacting.\n\n```javascript\n/**\n * Debounce a function so it only runs after `wait` milliseconds of silence.\n * @template T - The function type.\n * @param {T} fn - The function to debounce.\n * @param {number} [wait=250] - Delay in milliseconds.\n * @returns {(...args: Parameters<T>) => void} Debounced version of `fn`.\n */\nfunction debounce(fn, wait = 250) {\n  let timer; // Holds the ID of the scheduled timeout\n\n  return function debounced(...args) {\n    // Cancel any previously scheduled execution\n    clearTimeout(timer);\n\n    // Schedule a new execution after `wait` ms\n    timer = setTimeout(() => {\n      fn(...args);\n    }, wait);\n  };\n}\n```\n\n**Key points**\n- `clearTimeout(timer)` ensures the previous scheduled call is cancelled.\n- `setTimeout` creates a new timer that will invoke `fn` with the latest arguments after the wait period.\n- The returned function preserves the original function's arity via `...args` and `Parameters<T>`."
+    },
+    {
+      "prompt": "Write a reusable debounce utility in JavaScript that can be used to delay execution of an event handler, with a default wait time of 250ms.",
+      "response": "Here is a ready‑to‑use debounce utility that you can attach to any event handler. It defaults to a 250 ms wait but lets you override it per call.\n\n```javascript\n/**\n * Creates a debounced version of a function.\n *\n * @param {Function} func - The function to debounce.\n * @param {number} [wait=250] - Delay in milliseconds before invoking `func`.\n * @returns {Function} Debounced function that accepts the same arguments as `func`.\n */\nfunction debounce(func, wait = 250) {\n  let timeoutId; // Stores the ID of the scheduled timeout\n\n  return function debounced(...args) {\n    // Cancel any pending execution\n    if (timeoutId) clearTimeout(timeoutId);\n\n    // Schedule execution after the wait period\n    timeoutId = setTimeout(() => {\n      func.apply(this, args);\n    }, wait);\n  };\n}\n```\n\n**Typical usage**\n\n```javascript\n// Example: debounce a search input handler\nconst searchInput = document.getElementById('search');\n\nfunction performSearch(query) {\n  console.log('Searching for:', query);\n  // e.g., fetch results from an API\n}\n\nconst debouncedSearch = debounce(performSearch, 300); // 300 ms wait\n\nsearchInput.addEventListener('input', (e) => {\n  debouncedSearch(e.target.value);\n});\n```\n\nThe debounced version ensures `performSearch` is called only after the user stops typing for 300 ms, reducing unnecessary network requests."
+    },
+    {
+      "prompt": "Create a minimal, accessible HTML starter page for Nexion. Include a semantic document structure, viewport metadata, a page title, an h1 heading, and the tagline \"Purple local AI.\" Use a simple purple accent.",
+      "response": "```html\n<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Nexion</title>\n    <style>\n      :root {\n        color-scheme: light dark;\n        font-family: system-ui, sans-serif;\n      }\n\n      body {\n        max-width: 48rem;\n        margin: 0 auto;\n        padding: 2rem;\n        line-height: 1.6;\n      }\n\n      h1 {\n        color: #6d28d9;\n        margin-bottom: 0.25rem;\n      }\n    </style>\n  </head>\n  <body>\n    <main>\n      <h1>Nexion</h1>\n      <p>Purple local AI.</p>\n    </main>\n  </body>\n</html>\n```"
+    },
+    {
+      "prompt": "Build a polished single-file responsive landing page for Nexion. Present Nexion as \"Purple local AI.\" Use purple-themed styling, accessible text contrast, no external dependencies, and a clear content hierarchy.",
+      "response": "```html\n<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Nexion — Purple local AI</title>\n    <style>\n      * {\n        box-sizing: border-box;\n      }\n\n      body {\n        margin: 0;\n        min-height: 100vh;\n        display: grid;\n        place-items: center;\n        padding: 2rem;\n        background: #f5f0ff;\n        color: #1f1135;\n        font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;\n      }\n\n      .container {\n        width: min(100%, 42rem);\n        padding: clamp(2rem, 8vw, 4rem);\n        border: 1px solid #d8c9f5;\n        border-radius: 1.5rem;\n        background: #ffffff;\n        box-shadow: 0 1rem 3rem rgba(76, 29, 149, 0.12);\n      }\n\n      h1 {\n        margin: 0 0 0.75rem;\n        color: #5b21b6;\n        font-size: clamp(2.5rem, 8vw, 4.5rem);\n        letter-spacing: -0.04em;\n      }\n\n      p {\n        margin: 0;\n        color: #4c1d95;\n        font-size: clamp(1.25rem, 4vw, 1.75rem);\n        font-weight: 600;\n      }\n\n      @media (prefers-color-scheme: dark) {\n        body {\n          background: #170a2e;\n          color: #f5edff;\n        }\n\n        .container {\n          border-color: #4c1d95;\n          background: #21103c;\n        }\n\n        h1,\n        p {\n          color: #c4b5fd;\n        }\n      }\n    </style>\n  </head>\n  <body>\n    <main class=\"container\">\n      <h1>Nexion</h1>\n      <p>Purple local AI.</p>\n    </main>\n  </body>\n</html>\n```"
+    },
+    {
+      "prompt": "How can I create a purple button using CSS with a gradient background?",
+      "response": "```css\n.button {\n  background: linear-gradient(180deg, #a855f7, #7c3aed);\n  color: #faf5ff;\n  border: 0;\n  border-radius: 12px;\n  padding: 10px 16px;\n  cursor: pointer;\n  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);\n}\n```"
+    },
+    {
+      "prompt": "Provide a CSS snippet for a purple button that includes a hover effect and uses CSS custom properties for easy theming.",
+      "response": "```css\n:root {\n  --purple-1: #a855f7;\n  --purple-2: #7c3aed;\n  --purple-text: #faf5ff;\n}\n\n.button {\n  background: linear-gradient(180deg, var(--purple-1), var(--purple-2));\n  color: var(--purple-text);\n  border: 0;\n  border-radius: 12px;\n  padding: 10px 16px;\n  cursor: pointer;\n  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);\n  transition: background 0.2s ease, box-shadow 0.2s ease;\n}\n\n.button:hover {\n  background: linear-gradient(180deg, #c084fc, #8b5cf6);\n  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.45);\n}\n```"
+    },
+    {
+      "prompt": "How can I center a flex item both horizontally and vertically inside its parent?",
+      "response": "Make the parent a flex container, then use `align-items` and `justify-content` to center the child in both directions.\n\n```css\n.parent {\n  display: flex;\n  min-height: 100vh;\n  align-items: center; /* vertical centering */\n  justify-content: center; /* horizontal centering */\n}\n```\n\nIf you only need to center one item, a full-page container often uses `min-height: 100vh` so it stretches to the viewport height."
+    },
+    {
+      "prompt": "What is the simplest CSS Flexbox setup for centering content in a div?",
+      "response": "Set the parent to `display: flex` and add `place-items: center` to center its direct children both horizontally and vertically.\n\n```css\n.parent {\n  display: flex;\n  min-height: 100vh;\n  place-items: center;\n}\n```\n\n`place-items` is shorthand for `align-items` and `justify-content`, so this is equivalent to:\n\n```css\n.parent {\n  display: flex;\n  min-height: 100vh;\n  align-items: center;\n  justify-content: center;\n}\n```"
+    },
+    {
+      "prompt": "Show me a React functional component that manages its own state with a counter.",
+      "response": "```jsx\nimport { useState } from 'react';\n\nexport function Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={() => setCount(count + 1)}>Increment</button>\n      <button onClick={() => setCount(count - 1)}>Decrement</button>\n      <button onClick={() => setCount(0)}>Reset</button>\n    </div>\n  );\n}\n```"
+    },
+    {
+      "prompt": "Create a reusable Card component in React with TypeScript that accepts custom content.",
+      "response": "```tsx\nimport React from 'react';\n\ninterface CardProps {\n  title: string;\n  children: React.ReactNode;\n  className?: string;\n}\n\nexport function Card({ title, children, className = '' }: CardProps) {\n  return (\n    <div className={`card ${className}`} style={{ border: '1px solid #ddd', borderRadius: '8px', padding: '16px', maxWidth: '400px' }}>\n      <h2 style={{ marginTop: 0 }}>{title}</h2>\n      <div>{children}</div>\n    </div>\n  );\n}\n```"
+    },
+    {
+      "prompt": "Write a SQL query that returns the 20 most recently created active users, including only their ID, name, and creation timestamp.",
+      "response": "```sql\nSELECT id, name, created_at\nFROM users\nWHERE active = TRUE\nORDER BY created_at DESC\nLIMIT 20;\n```"
+    },
+    {
+      "prompt": "Write a SQL query that lists active users and their total number of orders. Include each user's ID and name, sort the results by order count from highest to lowest, and return the top 20 users.",
+      "response": "```sql\nSELECT u.id, u.name, COUNT(o.id) AS order_count\nFROM users AS u\nLEFT JOIN orders AS o ON o.user_id = u.id\nWHERE u.active = TRUE\nGROUP BY u.id, u.name\nORDER BY order_count DESC\nLIMIT 20;\n```"
+    },
+    {
+      "prompt": "How do I save changes to a Git repository with a meaningful commit message?",
+      "response": "First check what you've changed:\n```bash\ngit status\n```\n\nStage the files you want to include:\n```bash\ngit add <file1> <file2>\n# or stage everything:\ngit add .\n```\n\nVerify the staged changes look right:\n```bash\ngit diff --cached\n```\n\nThen commit with a clear message explaining the *why*, not just the *what*:\n```bash\ngit commit -m \"Fix login timeout: increase session expiry from 15 to 30 minutes\"\n```\n\nOnly commit when you're ready to record a logical snapshot. Avoid committing broken code or incomplete work."
+    },
+    {
+      "prompt": "What's the recommended Git workflow for committing changes?",
+      "response": "A safe, repeatable workflow:\n\n1. **Inspect** — See what's modified:\n   `git status`\n\n2. **Review** — Check exact diffs before staging:\n   `git diff`\n\n3. **Stage selectively** — Add only related changes:\n   `git add src/auth/login.js tests/auth/login.test.js`\n\n4. **Verify staging** — Confirm what will be committed:\n   `git diff --cached`\n\n5. **Commit with context** — Write a message future-you will understand:\n   `git commit -m \"Refactor password validation: extract reusable validator class\"`\n\n**Tip:** Keep commits atomic — one logical change per commit. If you're fixing two unrelated bugs, make two commits."
+    },
+    {
+      "prompt": "How do I start a basic HTTP server using Node.js that returns JSON responses?",
+      "response": "You can use the built-in 'http' module to create a server. Here's a simple example that listens on port 4173 and responds with JSON data including the requested URL path:\n\n```javascript\nconst http = require('http');\n\nconst server = http.createServer((req, res) => {\n  res.writeHead(200, { 'Content-Type': 'application/json' });\n  res.end(JSON.stringify({ app: 'Nexion', path: req.url }));\n});\n\nserver.listen(4173, () => console.log('Server running at http://localhost:4173'));\n```\n\nThis server will return a JSON object with the application name and the requested path for any incoming request."
+    },
+    {
+      "prompt": "Write a Node.js HTTP server that responds with JSON showing the current request URL.",
+      "response": "Use Node's native HTTP module to set up a server that sends JSON responses. The following code creates a server listening on port 4173 and returns the application name along with the requested URL:\n\n```javascript\nconst http = require('http');\n\nconst server = http.createServer((req, res) => {\n  res.writeHead(200, { 'Content-Type': 'application/json' });\n  res.end(JSON.stringify({ app: 'Nexion', path: req.url }));\n});\n\nserver.listen(4173, () => console.log('http://localhost:4173'));\n```\n\nRun this script with Node.js and visit http://localhost:4173 in your browser to see the JSON response."
+    }
+  ]
+}

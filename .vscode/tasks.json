@@ -27,6 +27,36 @@
         "${workspaceFolder}\\scripts\\run_unsloth_wsl.ps1"
       ],
       "problemMatcher": []
+    },
+    {
+      "label": "Nexion: Configure llama.cpp",
+      "type": "shell",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\scripts\\build-llama.ps1",
+        "-Action",
+        "Configure"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Nexion: Build llama.cpp",
+      "type": "shell",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\scripts\\build-llama.ps1",
+        "-Action",
+        "Build"
+      ],
+      "problemMatcher": []
     }
   ]
 }

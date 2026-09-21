@@ -1,690 +1,690 @@
 {
   "format": "nexion-brain-v1",
-  "trained_at": "2026-09-21T15:47:33.066271+00:00",
+  "trained_at": "2026-09-21T17:09:08.297192+00:00",
   "examples": [
     {
       "prompt": "write a python hello world",
       "response": "A minimal Python program:\n\n```python\nprint(\"Hello, world\")\n```\n\nRun it with `python hello.py`.",
       "vector": {
-        "write": 0.44514570402004316,
-        "python": 0.3500433796394079,
-        "hello": 0.5449908560311246,
-        "world": 0.6183040525547148
+        "write": 0.4225163266839657,
+        "python": 0.3435268690360601,
+        "hello": 0.5699772373635998,
+        "world": 0.6153008961663622
       }
     },
     {
       "prompt": "python hello world code",
       "response": "```python\ndef main():\n    print(\"Hello from Nexion\")\n\nif __name__ == \"__main__\":\n    main()\n```",
       "vector": {
-        "python": 0.34158906001799677,
-        "hello": 0.5318281249079707,
-        "world": 0.6033706460469379,
-        "code": 0.4862300105112745
+        "python": 0.3246290573690804,
+        "hello": 0.5386221281798926,
+        "world": 0.5814524799219397,
+        "code": 0.5161542325112252
       }
     },
     {
       "prompt": "write a python function that reverses a string",
       "response": "```python\ndef reverse_string(text):\n    return text[::-1]\n\nprint(reverse_string(\"nexion\"))\n```",
       "vector": {
-        "write": 0.35318194734599256,
-        "python": 0.27772704838021334,
-        "function": 0.4062778711668941,
-        "reverses": 0.5626137618593255,
-        "string": 0.5626137618593255
+        "write": 0.33051346411406723,
+        "python": 0.2687239482376115,
+        "function": 0.3973994771012194,
+        "reverses": 0.5905179803519808,
+        "string": 0.5584894449885368
       }
     },
     {
       "prompt": "python function add two numbers",
       "response": "```python\ndef add(a, b):\n    return a + b\n\nprint(add(2, 3))\n```",
       "vector": {
-        "python": 0.26474164127470556,
-        "function": 0.38728194122117765,
-        "add": 0.4961340979916452,
-        "two": 0.4961340979916452,
-        "numbers": 0.5363081903151999
+        "python": 0.2573491295378512,
+        "function": 0.380577950649811,
+        "add": 0.534849139670988,
+        "two": 0.5110574682715354,
+        "numbers": 0.49161825731190334
       }
     },
     {
       "prompt": "python for loop example",
       "response": "```python\nfor index, name in enumerate([\"Nexion\", \"Python\", \"Code\"], start=1):\n    print(f\"{index}. {name}\")\n```",
       "vector": {
-        "python": 0.4096059999059784,
-        "loop": 0.7676144270951714,
-        "example": 0.4929411893485627
+        "python": 0.38126561215439536,
+        "loop": 0.7571373520343067,
+        "example": 0.5304522251277797
       }
     },
     {
       "prompt": "python list comprehension",
       "response": "```python\nsquares = [n * n for n in range(1, 11) if n % 2 == 0]\nprint(squares)\n```",
       "vector": {
-        "python": 0.34870893778776496,
-        "list": 0.6159469423999122,
-        "comprehension": 0.706407418459863
+        "python": 0.3459595557236523,
+        "list": 0.6027760704275321,
+        "comprehension": 0.7190083412057443
       }
     },
     {
       "prompt": "python dictionary example",
       "response": "```python\nuser = {\"name\": \"Avighn\", \"role\": \"engineer\"}\nprint(user.get(\"name\", \"unknown\"))\nfor key, value in user.items():\n    print(f\"{key}: {value}\")\n```",
       "vector": {
-        "python": 0.3906703228507955,
-        "dictionary": 0.7914119322111468,
-        "example": 0.4701530095590949
+        "python": 0.38126561215439536,
+        "dictionary": 0.7571373520343067,
+        "example": 0.5304522251277797
       }
     },
     {
       "prompt": "python class example",
       "response": "```python\nclass Counter:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self):\n        self.value += 1\n        return self.value\n\ncount = Counter()\nprint(count.increment())\n```",
       "vector": {
-        "python": 0.42377679109094196,
-        "class": 0.7485441021055197,
-        "example": 0.5099950573639959
+        "python": 0.389692401701952,
+        "class": 0.7444357777951064,
+        "example": 0.5421763594941772
       }
     },
     {
       "prompt": "python read a file",
       "response": "```python\nfrom pathlib import Path\n\ntext = Path(\"notes.txt\").read_text(encoding=\"utf-8\")\nprint(text)\n```",
       "vector": {
-        "python": 0.35302456001514415,
-        "read": 0.6615790429064822,
-        "file": 0.6615790429064822
+        "python": 0.3540110588084095,
+        "read": 0.7030138232044864,
+        "file": 0.6168044541220176
       }
     },
     {
       "prompt": "python write a json file",
       "response": "```python\nimport json\nfrom pathlib import Path\n\ndata = {\"name\": \"Nexion\", \"theme\": \"purple\"}\nPath(\"config.json\").write_text(json.dumps(data, indent=2), encoding=\"utf-8\")\n```",
       "vector": {
-        "python": 0.32205869606677195,
-        "write": 0.4095579386306454,
-        "json": 0.6035480474628293,
-        "file": 0.6035480474628293
+        "python": 0.3443371180725075,
+        "write": 0.42351288176432844,
+        "json": 0.5849185320816591,
+        "file": 0.5999492469573
       }
     },
     {
       "prompt": "python http request example",
       "response": "Use the standard library so you do not need extra packages:\n\n```python\nfrom urllib.request import urlopen\nimport json\n\nwith urlopen(\"https://httpbin.org/get\") as response:\n    payload = json.loads(response.read().decode(\"utf-8\"))\nprint(payload[\"url\"])\n```",
       "vector": {
-        "python": 0.32154305017792617,
-        "http": 0.5679620942999075,
-        "request": 0.6513753201764609,
-        "example": 0.38696165001941923
+        "python": 0.30818702588466723,
+        "http": 0.5887347233839166,
+        "request": 0.6120140428902703,
+        "example": 0.4287784904394497
       }
     },
     {
       "prompt": "python flask hello route",
       "response": "```python\nfrom flask import Flask\n\napp = Flask(__name__)\n\n@app.get(\"/\")\ndef home():\n    return {\"app\": \"Nexion\", \"status\": \"ok\"}\n\nif __name__ == \"__main__\":\n    app.run(debug=True)\n```",
       "vector": {
-        "python": 0.29321130030365056,
-        "flask": 0.5939814420151889,
-        "hello": 0.45650764118178355,
-        "route": 0.5939814420151889
+        "python": 0.27840989062082316,
+        "flask": 0.5786197557452382,
+        "hello": 0.46193562895396495,
+        "route": 0.611802734358655
       }
     },
     {
       "prompt": "python error handling",
       "response": "```python\ndef parse_int(value):\n    try:\n        return int(value)\n    except (TypeError, ValueError):\n        return None\n\nprint(parse_int(\"42\"))\nprint(parse_int(\"nexion\"))\n```",
       "vector": {
-        "python": 0.32955476766234515,
-        "error": 0.6676052932350888,
-        "handling": 0.6676052932350888
+        "python": 0.3063118634297424,
+        "error": 0.6731170189210042,
+        "handling": 0.6731170189210042
       }
     },
     {
       "prompt": "javascript hello world",
       "response": "```javascript\nconsole.log(\"Hello, world\");\n```",
       "vector": {
-        "javascript": 0.46148965846184303,
-        "hello": 0.5866087431186561,
-        "world": 0.6655204562066609
+        "javascript": 0.4663585038321359,
+        "hello": 0.6011458209787282,
+        "world": 0.6489479546336998
       }
     },
     {
       "prompt": "write javascript function",
       "response": "```javascript\nfunction greet(name) {\n  return `Hello, ${name}`;\n}\n\nconsole.log(greet(\"Nexion\"));\n```",
       "vector": {
-        "write": 0.5546184140161391,
-        "javascript": 0.5341887720568516,
-        "function": 0.637997469150635
+        "write": 0.531424142480126,
+        "javascript": 0.5561543840256161,
+        "function": 0.638968451426477
       }
     },
     {
       "prompt": "javascript array map filter",
       "response": "```javascript\nconst numbers = [1, 2, 3, 4, 5, 6];\nconst evenSquares = numbers.filter((n) => n % 2 === 0).map((n) => n * n);\nconsole.log(evenSquares);\n```",
       "vector": {
-        "javascript": 0.33687464855390475,
-        "array": 0.5154236705121698,
-        "map": 0.5571597217304234,
-        "filter": 0.5571597217304234
+        "javascript": 0.31411875691265373,
+        "array": 0.48462301686701165,
+        "map": 0.5772650769266947,
+        "filter": 0.5772650769266947
       }
     },
     {
       "prompt": "javascript fetch api example",
       "response": "```javascript\nasync function loadStatus(url) {\n  const response = await fetch(url);\n  if (!response.ok) throw new Error(`Request failed: ${response.status}`);\n  return response.json();\n}\n\nloadStatus(\"/api/health\").then(console.log).catch(console.error);\n```",
       "vector": {
-        "javascript": 0.4018037944059556,
-        "fetch": 0.6147663156828378,
-        "api": 0.5520506195104397,
-        "example": 0.3947862730653962
+        "javascript": 0.3926888136248431,
+        "fetch": 0.6058410501150591,
+        "api": 0.5464349857788867,
+        "example": 0.4244536770558404
       }
     },
     {
       "prompt": "javascript debounce function",
       "response": "```javascript\nfunction debounce(fn, wait = 250) {\n  let timer;\n  return (...args) => {\n    clearTimeout(timer);\n    timer = setTimeout(() => fn(...args), wait);\n  };\n}\n```",
       "vector": {
-        "javascript": 0.44014718290933086,
-        "debounce": 0.7279630064265636,
-        "function": 0.5256808144220017
+        "javascript": 0.4505145873328471,
+        "debounce": 0.72741221023584,
+        "function": 0.5175983800207692
       }
     },
     {
       "prompt": "html starter page",
       "response": "```html\n<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Nexion</title>\n  </head>\n  <body>\n    <h1>Nexion</h1>\n    <p>Purple local AI.</p>\n  </body>\n</html>\n```",
       "vector": {
-        "html": 0.4909813341618163,
-        "starter": 0.6160102797456724,
-        "page": 0.6160102797456724
+        "html": 0.5290289185810578,
+        "starter": 0.6296051989611678,
+        "page": 0.5689689769627382
       }
     },
     {
       "prompt": "css purple button",
       "response": "```css\n.button {\n  background: linear-gradient(180deg, #a855f7, #7c3aed);\n  color: #faf5ff;\n  border: 0;\n  border-radius: 12px;\n  padding: 10px 16px;\n  cursor: pointer;\n  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);\n}\n```",
       "vector": {
-        "css": 0.5202764612813304,
-        "purple": 0.6038677023308071,
-        "button": 0.6038677023308071
+        "css": 0.5405673882521176,
+        "purple": 0.572871254313663,
+        "button": 0.6161212743765425
       }
     },
     {
       "prompt": "css flexbox center",
       "response": "```css\n.center {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  min-height: 100vh;\n}\n```",
       "vector": {
-        "css": 0.4909813341618163,
-        "flexbox": 0.6160102797456724,
-        "center": 0.6160102797456724
+        "css": 0.48903243612449776,
+        "flexbox": 0.6167849205428659,
+        "center": 0.6167849205428659
       }
     },
     {
       "prompt": "react component example",
       "response": "```jsx\nexport function Greeting({ name }) {\n  return <h1>Hello, {name}</h1>;\n}\n```",
       "vector": {
-        "react": 0.6519235138695225,
-        "component": 0.6519235138695225,
-        "example": 0.38728731470063543
+        "react": 0.6391183571344019,
+        "component": 0.6391183571344019,
+        "example": 0.4278497997517895
       }
     },
     {
       "prompt": "sql select example",
       "response": "```sql\nSELECT id, name, created_at\nFROM users\nWHERE active = TRUE\nORDER BY created_at DESC\nLIMIT 20;\n```",
       "vector": {
-        "sql": 0.5998153098104282,
-        "select": 0.6879066286212445,
-        "example": 0.408663754712812
+        "sql": 0.5713143975525359,
+        "select": 0.7074376228485363,
+        "example": 0.4160911786226607
       }
     },
     {
       "prompt": "git commit commands",
       "response": "```bash\ngit status\ngit add .\ngit commit -m \"Describe why this change exists\"\n```\n\nOnly commit when you intend to save a snapshot. Review `git diff` first.",
       "vector": {
-        "git": 0.5474206800000271,
-        "commit": 0.5917476654403919,
-        "commands": 0.5917476654403919
+        "git": 0.5238998496323529,
+        "commit": 0.579732959825515,
+        "commands": 0.6240501925703941
       }
     },
     {
       "prompt": "node http server",
       "response": "```javascript\nconst http = require(\"http\");\n\nconst server = http.createServer((req, res) => {\n  res.writeHead(200, { \"Content-Type\": \"application/json\" });\n  res.end(JSON.stringify({ app: \"Nexion\", path: req.url }));\n});\n\nserver.listen(4173, () => console.log(\"http://localhost:4173\"));\n```",
       "vector": {
-        "node": 0.6018982505873596,
-        "http": 0.5248209141028508,
-        "server": 0.6018982505873596
+        "node": 0.5922714991135094,
+        "http": 0.5697431313047294,
+        "server": 0.5697431313047294
       }
     },
     {
       "prompt": "write a python calculator",
       "response": "```python\ndef calculate(left, operator, right):\n    ops = {\n        \"+\": left + right,\n        \"-\": left - right,\n        \"*\": left * right,\n        \"/\": left / right if right else None,\n    }\n    return ops.get(operator, \"Unknown operator\")\n\nprint(calculate(12, \"*\", 4))\n```",
       "vector": {
-        "write": 0.4905285680205354,
-        "python": 0.38573050623410293,
-        "calculator": 0.7814049529636382
+        "write": 0.4319367663516286,
+        "python": 0.3511861568306261,
+        "calculator": 0.8307219228624182
       }
     },
     {
       "prompt": "python palindrome check",
       "response": "```python\ndef is_palindrome(text):\n    cleaned = \"\".join(ch.lower() for ch in text if ch.isalnum())\n    return cleaned == cleaned[::-1]\n\nprint(is_palindrome(\"Never odd or even\"))\n```",
       "vector": {
-        "python": 0.34068484224255946,
-        "palindrome": 0.6901523701794148,
-        "check": 0.6384540266940905
+        "python": 0.2958576149562758,
+        "palindrome": 0.6998436641353767,
+        "check": 0.6501439205606354
       }
     },
     {
       "prompt": "javascript todo array",
       "response": "```javascript\nconst todos = [];\n\nfunction addTodo(title) {\n  todos.push({ id: crypto.randomUUID(), title, done: false });\n}\n\nfunction toggleTodo(id) {\n  const item = todos.find((todo) => todo.id === id);\n  if (item) item.done = !item.done;\n}\n```",
       "vector": {
-        "javascript": 0.41952054973931774,
-        "todo": 0.6418732383993044,
-        "array": 0.6418732383993044
+        "javascript": 0.3985726950418953,
+        "todo": 0.680451895769561,
+        "array": 0.614918713579812
       }
     },
     {
       "prompt": "html form example",
       "response": "```html\n<form method=\"post\" action=\"/login\">\n  <label>Email <input type=\"email\" name=\"email\" required /></label>\n  <label>Password <input type=\"password\" name=\"password\" required /></label>\n  <button type=\"submit\">Sign in</button>\n</form>\n```",
       "vector": {
-        "html": 0.5652610159463556,
-        "form": 0.7092053655295917,
-        "example": 0.42131666636311954
+        "html": 0.5788835193074614,
+        "form": 0.6889379021594478,
+        "example": 0.43618624238087467
       }
     },
     {
       "prompt": "python unittest example",
       "response": "```python\nimport unittest\n\ndef add(a, b):\n    return a + b\n\nclass AddTests(unittest.TestCase):\n    def test_adds_positive_numbers(self):\n        self.assertEqual(add(2, 3), 5)\n\nif __name__ == \"__main__\":\n    unittest.main()\n```",
       "vector": {
-        "python": 0.3906703228507955,
-        "unittest": 0.7914119322111468,
-        "example": 0.4701530095590949
+        "python": 0.3423700695774631,
+        "unittest": 0.8098676926696189,
+        "example": 0.47633712413322443
       }
     },
     {
       "prompt": "javascript sort objects",
       "response": "```javascript\nconst people = [\n  { name: \"Ada\", score: 91 },\n  { name: \"Linus\", score: 88 }\n];\npeople.sort((a, b) => b.score - a.score);\nconsole.log(people);\n```",
       "vector": {
-        "javascript": 0.40567494989765507,
-        "sort": 0.6206892463076865,
-        "objects": 0.6709490998157245
+        "javascript": 0.37839008761927306,
+        "sort": 0.610958174730784,
+        "objects": 0.6953783504834673
       }
     },
     {
       "prompt": "css grid two columns",
       "response": "```css\n.layout {\n  display: grid;\n  grid-template-columns: 280px 1fr;\n  min-height: 100vh;\n}\n```",
       "vector": {
-        "css": 0.42657804685934536,
-        "grid": 0.5352066233389287,
-        "two": 0.4951150478484271,
-        "columns": 0.5352066233389287
+        "css": 0.40874269301056904,
+        "grid": 0.5549292451439206,
+        "two": 0.4658717384414563,
+        "columns": 0.5549292451439206
       }
     },
     {
       "prompt": "python argparse cli",
       "response": "```python\nimport argparse\n\nparser = argparse.ArgumentParser(description=\"Nexion CLI\")\nparser.add_argument(\"name\")\nargs = parser.parse_args()\nprint(f\"Hello, {args.name}\")\n```",
       "vector": {
-        "python": 0.32955476766234515,
-        "argparse": 0.6676052932350888,
-        "cli": 0.6676052932350888
+        "python": 0.2864055340919429,
+        "argparse": 0.6774850072294991,
+        "cli": 0.6774850072294991
       }
     },
     {
       "prompt": "how do i write a rest api in python",
       "response": "A small Flask API:\n\n```python\nfrom flask import Flask, request\n\napp = Flask(__name__)\nitems = []\n\n@app.get(\"/items\")\ndef list_items():\n    return {\"items\": items}\n\n@app.post(\"/items\")\ndef create_item():\n    payload = request.get_json(force=True) or {}\n    items.append(payload)\n    return payload, 201\n```",
       "vector": {
-        "write": 0.4248131859889282,
-        "rest": 0.626029054148815,
-        "api": 0.5621643840237422,
-        "python": 0.33405476453222893
+        "write": 0.38816024903145163,
+        "rest": 0.6558988531050314,
+        "api": 0.565268923356552,
+        "python": 0.31559366257051263
       }
     },
     {
       "prompt": "give me javascript code for a timer",
       "response": "```javascript\nfunction startTimer(seconds, onTick, onDone) {\n  let remaining = seconds;\n  const id = setInterval(() => {\n    remaining -= 1;\n    onTick(remaining);\n    if (remaining <= 0) {\n      clearInterval(id);\n      onDone();\n    }\n  }, 1000);\n  return () => clearInterval(id);\n}\n```",
       "vector": {
-        "give": 0.5387300728517874,
-        "javascript": 0.373569820438837,
-        "code": 0.43413900013473095,
-        "timer": 0.6178501650274273
+        "give": 0.521282577250904,
+        "javascript": 0.35124065574405644,
+        "code": 0.43387039050660553,
+        "timer": 0.6454850584241173
       }
     },
     {
       "prompt": "write sql insert and update",
       "response": "```sql\nINSERT INTO notes (title, body)\nVALUES ('Nexion', 'Purple local AI');\n\nUPDATE notes\nSET body = 'Updated notes'\nWHERE title = 'Nexion';\n```",
       "vector": {
-        "write": 0.3534538507867969,
-        "sql": 0.4909447544004736,
-        "insert": 0.5630469001293957,
-        "update": 0.5630469001293957
+        "write": 0.3041474355143649,
+        "sql": 0.4723965030706904,
+        "insert": 0.5849512293160083,
+        "update": 0.5849512293160083
       }
     },
     {
       "prompt": "python binary search",
       "response": "```python\ndef binary_search(values, target):\n    low, high = 0, len(values) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if values[mid] == target:\n            return mid\n        if values[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n```",
       "vector": {
-        "python": 0.32955476766234515,
-        "binary": 0.6676052932350888,
-        "search": 0.6676052932350888
+        "python": 0.2864055340919429,
+        "binary": 0.6774850072294991,
+        "search": 0.6774850072294991
       }
     },
     {
       "prompt": "javascript localstorage example",
       "response": "```javascript\nfunction saveTheme(theme) {\n  localStorage.setItem(\"nexion-theme\", theme);\n}\n\nfunction loadTheme() {\n  return localStorage.getItem(\"nexion-theme\") || \"dark\";\n}\n```",
       "vector": {
-        "javascript": 0.46122698734167206,
-        "localstorage": 0.7628270664621635,
-        "example": 0.45317163726391246
+        "javascript": 0.42464580502572946,
+        "localstorage": 0.780383813160637,
+        "example": 0.45899569108098853
       }
     },
     {
       "prompt": "write html css landing card",
       "response": "```html\n<article class=\"card\">\n  <h2>Nexion</h2>\n  <p>Local AI with a purple theme.</p>\n</article>\n```\n\n```css\n.card {\n  max-width: 360px;\n  padding: 24px;\n  border-radius: 20px;\n  background: #1a0b2e;\n  color: #f4eaff;\n  border: 1px solid rgba(192, 132, 252, 0.35);\n}\n```",
       "vector": {
-        "write": 0.32792524639472403,
-        "html": 0.41635494769378,
-        "css": 0.41635494769378,
-        "landing": 0.5223802005430426,
-        "card": 0.5223802005430426
+        "write": 0.2930434818124002,
+        "html": 0.43993361027710476,
+        "css": 0.41512601814300454,
+        "landing": 0.5235715449566334,
+        "card": 0.5235715449566334
       }
     },
     {
       "prompt": "debug javascript undefined",
       "response": "Check the name, then guard missing values:\n\n```javascript\nconst user = data && data.user;\nconst name = user?.name ?? \"guest\";\nconsole.log(name);\n```\n\nOpen DevTools, set a breakpoint, and inspect the object before you read a nested property.",
       "vector": {
-        "debug": 0.6501769689916282,
-        "javascript": 0.393115527530672,
-        "undefined": 0.6501769689916282
+        "debug": 0.6599403464556632,
+        "javascript": 0.3591064998575748,
+        "undefined": 0.6599403464556632
       }
     },
     {
       "prompt": "python generate password",
       "response": "```python\nimport secrets\nimport string\n\nalphabet = string.ascii_letters + string.digits\npassword = \"\".join(secrets.choice(alphabet) for _ in range(16))\nprint(password)\n```",
       "vector": {
-        "python": 0.34068484224255946,
-        "generate": 0.6901523701794148,
-        "password": 0.6384540266940905
+        "python": 0.2958576149562758,
+        "generate": 0.6998436641353767,
+        "password": 0.6501439205606354
       }
     },
     {
       "prompt": "code mode python fibonacci",
       "response": "```python\ndef fibonacci(count):\n    sequence = [0, 1]\n    while len(sequence) < count:\n        sequence.append(sequence[-1] + sequence[-2])\n    return sequence[:count]\n\nprint(fibonacci(10))\n```",
       "vector": {
-        "code": 0.4246936233228002,
-        "mode": 0.6044078628611015,
-        "python": 0.29835816887141453,
-        "fibonacci": 0.6044078628611015
+        "code": 0.4144319449160897,
+        "mode": 0.6165657625647767,
+        "python": 0.2606520360536208,
+        "fibonacci": 0.6165657625647767
       }
     },
     {
       "prompt": "write a javascript promise example",
       "response": "```javascript\nfunction wait(ms) {\n  return new Promise((resolve) => setTimeout(resolve, ms));\n}\n\nasync function run() {\n  await wait(200);\n  return \"ready\";\n}\n\nrun().then(console.log);\n```",
       "vector": {
-        "write": 0.4318998180411211,
-        "javascript": 0.41599057589936134,
-        "promise": 0.6880101975779269,
-        "example": 0.4087252817819644
+        "write": 0.3759899054120094,
+        "javascript": 0.3934868921618213,
+        "promise": 0.7231221825336644,
+        "example": 0.4253163127048492
       }
     },
     {
       "prompt": "python csv read write",
       "response": "```python\nimport csv\nfrom pathlib import Path\n\npath = Path(\"rows.csv\")\nwith path.open(\"w\", newline=\"\", encoding=\"utf-8\") as handle:\n    writer = csv.DictWriter(handle, fieldnames=[\"name\", \"score\"])\n    writer.writeheader()\n    writer.writerow({\"name\": \"Nexion\", \"score\": 100})\n```",
       "vector": {
-        "python": 0.31260741568184996,
-        "csv": 0.6332736949737371,
-        "read": 0.5858360530592975,
-        "write": 0.3975388658369507
+        "python": 0.28805378377627483,
+        "csv": 0.6813838999406544,
+        "read": 0.5720323893346886,
+        "write": 0.3542879395433645
       }
     },
     {
       "prompt": "give me code for a rest fetch in browser",
       "response": "```javascript\nasync function createNote(title, body) {\n  const response = await fetch(\"/api/notes\", {\n    method: \"POST\",\n    headers: { \"Content-Type\": \"application/json\" },\n    body: JSON.stringify({ title, body })\n  });\n  if (!response.ok) throw new Error(await response.text());\n  return response.json();\n}\n```",
       "vector": {
-        "give": 0.437858055795298,
-        "code": 0.35285065401612514,
-        "rest": 0.464547298267012,
-        "fetch": 0.464547298267012,
-        "browser": 0.5021636728012033
+        "give": 0.4267782606900585,
+        "code": 0.35521319665399287,
+        "rest": 0.4643073811140813,
+        "fetch": 0.44365361574278067,
+        "browser": 0.5284638362334368
       }
     },
     {
       "prompt": "python sort a list of dicts",
       "response": "```python\npeople = [{\"name\": \"Ada\", \"score\": 91}, {\"name\": \"Linus\", \"score\": 88}]\npeople.sort(key=lambda row: row[\"score\"], reverse=True)\nprint(people)\n```",
       "vector": {
-        "python": 0.2919062030747271,
-        "sort": 0.5470413345755851,
-        "list": 0.5156126321054526,
-        "dicts": 0.59133760280025
+        "python": 0.2677347342571074,
+        "sort": 0.5564335598671329,
+        "list": 0.46648253636147624,
+        "dicts": 0.6333197050429032
       }
     },
     {
       "prompt": "html accessibility button",
       "response": "```html\n<button type=\"button\" aria-pressed=\"false\" aria-label=\"Toggle code mode\">{ }</button>\n```",
       "vector": {
-        "html": 0.5049927211953308,
-        "accessibility": 0.6335896821497881,
-        "button": 0.5861283700803649
+        "html": 0.5131315807991474,
+        "accessibility": 0.657368918943538,
+        "button": 0.5518714390087355
       }
     },
     {
       "prompt": "javascript event listener",
       "response": "```javascript\ndocument.querySelector(\"#send-button\").addEventListener(\"click\", (event) => {\n  event.preventDefault();\n  console.log(\"send\");\n});\n```",
       "vector": {
-        "javascript": 0.393115527530672,
-        "event": 0.6501769689916282,
-        "listener": 0.6501769689916282
+        "javascript": 0.37032332177590127,
+        "event": 0.6322239568458294,
+        "listener": 0.6805538228083545
       }
     },
     {
       "prompt": "python type hints function",
       "response": "```python\ndef title_case(value: str) -> str:\n    return value.strip().title()\n```",
       "vector": {
-        "python": 0.2968581760168439,
-        "type": 0.6013692080826271,
-        "hints": 0.6013692080826271,
-        "function": 0.43426417590229616
+        "python": 0.26372554385024016,
+        "type": 0.6238360670943818,
+        "hints": 0.6238360670943818,
+        "function": 0.3900076413422218
       }
     },
     {
       "prompt": "write bash loop",
       "response": "```bash\nfor file in *.jsonl; do\n  echo \"training file: $file\"\ndone\n```",
       "vector": {
-        "write": 0.41851376471999147,
-        "bash": 0.6666864071859101,
-        "loop": 0.6167458659881252
+        "write": 0.3699693756023115,
+        "bash": 0.7115432050309918,
+        "loop": 0.5973515953696449
       }
     },
     {
       "prompt": "sql join example",
       "response": "```sql\nSELECT users.name, orders.total\nFROM users\nJOIN orders ON orders.user_id = users.id\nWHERE orders.total > 50\nORDER BY orders.total DESC;\n```",
       "vector": {
-        "sql": 0.5998153098104282,
-        "join": 0.6879066286212445,
-        "example": 0.408663754712812
+        "sql": 0.5713143975525359,
+        "join": 0.7074376228485363,
+        "example": 0.4160911786226607
       }
     },
     {
       "prompt": "javascript regex email check",
       "response": "```javascript\nfunction looksLikeEmail(value) {\n  return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(value);\n}\n```",
       "vector": {
-        "javascript": 0.33687464855390475,
-        "regex": 0.5571597217304234,
-        "email": 0.5571597217304234,
-        "check": 0.5154236705121698
+        "javascript": 0.3061513066045209,
+        "regex": 0.5626230642680464,
+        "email": 0.5626230642680464,
+        "check": 0.522668109388369
       }
     },
     {
       "prompt": "python recursive factorial",
       "response": "```python\ndef factorial(n):\n    if n < 0:\n        raise ValueError(\"n must be >= 0\")\n    if n in (0, 1):\n        return 1\n    return n * factorial(n - 1)\n```",
       "vector": {
-        "python": 0.32955476766234515,
-        "recursive": 0.6676052932350888,
-        "factorial": 0.6676052932350888
+        "python": 0.2864055340919429,
+        "recursive": 0.6774850072294991,
+        "factorial": 0.6774850072294991
       }
     },
     {
       "prompt": "code a dark purple webpage",
       "response": "```html\n<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <title>Nexion</title>\n    <style>\n      body { margin:0; min-height:100vh; display:grid; place-items:center; background:#12081f; color:#f4eaff; font-family:sans-serif; }\n      h1 { color:#d8b4fe; }\n    </style>\n  </head>\n  <body>\n    <h1>Nexion</h1>\n  </body>\n</html>\n```",
       "vector": {
-        "code": 0.3839316818823194,
-        "dark": 0.5463970132529724,
-        "purple": 0.5054671813911126,
-        "webpage": 0.5463970132529724
+        "code": 0.3841794780438311,
+        "dark": 0.5715580464961316,
+        "purple": 0.4461489971086131,
+        "webpage": 0.5715580464961316
       }
     },
     {
       "prompt": "how do i copy text in javascript",
       "response": "```javascript\nasync function copyText(value) {\n  await navigator.clipboard.writeText(value);\n}\n```",
       "vector": {
-        "copy": 0.6501769689916282,
-        "text": 0.6501769689916282,
-        "javascript": 0.393115527530672
+        "copy": 0.7069502903233523,
+        "text": 0.5934957719866001,
+        "javascript": 0.38468695798760527
       }
     },
     {
       "prompt": "python set unique values",
       "response": "```python\nvalues = [\"nexion\", \"purple\", \"nexion\"]\nunique = sorted(set(values))\nprint(unique)\n```",
       "vector": {
-        "python": 0.274087345591292,
-        "set": 0.5552405265548495,
-        "unique": 0.5552405265548495,
-        "values": 0.5552405265548495
+        "python": 0.2550884301877048,
+        "set": 0.5605540763802956,
+        "unique": 0.603405194378681,
+        "values": 0.5065680523233108
       }
     },
     {
       "prompt": "give me python code for a todo list",
       "response": "```python\ntodos = []\n\ndef add(title):\n    todos.append({\"title\": title, \"done\": False})\n\ndef complete(index):\n    todos[index][\"done\"] = True\n\nadd(\"Train Nexion\")\ncomplete(0)\nprint(todos)\n```",
       "vector": {
-        "give": 0.49413384895516044,
-        "python": 0.27974631860784516,
-        "code": 0.39820085406135836,
-        "todo": 0.5242533315904442,
-        "list": 0.49413384895516044
+        "give": 0.49255204252058643,
+        "python": 0.2578379413487548,
+        "code": 0.4099575860759548,
+        "todo": 0.5665960975266314,
+        "list": 0.44923904694071565
       }
     },
     {
       "prompt": "javascript switch statement",
       "response": "```javascript\nfunction statusLabel(code) {\n  switch (code) {\n    case 200: return \"ok\";\n    case 404: return \"missing\";\n    default: return \"unknown\";\n  }\n}\n```",
       "vector": {
-        "javascript": 0.393115527530672,
-        "switch": 0.6501769689916282,
-        "statement": 0.6501769689916282
+        "javascript": 0.37032332177590127,
+        "switch": 0.6805538228083545,
+        "statement": 0.6322239568458294
       }
     },
     {
       "prompt": "python datetime now",
       "response": "```python\nfrom datetime import datetime, timezone\n\nprint(datetime.now(timezone.utc).isoformat())\n```",
       "vector": {
-        "python": 0.32955476766234515,
-        "datetime": 0.6676052932350888,
-        "now": 0.6676052932350888
+        "python": 0.2864055340919429,
+        "datetime": 0.6774850072294991,
+        "now": 0.6774850072294991
       }
     },
     {
       "prompt": "write a python script that counts words",
       "response": "```python\nfrom collections import Counter\nimport re\n\ndef count_words(text):\n    words = re.findall(r\"[a-z0-9']+\", text.lower())\n    return Counter(words)\n\nprint(count_words(\"Nexion writes code and answers questions\"))\n```",
       "vector": {
-        "write": 0.32913320947781977,
-        "python": 0.25881615829767446,
-        "script": 0.5243044683587527,
-        "counts": 0.5243044683587527,
-        "words": 0.5243044683587527
+        "write": 0.28971366040122964,
+        "python": 0.23555167076195194,
+        "script": 0.48954744351122365,
+        "counts": 0.557191486802248,
+        "words": 0.557191486802248
       }
     },
     {
       "prompt": "java class example",
       "response": "```java\npublic final class Greeting {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, Nexion\");\n    }\n}\n```",
       "vector": {
-        "java": 0.6879066286212445,
-        "class": 0.5998153098104282,
-        "example": 0.408663754712812
+        "java": 0.7074376228485363,
+        "class": 0.5713143975525359,
+        "example": 0.4160911786226607
       }
     },
     {
       "prompt": "c++ vector example",
       "response": "```cpp\n#include <iostream>\n#include <vector>\n\nint main() {\n    const std::vector<int> values{1, 2, 3};\n    for (const int value : values) std::cout << value << '\\n';\n}\n```",
       "vector": {
-        "vector": 0.8597344610805685,
-        "example": 0.5107412813064012
+        "vector": 0.8619600920129994,
+        "example": 0.5069761333405566
       }
     },
     {
       "prompt": "c sharp async method",
       "response": "```csharp\npublic async Task<string> LoadAsync(HttpClient client, string url)\n{\n    using HttpResponseMessage response = await client.GetAsync(url);\n    response.EnsureSuccessStatusCode();\n    return await response.Content.ReadAsStringAsync();\n}\n```",
       "vector": {
-        "sharp": 0.6018982505873596,
-        "async": 0.6018982505873596,
-        "method": 0.5248209141028508
+        "sharp": 0.6006320371005892,
+        "async": 0.6006320371005892,
+        "method": 0.5277142332899434
       }
     },
     {
       "prompt": "go http handler",
       "response": "```go\npackage main\n\nimport (\n    \"fmt\"\n    \"net/http\"\n)\n\nfunc handler(w http.ResponseWriter, r *http.Request) {\n    fmt.Fprintln(w, \"Hello, Nexion\")\n}\n\nfunc main() {\n    http.HandleFunc(\"/\", handler)\n    http.ListenAndServe(\":8080\", nil)\n}\n```",
       "vector": {
-        "go": 0.6018982505873596,
-        "http": 0.5248209141028508,
-        "handler": 0.6018982505873596
+        "go": 0.630541332540315,
+        "http": 0.5092142824998872,
+        "handler": 0.5857631282834462
       }
     },
     {
       "prompt": "rust function example",
       "response": "```rust\nfn square(value: i32) -> i32 {\n    value * value\n}\n\nfn main() {\n    println!(\"{}\", square(4));\n}\n```",
       "vector": {
-        "rust": 0.7304169093465372,
-        "function": 0.5274528408493011,
-        "example": 0.43391777933227665
+        "rust": 0.7587992570119606,
+        "function": 0.4743834543870513,
+        "example": 0.4463003761615096
       }
     },
     {
       "prompt": "kotlin data class",
       "response": "```kotlin\ndata class User(val id: Int, val name: String)\n\nfun main() {\n    println(User(1, \"Nexion\"))\n}\n```",
       "vector": {
-        "kotlin": 0.6018982505873596,
-        "data": 0.6018982505873596,
-        "class": 0.5248209141028508
+        "kotlin": 0.6587535681938383,
+        "data": 0.5319979964209856,
+        "class": 0.5319979964209856
       }
     },
     {
       "prompt": "swift function example",
       "response": "```swift\nfunc greeting(_ name: String) -> String {\n    \"Hello, \\(name)\"\n}\n\nprint(greeting(\"Nexion\"))\n```",
       "vector": {
-        "swift": 0.7304169093465372,
-        "function": 0.5274528408493011,
-        "example": 0.43391777933227665
+        "swift": 0.7587992570119606,
+        "function": 0.4743834543870513,
+        "example": 0.4463003761615096
       }
     },
     {
       "prompt": "php json response",
       "response": "```php\n<?php\nheader('Content-Type: application/json');\necho json_encode(['status' => 'ok']);\n```",
       "vector": {
-        "php": 0.5917476654403919,
-        "json": 0.5474206800000271,
-        "response": 0.5917476654403919
+        "php": 0.6611619436757896,
+        "json": 0.47478949955317995,
+        "response": 0.5808957009213382
       }
     },
     {
       "prompt": "ruby method example",
       "response": "```ruby\ndef greeting(name)\n  \"Hello, #{name}\"\nend\n\nputs greeting(\"Nexion\")\n```",
       "vector": {
-        "ruby": 0.6879066286212445,
-        "method": 0.5998153098104282,
-        "example": 0.408663754712812
+        "ruby": 0.6871473287732887,
+        "method": 0.6037264137811889,
+        "example": 0.4041571054214425
       }
     },
     {
       "prompt": "powershell get files",
       "response": "```powershell\nGet-ChildItem -File | ForEach-Object {\n    Write-Output $_.FullName\n}\n```",
       "vector": {
-        "powershell": 0.5773502691896257,
-        "get": 0.5773502691896257,
-        "files": 0.5773502691896257
+        "powershell": 0.6190661551479163,
+        "get": 0.48323306085237183,
+        "files": 0.6190661551479163
       }
     },
     {
       "prompt": "dart flutter widget",
       "response": "```dart\nimport 'package:flutter/material.dart';\n\nclass Greeting extends StatelessWidget {\n  const Greeting({super.key});\n\n  @override\n  Widget build(BuildContext context) => const Text('Hello, Nexion');\n}\n```",
       "vector": {
-        "dart": 0.5773502691896257,
-        "flutter": 0.5773502691896257,
-        "widget": 0.5773502691896257
+        "dart": 0.5773502691896258,
+        "flutter": 0.5773502691896258,
+        "widget": 0.5773502691896258
       }
     },
     {
       "prompt": "what is the solar system",
       "response": "The Solar System is the Sun and the objects bound to it by gravity, including eight planets, dwarf planets, moons, asteroids, and comets.",
       "vector": {
-        "solar": 0.7340659912641422,
-        "system": 0.6790781401793113
+        "solar": 0.7326425691471455,
+        "system": 0.6806135951283006
       }
     },
     {
       "prompt": "what are the planets in order",
       "response": "From the Sun outward: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.",
       "vector": {
-        "planets": 0.7071067811865475,
-        "order": 0.7071067811865475
+        "planets": 0.7326425691471455,
+        "order": 0.6806135951283006
       }
     },
     {
@@ -698,24 +698,24 @@
       "prompt": "what is climate change",
       "response": "Climate change describes long-term shifts in climate patterns. Current warming is primarily driven by heat-trapping greenhouse gases emitted through human activities, especially burning fossil fuels and land-use change.",
       "vector": {
-        "climate": 0.7071067811865475,
-        "change": 0.7071067811865475
+        "climate": 0.7071067811865476,
+        "change": 0.7071067811865476
       }
     },
     {
       "prompt": "what is machine learning",
       "response": "Machine learning is a way to build programs that learn patterns from examples so they can make predictions, classifications, or decisions on new inputs.",
       "vector": {
-        "machine": 0.7071067811865475,
-        "learning": 0.7071067811865475
+        "machine": 0.7071067811865476,
+        "learning": 0.7071067811865476
       }
     },
     {
       "prompt": "what is a neural network",
       "response": "A neural network is a machine-learning model made of layers of adjustable numerical units. Training changes its parameters to reduce error on examples.",
       "vector": {
-        "neural": 0.7071067811865475,
-        "network": 0.7071067811865475
+        "neural": 0.7071067811865476,
+        "network": 0.7071067811865476
       }
     },
     {
@@ -743,17 +743,17 @@
       "prompt": "how do i protect api keys",
       "response": "Keep API keys out of source code and client-side applications, store only hashes when possible, use one key per user, rotate compromised keys, limit permissions, and use HTTPS in production.",
       "vector": {
-        "protect": 0.6097003391010448,
-        "api": 0.5064888873412149,
-        "keys": 0.6097003391010448
+        "protect": 0.6233771409096183,
+        "api": 0.4720189407033368,
+        "keys": 0.6233771409096183
       }
     },
     {
       "prompt": "what is a strong password",
       "response": "Use a long, unique passphrase for every account and keep it in a reputable password manager. Turn on multi-factor authentication where available.",
       "vector": {
-        "strong": 0.7340659912641422,
-        "password": 0.6790781401793113
+        "strong": 0.7326425691471455,
+        "password": 0.6806135951283006
       }
     },
     {
@@ -767,8 +767,8 @@
       "prompt": "what is version control",
       "response": "Version control records changes to files over time, helping people review history, collaborate safely, and recover from mistakes. Git is a common version-control system.",
       "vector": {
-        "version": 0.7071067811865475,
-        "control": 0.7071067811865475
+        "version": 0.7071067811865476,
+        "control": 0.7071067811865476
       }
     },
     {
@@ -789,17 +789,17 @@
       "prompt": "how do i write good code",
       "response": "Start with a clear behavior, keep functions small and named for their purpose, validate inputs, handle failure paths, write tests for key cases, and prefer simple designs over clever ones.",
       "vector": {
-        "write": 0.4568878627458163,
-        "good": 0.7278157933578412,
-        "code": 0.5114075202951716
+        "write": 0.43527299417316173,
+        "good": 0.7027906487323753,
+        "code": 0.5626923889638619
       }
     },
     {
       "prompt": "what is a function in programming",
       "response": "A function is a named, reusable piece of code that accepts inputs, performs a focused task, and may return an output.",
       "vector": {
-        "function": 0.615325483055524,
-        "programming": 0.7882731442225379
+        "function": 0.5583139562378913,
+        "programming": 0.8296297525221682
       }
     },
     {
@@ -835,8 +835,8 @@
       "prompt": "what is big o notation",
       "response": "Big O notation describes how an algorithm's time or memory needs grow as input size grows. It is useful for comparing scalability, not for measuring one exact runtime.",
       "vector": {
-        "big": 0.7071067811865475,
-        "notation": 0.7071067811865475
+        "big": 0.7326425691471455,
+        "notation": 0.6806135951283006
       }
     },
     {
@@ -850,24 +850,24 @@
       "prompt": "how do i plan a project",
       "response": "Define the desired outcome, list constraints, break work into small deliverables, choose a first milestone, identify risks, and review progress at regular intervals.",
       "vector": {
-        "plan": 0.7071067811865475,
-        "project": 0.7071067811865475
+        "plan": 0.7071067811865476,
+        "project": 0.7071067811865476
       }
     },
     {
       "prompt": "how do i make a decision",
       "response": "Clarify the goal, gather the few facts that matter, list options and trade-offs, decide by a deadline, then revisit if new evidence changes the assumptions.",
       "vector": {
-        "make": 0.7071067811865475,
-        "decision": 0.7071067811865475
+        "make": 0.7071067811865476,
+        "decision": 0.7071067811865476
       }
     },
     {
       "prompt": "what is critical thinking",
       "response": "Critical thinking means examining claims, evidence, assumptions, alternatives, and uncertainty before reaching a conclusion.",
       "vector": {
-        "critical": 0.7071067811865475,
-        "thinking": 0.7071067811865475
+        "critical": 0.7071067811865476,
+        "thinking": 0.7071067811865476
       }
     },
     {
@@ -881,24 +881,24 @@
       "prompt": "what is compound interest",
       "response": "Compound interest means interest is calculated on both the original amount and previously accumulated interest. Its effect depends on rate, time, deposits, fees, and compounding frequency.",
       "vector": {
-        "compound": 0.7340659912641422,
-        "interest": 0.6790781401793113
+        "compound": 0.7326425691471455,
+        "interest": 0.6806135951283006
       }
     },
     {
       "prompt": "how do i stay productive",
       "response": "Choose one important next action, remove obvious distractions, work in a time-bounded focus block, take a short break, and review the result before starting the next task.",
       "vector": {
-        "stay": 0.7071067811865475,
-        "productive": 0.7071067811865475
+        "stay": 0.7071067811865476,
+        "productive": 0.7071067811865476
       }
     },
     {
       "prompt": "how do i communicate clearly",
       "response": "Lead with the main point, use concrete language, separate facts from opinions, give necessary context, and state the requested next action.",
       "vector": {
-        "communicate": 0.7071067811865475,
-        "clearly": 0.7071067811865475
+        "communicate": 0.7071067811865476,
+        "clearly": 0.7071067811865476
       }
     },
     {
@@ -912,8 +912,8 @@
       "prompt": "what is the rule of law",
       "response": "Rule of law means laws are public, applied consistently, and constrain both citizens and government officials through fair procedures.",
       "vector": {
-        "rule": 0.7071067811865475,
-        "law": 0.7071067811865475
+        "rule": 0.7071067811865476,
+        "law": 0.7071067811865476
       }
     },
     {
@@ -927,17 +927,17 @@
       "prompt": "what causes inflation",
       "response": "Inflation can arise when demand grows faster than supply, production costs rise, money and credit expand too quickly, or inflation expectations become entrenched. The cause varies by situation.",
       "vector": {
-        "causes": 0.7340659912641422,
-        "inflation": 0.6790781401793113
+        "causes": 0.7326425691471455,
+        "inflation": 0.6806135951283006
       }
     },
     {
       "prompt": "what is gross domestic product",
       "response": "Gross domestic product, or GDP, is the market value of final goods and services produced within an economy over a specified period. It is useful but does not measure every aspect of wellbeing.",
       "vector": {
-        "gross": 0.5773502691896257,
-        "domestic": 0.5773502691896257,
-        "product": 0.5773502691896257
+        "gross": 0.5773502691896258,
+        "domestic": 0.5773502691896258,
+        "product": 0.5773502691896258
       }
     },
     {
@@ -958,8 +958,8 @@
       "prompt": "what is an emergency fund",
       "response": "An emergency fund is cash set aside for unexpected necessary expenses or income loss. The appropriate amount depends on stability, obligations, insurance, and access to support.",
       "vector": {
-        "emergency": 0.7071067811865475,
-        "fund": 0.7071067811865475
+        "emergency": 0.7071067811865476,
+        "fund": 0.7071067811865476
       }
     },
     {
@@ -973,16 +973,16 @@
       "prompt": "what is a supply and demand",
       "response": "Supply is how much sellers are willing to provide at different prices; demand is how much buyers want. Their interaction influences prices and quantities in a market.",
       "vector": {
-        "supply": 0.7071067811865475,
-        "demand": 0.7071067811865475
+        "supply": 0.7071067811865476,
+        "demand": 0.7071067811865476
       }
     },
     {
       "prompt": "what is interest rate",
       "response": "An interest rate is the cost of borrowing or the return paid for lending, expressed as a percentage over a period. Real returns also depend on inflation, fees, and taxes.",
       "vector": {
-        "interest": 0.6790781401793113,
-        "rate": 0.7340659912641422
+        "interest": 0.7071067811865476,
+        "rate": 0.7071067811865476
       }
     },
     {
@@ -1031,16 +1031,16 @@
       "prompt": "how do i exercise safely",
       "response": "Begin at an appropriate level, progress gradually, use sound technique, rest, and stop for concerning symptoms. Seek qualified medical guidance for injuries, symptoms, or conditions that could make exercise risky.",
       "vector": {
-        "exercise": 0.7071067811865475,
-        "safely": 0.7071067811865475
+        "exercise": 0.7326425691471455,
+        "safely": 0.6806135951283006
       }
     },
     {
       "prompt": "what is mental health",
       "response": "Mental health includes emotional, psychological, and social wellbeing. Persistent distress, impaired daily functioning, or thoughts of self-harm deserve prompt support from trusted people and qualified professionals or local emergency services.",
       "vector": {
-        "mental": 0.7071067811865475,
-        "health": 0.7071067811865475
+        "mental": 0.7071067811865476,
+        "health": 0.7071067811865476
       }
     },
     {
@@ -1166,8 +1166,8 @@
       "prompt": "how do i evaluate a source",
       "response": "Check who created it, their expertise and incentives, the date, the evidence and links, agreement with independent reliable sources, and whether the claim is presented with appropriate uncertainty.",
       "vector": {
-        "evaluate": 0.7071067811865475,
-        "source": 0.7071067811865475
+        "evaluate": 0.7071067811865476,
+        "source": 0.7071067811865476
       }
     },
     {
@@ -1223,16 +1223,16 @@
       "prompt": "what is an operating system",
       "response": "An operating system manages hardware resources and provides common services and interfaces for programs, users, storage, networking, and security.",
       "vector": {
-        "operating": 0.7340659912641422,
-        "system": 0.6790781401793113
+        "operating": 0.7326425691471455,
+        "system": 0.6806135951283006
       }
     },
     {
       "prompt": "what is cloud computing",
       "response": "Cloud computing provides computing resources such as servers, storage, databases, and software over a network. It involves trade-offs in cost, control, reliability, and data protection.",
       "vector": {
-        "cloud": 0.7071067811865475,
-        "computing": 0.7071067811865475
+        "cloud": 0.7071067811865476,
+        "computing": 0.7071067811865476
       }
     },
     {
@@ -1260,32 +1260,32 @@
       "prompt": "how do i prepare for an interview",
       "response": "Study the role and organization, prepare concrete examples of your work using situation-action-result structure, practice thoughtful questions, and be honest about what you know and want to learn.",
       "vector": {
-        "prepare": 0.7071067811865475,
-        "interview": 0.7071067811865475
+        "prepare": 0.7071067811865476,
+        "interview": 0.7071067811865476
       }
     },
     {
       "prompt": "how do i resolve conflict",
       "response": "Describe the issue without blame, listen to understand the other perspective, identify shared interests, suggest specific options, and agree on a next step. Step away if safety is at risk.",
       "vector": {
-        "resolve": 0.7071067811865475,
-        "conflict": 0.7071067811865475
+        "resolve": 0.7071067811865476,
+        "conflict": 0.7071067811865476
       }
     },
     {
       "prompt": "how do i learn effectively",
       "response": "Use active recall, spaced repetition, practice on varied problems, immediate feedback, and short explanations in your own words. Sleep and regular breaks improve retention.",
       "vector": {
-        "learn": 0.6790781401793113,
-        "effectively": 0.7340659912641422
+        "learn": 0.6806135951283006,
+        "effectively": 0.7326425691471455
       }
     },
     {
       "prompt": "what is scientific method",
       "response": "Scientific inquiry uses observations, testable questions, evidence, transparent methods, replication, and revision of explanations when evidence changes.",
       "vector": {
-        "scientific": 0.7537174575426155,
-        "method": 0.6571985957041414
+        "scientific": 0.7512355461124401,
+        "method": 0.6600342068841158
       }
     },
     {
@@ -1297,29 +1297,82 @@
     },
     {
       "prompt": "hello nexion",
-      "response": "Hello. I am Nexion, your local purple-themed assistant. Ask me a question or turn on code mode and I will write examples.",
+      "response": "Hello! I am Nexion, your AI assistant. How can I help you today?",
       "vector": {
-        "hello": 0.609374280732113,
-        "nexion": 0.7928827063205629
+        "hello": 0.6239039701002534,
+        "nexion": 0.7815010147742241
       }
     },
     {
       "prompt": "hello",
-      "response": "Hi. I am Nexion. I can answer from my trained knowledge and return working code when you ask for it.",
+      "response": "Hello! I am your AI assistant, Nexion. What would you like to work on?",
       "vector": {
         "hello": 1.0
       }
     },
     {
       "prompt": "hi",
-      "response": "Hi there. Nexion is ready. What should we work on?",
+      "response": "Hi there! I am Nexion, your AI assistant. What can I do for you?",
       "vector": {
         "hi": 1.0
       }
     },
     {
+      "prompt": "hey",
+      "response": "Hey! I am Nexion, your AI assistant. How can I help?",
+      "vector": {
+        "hey": 1.0
+      }
+    },
+    {
+      "prompt": "good morning",
+      "response": "Good morning! I am Nexion, your AI assistant. What would you like to accomplish today?",
+      "vector": {
+        "good": 0.6429745281052517,
+        "morning": 0.7658875610739666
+      }
+    },
+    {
+      "prompt": "good afternoon",
+      "response": "Good afternoon! I am Nexion, your AI assistant. How can I help?",
+      "vector": {
+        "good": 0.6429745281052517,
+        "afternoon": 0.7658875610739666
+      }
+    },
+    {
+      "prompt": "good evening",
+      "response": "Good evening! I am Nexion, your AI assistant. What can I help you with?",
+      "vector": {
+        "good": 0.6429745281052517,
+        "evening": 0.7658875610739666
+      }
+    },
+    {
+      "prompt": "how are you doing",
+      "response": "I’m doing well, thank you! I’m ready to help with questions, ideas, research, or code.",
+      "vector": {
+        "doing": 1.0
+      }
+    },
+    {
+      "prompt": "what is up",
+      "response": "I’m here and ready to help. What would you like to do?",
+      "vector": {
+        "up": 1.0
+      }
+    },
+    {
+      "prompt": "nice to meet you",
+      "response": "Nice to meet you too! I am Nexion, your AI assistant. How can I help?",
+      "vector": {
+        "nice": 0.7071067811865476,
+        "meet": 0.7071067811865476
+      }
+    },
+    {
       "prompt": "what is your name",
-      "response": "I am Nexion, a locally trained assistant. I specialize in clear answers and practical code.",
+      "response": "My name is Nexion. I am your AI assistant, and I can help with explanations, ideas, planning, and code.",
       "vector": {
         "name": 1.0
       }
@@ -1328,8 +1381,8 @@
       "prompt": "how do i add knowledge",
       "response": "Add prompt and response examples to a .jsonl file in training/, then run python brain.py train. Nexion reloads the model about every 30 seconds.",
       "vector": {
-        "add": 0.6790781401793113,
-        "knowledge": 0.7340659912641422
+        "add": 0.6600342068841158,
+        "knowledge": 0.7512355461124401
       }
     },
     {
@@ -1350,256 +1403,1416 @@
       "prompt": "write code",
       "response": "Turn on code mode with the { } button, then describe what you want. I return a short explanation plus a fenced code block you can copy.",
       "vector": {
-        "write": 0.6662380624821364,
-        "code": 0.7457391260354046
+        "write": 0.6118568968337148,
+        "code": 0.7909684809124929
       }
     },
     {
       "prompt": "help me code",
       "response": "Tell me the language and the task. Example: write a Python function that reverses a string. I will answer with runnable code.",
       "vector": {
-        "help": 0.8182078815483284,
-        "code": 0.5749224839682272
+        "help": 0.8299394035807579,
+        "code": 0.5578535528111441
+      }
+    },
+    {
+      "prompt": "Write a minimal Python program that displays the message Hello, world.",
+      "response": "Create a file named `hello.py` with this code:\n\n```python\nprint(\"Hello, world\")\n```\n\nRun it using:\n\n```bash\npython hello.py\n```\n\nThis prints `Hello, world` to the terminal.",
+      "vector": {
+        "write": 0.2426744901349745,
+        "minimal": 0.37691779426103467,
+        "python": 0.19730647675857899,
+        "program": 0.37691779426103467,
+        "displays": 0.46672345301226253,
+        "message": 0.41006239086702795,
+        "hello": 0.3273694452266998,
+        "world": 0.3534013287217934
+      }
+    },
+    {
+      "prompt": "How do I print a greeting from Python? Please include the code and a command to run it.",
+      "response": "Use Python's built-in `print()` function:\n\n```python\nprint(\"Hello, world!\")\n```\n\nSave the code in a file named `hello.py`, then run:\n\n```bash\npython hello.py\n```\n\nThe program outputs:\n\n```text\nHello, world!\n```",
+      "vector": {
+        "print": 0.42789368810432143,
+        "greeting": 0.3866839638097469,
+        "python": 0.1947193567667641,
+        "include": 0.371975576565887,
+        "code": 0.30960019710361664,
+        "command": 0.46060368646544847,
+        "run": 0.42789368810432143
+      }
+    },
+    {
+      "prompt": "Provide a simple Python hello world program.",
+      "response": "```python\n\ndef main():\n    print(\"Hello, World!\")\n\nif __name__ == \"__main__\":\n    main()\n```",
+      "vector": {
+        "provide": 0.4821667060193116,
+        "simple": 0.4431940488730167,
+        "python": 0.23200033968930706,
+        "hello": 0.3849332457009272,
+        "world": 0.4155425085737517,
+        "program": 0.4431940488730167
+      }
+    },
+    {
+      "prompt": "Show me a minimal Python script that prints a greeting using a function.",
+      "response": "```python\n\ndef greet():\n    print(\"Hello from Nexion\")\n\nif __name__ == \"__main__\":\n    greet()\n```",
+      "vector": {
+        "show": 0.34612195894942643,
+        "minimal": 0.3794930093515771,
+        "python": 0.19865453361380553,
+        "script": 0.4128640597537278,
+        "prints": 0.4128640597537278,
+        "greeting": 0.39449864544578467,
+        "using": 0.33745045797904955,
+        "function": 0.2937780882562349
+      }
+    },
+    {
+      "prompt": "Write a Python function that reverses a given string. The function should handle edge cases such as empty strings and return the reversed result.",
+      "response": "```python\ndef reverse_string(s):\n    \"\"\"\n    Reverse a string character by character.\n    \n    Args:\n        s (str): The input string to reverse\n        \n    Returns:\n        str: The reversed string\n        \n    Raises:\n        TypeError: If input is not a string\n    \"\"\"\n    if not isinstance(s, str):\n        raise TypeError(\"Input must be a string\")\n    return s[::-1]\n\n# Test the function\nprint(reverse_string(\"hello\"))  # Output: \"olleh\"\n```",
+      "vector": {
+        "write": 0.1392560610753785,
+        "python": 0.11322213044633708,
+        "function": 0.33487462305276483,
+        "reverses": 0.24880441151899385,
+        "given": 0.24880441151899385,
+        "string": 0.23530974893790346,
+        "should": 0.24880441151899385,
+        "handle": 0.267824070184871,
+        "edge": 0.267824070184871,
+        "cases": 0.267824070184871,
+        "such": 0.267824070184871,
+        "empty": 0.267824070184871,
+        "strings": 0.267824070184871,
+        "return": 0.22484247544231153,
+        "reversed": 0.267824070184871,
+        "result": 0.24880441151899385
+      }
+    },
+    {
+      "prompt": "Implement a string reversal function in Python. Demonstrate an approach that explicitly iterates through indices rather than using slice notation.",
+      "response": "```python\ndef reverse_string(text):\n    \"\"\"Reverse a string by iterating from the last index to the first.\"\"\"\n    if not isinstance(text, str):\n        raise TypeError(\"Input must be a string\")\n    # Build the reversed string by accessing characters from end to start\n    reversed_chars = []\n    for i in range(len(text) - 1, -1, -1):\n        reversed_chars.append(text[i])\n    return ''.join(reversed_chars)\n\n# Verify with test cases\nprint(reverse_string(\"Nexion\"))  # Output: \"noixen\"\nprint(reverse_string(\"\"))       # Output: \"\"\n```",
+      "vector": {
+        "implement": 0.2533426776765531,
+        "string": 0.23960186845310397,
+        "reversal": 0.2727092605497813,
+        "function": 0.1704914176805849,
+        "python": 0.11528733564006471,
+        "demonstrate": 0.2533426776765531,
+        "approach": 0.2727092605497813,
+        "explicitly": 0.2727092605497813,
+        "iterates": 0.2727092605497813,
+        "through": 0.2727092605497813,
+        "indices": 0.2727092605497813,
+        "rather": 0.2727092605497813,
+        "than": 0.2727092605497813,
+        "using": 0.1958362766920544,
+        "slice": 0.2727092605497813,
+        "notation": 0.2533426776765531
+      }
+    },
+    {
+      "prompt": "Write a Python function called add_numbers that takes two numeric arguments and returns their sum. Include a brief example call.",
+      "response": "```python\ndef add_numbers(a, b):\n    \"\"\"Return the sum of two numbers.\"\"\"\n    return a + b\n\nprint(add_numbers(2, 3))  # 5\n```",
+      "vector": {
+        "write": 0.1515939073953726,
+        "python": 0.12325341550985104,
+        "function": 0.18227196792763786,
+        "called": 0.27084805234405135,
+        "add": 0.25615778598255856,
+        "numbers": 0.23545301843261415,
+        "takes": 0.27084805234405135,
+        "two": 0.244763130146976,
+        "numeric": 0.27084805234405135,
+        "arguments": 0.29155281989399573,
+        "returns": 0.22076275207112145,
+        "their": 0.25615778598255856,
+        "sum": 0.29155281989399573,
+        "include": 0.23545301843261415,
+        "brief": 0.29155281989399573,
+        "example": 0.17148162967638242,
+        "call": 0.27084805234405135
+      }
+    },
+    {
+      "prompt": "Create a reusable Python function for adding two values. Show the result of adding -4 and 7.5.",
+      "response": "```python\ndef add(a, b):\n    return a + b\n\nresult = add(-4, 7.5)\nprint(result)  # 3.5\n```",
+      "vector": {
+        "create": 0.24385188031965832,
+        "reusable": 0.29834802385600795,
+        "python": 0.14355375851574265,
+        "function": 0.2122929085562096,
+        "adding": 0.679145530020648,
+        "two": 0.2850766214739744,
+        "values": 0.2850766214739744,
+        "show": 0.25011816850158586,
+        "result": 0.315457837333113
+      }
+    },
+    {
+      "prompt": "Write a simple Python for loop that prints a numbered list from a list of items.",
+      "response": "```python\nitems = [\"Nexion\", \"Python\", \"Code\"]\n\nfor index, item in enumerate(items, start=1):\n    print(f\"{index}. {item}\")\n```",
+      "vector": {
+        "write": 0.20222139996798885,
+        "simple": 0.3140867587108934,
+        "python": 0.16441609470644944,
+        "loop": 0.32650614849432547,
+        "prints": 0.3417062531345153,
+        "numbered": 0.38892209071311545,
+        "list": 0.5729345285745432,
+        "items": 0.3613025962894936
+      }
+    },
+    {
+      "prompt": "Show how to use a Python for loop to process each item in a list and print it with its position.",
+      "response": "```python\nnames = [\"Nexion\", \"Python\", \"Code\"]\n\nfor i in range(len(names)):\n    print(f\"{i + 1}. {names[i]}\")\n```",
+      "vector": {
+        "show": 0.2677912582974446,
+        "use": 0.2936101216975709,
+        "python": 0.15369711787256465,
+        "loop": 0.3052198392185807,
+        "process": 0.3635666236100741,
+        "each": 0.28379424539673065,
+        "item": 0.33774776020994773,
+        "list": 0.2677912582974446,
+        "print": 0.33774776020994773,
+        "its": 0.28379424539673065,
+        "position": 0.3635666236100741
+      }
+    },
+    {
+      "prompt": "Give an example of a Python list comprehension that computes the squares of even numbers between 1 and 10.",
+      "response": "```python\nsquares = [n * n for n in range(1, 11) if n % 2 == 0]\nprint(squares)\n```",
+      "vector": {
+        "give": 0.28788081577333063,
+        "example": 0.2096650608686319,
+        "python": 0.15069797805110793,
+        "list": 0.2625657639113769,
+        "comprehension": 0.3131958676352844,
+        "computes": 0.356472234634442,
+        "squares": 0.3311571827724883,
+        "even": 0.3311571827724883,
+        "numbers": 0.28788081577333063,
+        "between": 0.356472234634442,
+        "10": 0.356472234634442
+      }
+    },
+    {
+      "prompt": "Show how to use a list comprehension to create a list of cubes for numbers from 0 to 9 that are divisible by 3.",
+      "response": "```python\ncubes = [n ** 3 for n in range(0, 10) if n % 3 == 0]\nprint(cubes)\n```",
+      "vector": {
+        "show": 0.26026225396597047,
+        "use": 0.2853552149015832,
+        "list": 0.5205245079319409,
+        "comprehension": 0.3104481758371961,
+        "create": 0.2537418228593496,
+        "cubes": 0.3533448758900672,
+        "numbers": 0.2853552149015832,
+        "divisible": 0.3533448758900672,
+        "by": 0.2966385229122207
+      }
+    },
+    {
+      "prompt": "Show how to create a Python dictionary, safely get a value with a default, and iterate over its items.",
+      "response": "```python\nuser = {\"name\": \"Avighn\", \"role\": \"engineer\"}\nprint(user.get(\"name\", \"unknown\"))\nfor key, value in user.items():\n    print(f\"{key}: {value}\")\n```",
+      "vector": {
+        "show": 0.25550476710774306,
+        "create": 0.24910352679743253,
+        "python": 0.14664536309673745,
+        "dictionary": 0.2912160928329692,
+        "safely": 0.32225160508321204,
+        "get": 0.2707735235183414,
+        "value": 0.28013903904767534,
+        "default": 0.30477331098760774,
+        "iterate": 0.34688587702314433,
+        "over": 0.34688587702314433,
+        "its": 0.2707735235183414,
+        "items": 0.32225160508321204
+      }
+    },
+    {
+      "prompt": "Give a simple Python snippet that demonstrates dictionary creation, using .get() to avoid KeyError, and printing each key-value pair.",
+      "response": "```python\nperson = {\"name\": \"Avighn\", \"role\": \"engineer\"}\nprint(person.get(\"name\", \"unknown\"))\nfor k, v in person.items():\n    print(f\"{k}: {v}\")\n```",
+      "vector": {
+        "give": 0.23026466065338844,
+        "simple": 0.23026466065338844,
+        "python": 0.12053744770687427,
+        "snippet": 0.26487974236560197,
+        "demonstrates": 0.2851282671266455,
+        "dictionary": 0.23936961810444873,
+        "creation": 0.26487974236560197,
+        "using": 0.20475453639223523,
+        "get": 0.22256652881665032,
+        "avoid": 0.2851282671266455,
+        "keyerror": 0.2851282671266455,
+        "printing": 0.2851282671266455,
+        "each": 0.22256652881665032,
+        "key": 0.2851282671266455,
+        "value": 0.23026466065338844,
+        "pair": 0.2851282671266455
+      }
+    },
+    {
+      "prompt": "Create a simple Python class named Counter. It should start at zero by default, provide methods to increase and decrease the value, and return the updated value after each operation.",
+      "response": "```python\nclass Counter:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def decrement(self, amount=1):\n        self.value -= amount\n        return self.value\n\n\ncounter = Counter()\nprint(counter.increment())  # 1\nprint(counter.decrement())  # 0\n```",
+      "vector": {
+        "create": 0.16640871800208212,
+        "simple": 0.187141382338467,
+        "python": 0.0979635543005465,
+        "class": 0.187141382338467,
+        "named": 0.23173029635742726,
+        "counter": 0.21527385487246853,
+        "should": 0.21527385487246853,
+        "start": 0.21527385487246853,
+        "zero": 0.23173029635742726,
+        "by": 0.19454119053608362,
+        "default": 0.20359782382342576,
+        "provide": 0.20359782382342576,
+        "methods": 0.21527385487246853,
+        "increase": 0.23173029635742726,
+        "decrease": 0.23173029635742726,
+        "value": 0.374282764676934,
+        "return": 0.19454119053608362,
+        "updated": 0.23173029635742726,
+        "after": 0.23173029635742726,
+        "each": 0.18088493365344935,
+        "operation": 0.23173029635742726
+      }
+    },
+    {
+      "prompt": "Write a Python class that represents a rectangle. Store its width and height, reject non-positive dimensions, and include methods for calculating its area and perimeter.",
+      "response": "```python\nclass Rectangle:\n    def __init__(self, width, height):\n        if width <= 0 or height <= 0:\n            raise ValueError(\"Width and height must be positive.\")\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)\n\n\nrectangle = Rectangle(5, 3)\nprint(rectangle.area())      # 15\nprint(rectangle.perimeter()) # 16\n```",
+      "vector": {
+        "write": 0.12590852512770193,
+        "python": 0.1023699173036216,
+        "class": 0.1955589297556492,
+        "represents": 0.24215343598166303,
+        "rectangle": 0.24215343598166303,
+        "store": 0.24215343598166303,
+        "its": 0.3780421368290715,
+        "width": 0.24215343598166303,
+        "height": 0.24215343598166303,
+        "reject": 0.24215343598166303,
+        "non": 0.24215343598166303,
+        "positive": 0.24215343598166303,
+        "dimensions": 0.24215343598166303,
+        "include": 0.1955589297556492,
+        "methods": 0.22495679008661187,
+        "calculating": 0.24215343598166303,
+        "area": 0.24215343598166303,
+        "perimeter": 0.24215343598166303
+      }
+    },
+    {
+      "prompt": "How do I read the contents of a text file in Python using a context manager?",
+      "response": "```python\nwith open(\"notes.txt\", \"r\", encoding=\"utf-8\") as f:\n    content = f.read()\nprint(content)\n```",
+      "vector": {
+        "read": 0.353296064882817,
+        "contents": 0.4208332517736024,
+        "text": 0.353296064882817,
+        "file": 0.3099719795696219,
+        "python": 0.1779064790389351,
+        "using": 0.30220615526368594,
+        "context": 0.4208332517736024,
+        "manager": 0.4208332517736024
+      }
+    },
+    {
+      "prompt": "What's the Pythonic way to read a file line by line into a list?",
+      "response": "```python\nfrom pathlib import Path\n\nlines = Path(\"notes.txt\").read_text(encoding=\"utf-8\").splitlines()\n# Or using open():\n# with open(\"notes.txt\", encoding=\"utf-8\") as f:\n#     lines = f.readlines()\nprint(lines)\n```",
+      "vector": {
+        "what's": 0.29660651622337625,
+        "pythonic": 0.3192803694006656,
+        "way": 0.3192803694006656,
+        "read": 0.26804083952061647,
+        "file": 0.2351714550210655,
+        "line": 0.5932130324467525,
+        "by": 0.26804083952061647,
+        "into": 0.3192803694006656,
+        "list": 0.2351714550210655
+      }
+    },
+    {
+      "prompt": "Python: write a JSON file",
+      "response": "```python\nimport json\nfrom pathlib import Path\n\ndata = {\n    \"name\": \"Nexion\",\n    \"theme\": \"purple\",\n}\n\noutput_path = Path(\"config.json\")\noutput_path.write_text(\n    json.dumps(data, indent=2, ensure_ascii=False),\n    encoding=\"utf-8\",\n)\n```\n\nThis writes the dictionary as pretty-printed JSON to `config.json` in the current directory. Use `Path(\"subfolder/config.json\")` when the destination is in a subdirectory.",
+      "vector": {
+        "python": 0.3443371180725075,
+        "write": 0.42351288176432844,
+        "json": 0.5849185320816591,
+        "file": 0.5999492469573
+      }
+    },
+    {
+      "prompt": "How can I save a Python object as a JSON file?",
+      "response": "```python\nimport json\nfrom pathlib import Path\n\nrecord = {\n    \"name\": \"Nexion\",\n    \"theme\": \"purple\",\n}\n\nwith Path(\"record.json\").open(\"w\", encoding=\"utf-8\") as file:\n    json.dump(record, file, indent=2, ensure_ascii=False)\n```\n\n`json.dump()` writes the object directly to the file. The dictionary must contain JSON-compatible values; for example, use a `datetime` converted to a string rather than a raw `datetime` object.",
+      "vector": {
+        "save": 0.5276322646374955,
+        "python": 0.240106872421441,
+        "object": 0.5679667004830704,
+        "json": 0.40786471161059723,
+        "file": 0.41834565528361894
+      }
+    },
+    {
+      "prompt": "How to send a POST request with form data using Python's standard library urllib?",
+      "response": "Use urllib.request to post data via the requests object:\n\n```python\nfrom urllib.request import urlopen, parse_qs, urlencode\nimport json\n\n# Example: posting form data to a JSON API\nbase_url = \"https://httpbin.org/post\"\ndata = {\"name\": \"Alice\", \"age\": 30}\n\n# Encode form data as application/x-www-form-urlencoded\nform_data = urlencode(data)\n\nwith urlopen(f\"{base_url}?data={form_data}\", timeout=10) as response:\n    result = json.loads(response.read().decode(\"utf-8\"))\n    print(result)\n```\nThis approach avoids external dependencies while correctly encoding multipart/form-data or simple key-value pairs.",
+      "vector": {
+        "send": 0.33833875362957444,
+        "post": 0.33833875362957444,
+        "request": 0.28404064971318305,
+        "form": 0.3143114598802455,
+        "data": 0.2732365299151493,
+        "using": 0.2429657197480869,
+        "python's": 0.33833875362957444,
+        "standard": 0.33833875362957444,
+        "library": 0.33833875362957444,
+        "urllib": 0.33833875362957444
+      }
+    },
+    {
+      "prompt": "Demonstrate a robust GET request with query parameters and error handling in Python.",
+      "response": "Use urllib with proper exception handling for network issues and missing endpoints:\n\n```python\nfrom urllib.request import urlopen, Request, urlretrieve\nimport json\nimport sys\n\ndef fetch_with_headers(url, params=None):\n    headers = {\"Accept\": \"application/json\"}\n    if params:\n        query_string = urlencode(params)\n        url = f\"{url}?{query_string}\"\n    \n    req = Request(url, headers=headers)\n    try:\n        with urlopen(req, timeout=15) as response:\n            # Read and decode response\n            content = response.read().decode(\"utf-8\")\n            return json.loads(content)\n    except urlopen.error as e:\n        print(f\"HTTP Error: {e.code} - {e.reason}\", file=sys.stderr)\n        raise\n    except TimeoutError:\n        print(\"Request timed out after 15 seconds\", file=sys.stderr)\n        raise\n    except Exception as e:\n        print(f\"Unexpected error: {e}\", file=sys.stderr)\n        raise\n\n# Usage\nresult = fetch_with_headers(\n    \"https://httpbin.org/get\",\n    params={\"page\": 1, \"limit\": 10}\n)\nprint(json.dumps(result, indent=2))\n```\nThe function constructs URLs safely, handles timeouts and HTTP errors gracefully, and returns structured JSON when successful.",
+      "vector": {
+        "demonstrate": 0.3548487105698309,
+        "robust": 0.38197484274675003,
+        "get": 0.2981634044991721,
+        "request": 0.3206738256967855,
+        "query": 0.3356024134996147,
+        "parameters": 0.38197484274675003,
+        "error": 0.3548487105698309,
+        "handling": 0.3548487105698309,
+        "python": 0.16147915847458677
+      }
+    },
+    {
+      "prompt": "Write a minimal Python script using the Flask framework to create a web server with a single GET endpoint at the root URL that returns a JSON response.",
+      "response": "```python\nfrom flask import Flask, jsonify\n\napp = Flask(__name__)\n\n@app.route('/', methods=['GET'])\ndef index():\n    # Returns a JSON object indicating the server is running\n    return jsonify({\n        \"message\": \"Hello, World!\",\n        \"status\": \"success\"\n    })\n\nif __name__ == '__main__':\n    # Running in debug mode for development convenience\n    app.run(debug=True)\n```",
+      "vector": {
+        "write": 0.14772831992257546,
+        "minimal": 0.22944905525148457,
+        "python": 0.12011049989298712,
+        "script": 0.2496258590366353,
+        "using": 0.2040292887338583,
+        "flask": 0.2496258590366353,
+        "framework": 0.2841183329307333,
+        "create": 0.2040292887338583,
+        "web": 0.2841183329307333,
+        "server": 0.22944905525148457,
+        "single": 0.2639415291455826,
+        "get": 0.22177819046429195,
+        "endpoint": 0.2639415291455826,
+        "root": 0.2841183329307333,
+        "url": 0.2639415291455826,
+        "returns": 0.21513338514253738,
+        "json": 0.2040292887338583,
+        "response": 0.2496258590366353
+      }
+    },
+    {
+      "prompt": "How do I set up a basic Flask API route in Python that returns a dictionary as a JSON response when the user visits the home page?",
+      "response": "```python\nfrom flask import Flask\n\napp = Flask(__name__)\n\n@app.route('/')\ndef hello_world():\n    # Flask automatically converts dictionaries to JSON responses\n    return {\n        \"greeting\": \"Hello from Flask\",\n        \"version\": 1.0\n    }\n\nif __name__ == '__main__':\n    app.run(port=5000)\n```",
+      "vector": {
+        "set": 0.2787143088015182,
+        "up": 0.2787143088015182,
+        "basic": 0.2787143088015182,
+        "flask": 0.2635973921406125,
+        "api": 0.22717437810652555,
+        "route": 0.2787143088015182,
+        "python": 0.1268330719528947,
+        "returns": 0.22717437810652555,
+        "dictionary": 0.2518718006225632,
+        "json": 0.21544878658847624,
+        "response": 0.2635973921406125,
+        "user": 0.2787143088015182,
+        "visits": 0.30002040617469944,
+        "home": 0.30002040617469944,
+        "page": 0.2518718006225632
+      }
+    },
+    {
+      "prompt": "Write a Python helper that converts user-provided text to an integer. Return None when the value is not a valid integer instead of allowing TypeError or ValueError to stop the program.",
+      "response": "```python\ndef to_integer(value):\n    try:\n        return int(value)\n    except (TypeError, ValueError):\n        return None\n\nprint(to_integer(\"42\"))    # 42\nprint(to_integer(\"nexion\")) # None\nprint(to_integer(None))     # None\n```",
+      "vector": {
+        "write": 0.12095840902943958,
+        "python": 0.09834522576578904,
+        "helper": 0.23263313050205706,
+        "converts": 0.23263313050205706,
+        "user": 0.21611257380426138,
+        "provided": 0.23263313050205706,
+        "text": 0.19529913385257597,
+        "integer": 0.43222514760852276,
+        "return": 0.19529913385257597,
+        "none": 0.23263313050205706,
+        "value": 0.18787049558996768,
+        "not": 0.23263313050205706,
+        "valid": 0.23263313050205706,
+        "instead": 0.23263313050205706,
+        "allowing": 0.23263313050205706,
+        "typeerror": 0.23263313050205706,
+        "valueerror": 0.23263313050205706,
+        "stop": 0.23263313050205706,
+        "program": 0.18787049558996768
+      }
+    },
+    {
+      "prompt": "A program reads several numeric values from a file, and some lines may contain invalid data. Write Python code that attempts to convert each line to an integer, skips invalid lines, and reports how many were skipped.",
+      "response": "```python\nlines = [\"10\", \"20\", \"invalid\", \"30\", None]\n\nvalid_count = 0\nskipped_count = 0\n\nfor line in lines:\n    try:\n        number = int(line)\n    except (TypeError, ValueError):\n        skipped_count += 1\n        continue\n\n    valid_count += 1\n    print(f\"Processed: {number}\")\n\nprint(f\"Valid values: {valid_count}\")\nprint(f\"Skipped values: {skipped_count}\")\n```\n\nThis keeps processing going after each invalid value. The `continue` statement skips the remaining loop body only for that invalid line.",
+      "vector": {
+        "program": 0.15643393140167045,
+        "reads": 0.19370638835243462,
+        "several": 0.19370638835243462,
+        "numeric": 0.17995023348061887,
+        "values": 0.16261952794641465,
+        "file": 0.1426777765298547,
+        "some": 0.19370638835243462,
+        "lines": 0.38741277670486923,
+        "may": 0.19370638835243462,
+        "contain": 0.19370638835243462,
+        "invalid": 0.38741277670486923,
+        "data": 0.15643393140167045,
+        "write": 0.10071831343791367,
+        "python": 0.0818890175001421,
+        "code": 0.13020203219463844,
+        "attempts": 0.19370638835243462,
+        "convert": 0.19370638835243462,
+        "each": 0.1512040840414538,
+        "line": 0.17995023348061887,
+        "integer": 0.17995023348061887,
+        "skips": 0.19370638835243462,
+        "reports": 0.19370638835243462,
+        "many": 0.19370638835243462,
+        "were": 0.19370638835243462,
+        "skipped": 0.19370638835243462
+      }
+    },
+    {
+      "prompt": "Write a minimal JavaScript program that prints \"Hello, world!\" to the console.",
+      "response": "```javascript\nconsole.log(\"Hello, world!\");\n```",
+      "vector": {
+        "write": 0.24319432540587,
+        "minimal": 0.3777251933559129,
+        "javascript": 0.2545115651189765,
+        "program": 0.3777251933559129,
+        "prints": 0.4109407893089979,
+        "hello": 0.3280707063446182,
+        "world": 0.3541583529782315,
+        "console": 0.43450762968667944
+      }
+    },
+    {
+      "prompt": "What JavaScript statement outputs \"Hello, world\" to the console, and how can it be run with Node.js?",
+      "response": "Use the following statement:\n\n```javascript\nconsole.log(\"Hello, world\");\n```\n\nSave it in a `.js` file, then run it with Node.js:\n\n```bash\nnode filename.js\n```",
+      "vector": {
+        "javascript": 0.21463862214561866,
+        "statement": 0.3664356820253349,
+        "outputs": 0.39444757117380236,
+        "hello": 0.27667365270113,
+        "world": 0.2986742895910213,
+        "console": 0.3664356820253349,
+        "run": 0.3664356820253349,
+        "node": 0.331144875341884,
+        "js": 0.3465609303824118
+      }
+    },
+    {
+      "prompt": "How can I create a JavaScript function that takes a person's name as input and returns a greeting message?",
+      "response": "You can define a function using the `function` keyword, accept a parameter for the name, and use a template literal to build the greeting string. Here's an example:\n\n```javascript\nfunction createGreeting(name) {\n  return `Hello, ${name}!`;\n}\n\nconsole.log(createGreeting(\"Nexion\")); // Output: Hello, Nexion!\n```\n\nThis approach uses backticks and `${}` syntax to embed the `name` variable directly into the string, making it easy to read and maintain.",
+      "vector": {
+        "create": 0.27603632145918316,
+        "javascript": 0.20916622527908404,
+        "function": 0.2403120840114462,
+        "takes": 0.35709308814331925,
+        "person's": 0.38439079000867143,
+        "name": 0.31042735857655385,
+        "input": 0.38439079000867143,
+        "returns": 0.29105933087514085,
+        "greeting": 0.3227020510259485,
+        "message": 0.3377250604419061
+      }
+    },
+    {
+      "prompt": "Write a JavaScript function that returns a personalized greeting when given a name, and show how to call it.",
+      "response": "Below is a simple JavaScript function named `greet` that accepts a `name` argument and returns a greeting using string interpolation:\n\n```javascript\nfunction greet(name) {\n  return `Hello, ${name}`;\n}\n\nconsole.log(greet(\"Nexion\"));\n```\n\nWhen executed, this code logs `Hello, Nexion` to the console. The function uses a template literal to dynamically insert the provided name into the returned message.",
+      "vector": {
+        "write": 0.20956030902668238,
+        "javascript": 0.21931236326417158,
+        "function": 0.2519690308278398,
+        "returns": 0.3051779015428773,
+        "personalized": 0.4030366396931558,
+        "greeting": 0.3383555320476163,
+        "given": 0.374414793600254,
+        "name": 0.3254854245251146,
+        "show": 0.2968635784322128,
+        "call": 0.374414793600254
+      }
+    },
+    {
+      "prompt": "How can I obtain the squares of only the even numbers from a JavaScript array?",
+      "response": "```javascript\nconst numbers = [1, 2, 3, 4, 5, 6];\nconst evenSquares = numbers.filter(n => n % 2 === 0).map(n => n * n);\nconsole.log(evenSquares);\n```",
+      "vector": {
+        "obtain": 0.43676401668156345,
+        "squares": 0.40574700424841414,
+        "only": 0.40574700424841414,
+        "even": 0.40574700424841414,
+        "numbers": 0.35272307126995683,
+        "javascript": 0.237665113425201,
+        "array": 0.36667018997591627
+      }
+    },
+    {
+      "prompt": "Write JavaScript code that filters out odd values from an array and then maps each remaining value to its cube.",
+      "response": "```javascript\nconst values = [1, 2, 3, 4, 5, 6];\nconst cubedEvens = values.filter(v => v % 2 === 0).map(v => Math.pow(v, 3));\nconsole.log(cubedEvens);\n```",
+      "vector": {
+        "write": 0.1546861634118576,
+        "javascript": 0.16188460601001908,
+        "code": 0.19996813033442098,
+        "filters": 0.2974999979628941,
+        "out": 0.2974999979628941,
+        "odd": 0.2974999979628941,
+        "values": 0.2497558787001002,
+        "array": 0.2497558787001002,
+        "then": 0.2974999979628941,
+        "maps": 0.2974999979628941,
+        "each": 0.2322237024649394,
+        "remaining": 0.2974999979628941,
+        "value": 0.2402558566558476,
+        "its": 0.2322237024649394,
+        "cube": 0.2974999979628941
+      }
+    },
+    {
+      "prompt": "How do I use the JavaScript fetch API to retrieve JSON data from a server endpoint?",
+      "response": "You can use the `fetch()` function to make HTTP requests. Since `fetch()` returns a Promise, you can use `async/await` for cleaner syntax. Here's an example that fetches JSON data from an API endpoint:\n\n```javascript\nasync function fetchData(url) {\n  try {\n    const response = await fetch(url);\n    if (!response.ok) {\n      throw new Error(`HTTP error! status: ${response.status}`);\n }\n    const data = await response.json();\n    return data;\n  } catch (error) {\n    console.error('Failed to fetch data:', error);\n  }\n}\n\n// Usage\nfetchData('https://api.example.com/data')\n  .then(data => console.log(data))\n  .catch(error => console.error(error));\n```\n\nThis example includes error handling using a try/catch block and checks the response status before parsing the JSON data.",
+      "vector": {
+        "use": 0.33220916304307097,
+        "javascript": 0.22384282414884807,
+        "fetch": 0.3453451357354356,
+        "api": 0.311482135947311,
+        "retrieve": 0.411362398004473,
+        "json": 0.2954050047068546,
+        "data": 0.33220916304307097,
+        "server": 0.33220916304307097,
+        "endpoint": 0.3821492940716521
+      }
+    },
+    {
+      "prompt": "Show me a practical example of using JavaScript fetch to get data from a REST API.",
+      "response": "Here's a complete example of using the Fetch API to retrieve data from a REST endpoint:\n\n```javascript\nfunction getData(endpoint) {\n  return fetch(endpoint)\n    .then(response => {\n      if (!response.ok) {\n        throw new Error(`Request failed with status ${response.status}`);\n      }\n      return response.json();\n    })\n    .catch(error => {\n      console.error('Error fetching data:', error);\n      return null;\n    });\n}\n\n// Example usage\ngetData('https://jsonplaceholder.typicode.com/posts/1')\n  .then(data => {\n    if (data) {\n      console.log('Received data:', data);\n    } else {\n      console.log('No data received');\n    }\n  });\n```\n\nThis version uses Promise chaining instead of async/await and demonstrates how to handle both network errors and HTTP error statuses when working with REST APIs.",
+      "vector": {
+        "show": 0.30040639408717984,
+        "practical": 0.40784654100934664,
+        "example": 0.23988171177897294,
+        "using": 0.2928802193661618,
+        "javascript": 0.22192967077627362,
+        "fetch": 0.3423935190658073,
+        "get": 0.31835843508987915,
+        "data": 0.3293698176984405,
+        "rest": 0.3583332413097012,
+        "api": 0.3088199416100557
+      }
+    },
+    {
+      "prompt": "Explain how to implement a JavaScript debounce function that limits the rate at which a function is called.",
+      "response": "A debounce function wraps another function so that its execution is postponed until a specified delay has passed without any new calls. This is useful for events like typing, resizing, or scrolling where you only want to act after the user has stopped interacting.\n\n```javascript\n/**\n * Debounce a function so it only runs after `wait` milliseconds of silence.\n * @template T - The function type.\n * @param {T} fn - The function to debounce.\n * @param {number} [wait=250] - Delay in milliseconds.\n * @returns {(...args: Parameters<T>) => void} Debounced version of `fn`.\n */\nfunction debounce(fn, wait = 250) {\n  let timer; // Holds the ID of the scheduled timeout\n\n  return function debounced(...args) {\n    // Cancel any previously scheduled execution\n    clearTimeout(timer);\n\n    // Schedule a new execution after `wait` ms\n    timer = setTimeout(() => {\n      fn(...args);\n    }, wait);\n  };\n}\n```\n\n**Key points**\n- `clearTimeout(timer)` ensures the previous scheduled call is cancelled.\n- `setTimeout` creates a new timer that will invoke `fn` with the latest arguments after the wait period.\n- The returned function preserves the original function's arity via `...args` and `Parameters<T>`.",
+      "vector": {
+        "explain": 0.3721497847104917,
+        "implement": 0.3457213838842054,
+        "javascript": 0.20250528298183554,
+        "debounce": 0.3269701350855931,
+        "function": 0.46531859062581493,
+        "limits": 0.3721497847104917,
+        "rate": 0.3457213838842054,
+        "called": 0.3457213838842054
+      }
+    },
+    {
+      "prompt": "Write a reusable debounce utility in JavaScript that can be used to delay execution of an event handler, with a default wait time of 250ms.",
+      "response": "Here is a ready‑to‑use debounce utility that you can attach to any event handler. It defaults to a 250 ms wait but lets you override it per call.\n\n```javascript\n/**\n * Creates a debounced version of a function.\n *\n * @param {Function} func - The function to debounce.\n * @param {number} [wait=250] - Delay in milliseconds before invoking `func`.\n * @returns {Function} Debounced function that accepts the same arguments as `func`.\n */\nfunction debounce(func, wait = 250) {\n  let timeoutId; // Stores the ID of the scheduled timeout\n\n  return function debounced(...args) {\n    // Cancel any pending execution\n    if (timeoutId) clearTimeout(timeoutId);\n\n    // Schedule execution after the wait period\n    timeoutId = setTimeout(() => {\n      func.apply(this, args);\n    }, wait);\n  };\n}\n```\n\n**Typical usage**\n\n```javascript\n// Example: debounce a search input handler\nconst searchInput = document.getElementById('search');\n\nfunction performSearch(query) {\n  console.log('Searching for:', query);\n  // e.g., fetch results from an API\n}\n\nconst debouncedSearch = debounce(performSearch, 300); // 300 ms wait\n\nsearchInput.addEventListener('input', (e) => {\n  debouncedSearch(e.target.value);\n});\n```\n\nThe debounced version ensures `performSearch` is called only after the user stops typing for 300 ms, reducing unnecessary network requests.",
+      "vector": {
+        "write": 0.15260914867526335,
+        "reusable": 0.2578733032019719,
+        "debounce": 0.2578733032019719,
+        "utility": 0.29350538159723716,
+        "javascript": 0.15971093575474665,
+        "used": 0.29350538159723716,
+        "delay": 0.29350538159723716,
+        "execution": 0.29350538159723716,
+        "event": 0.27266195191325054,
+        "handler": 0.27266195191325054,
+        "default": 0.2578733032019719,
+        "wait": 0.29350538159723716,
+        "time": 0.29350538159723716,
+        "250ms": 0.29350538159723716
+      }
+    },
+    {
+      "prompt": "Create a minimal, accessible HTML starter page for Nexion. Include a semantic document structure, viewport metadata, a page title, an h1 heading, and the tagline \"Purple local AI.\" Use a simple purple accent.",
+      "response": "```html\n<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Nexion</title>\n    <style>\n      :root {\n        color-scheme: light dark;\n        font-family: system-ui, sans-serif;\n      }\n\n      body {\n        max-width: 48rem;\n        margin: 0 auto;\n        padding: 2rem;\n        line-height: 1.6;\n      }\n\n      h1 {\n        color: #6d28d9;\n        margin-bottom: 0.25rem;\n      }\n    </style>\n  </head>\n  <body>\n    <main>\n      <h1>Nexion</h1>\n      <p>Purple local AI.</p>\n    </main>\n  </body>\n</html>\n```",
+      "vector": {
+        "create": 0.14904487036321779,
+        "minimal": 0.16761419356575535,
+        "accessible": 0.19281119509409222,
+        "html": 0.16201057138545039,
+        "starter": 0.19281119509409222,
+        "page": 0.34848374378310926,
+        "nexion": 0.18235349459044606,
+        "include": 0.16761419356575535,
+        "semantic": 0.20755049611878293,
+        "document": 0.20755049611878293,
+        "structure": 0.20755049611878293,
+        "viewport": 0.20755049611878293,
+        "metadata": 0.20755049611878293,
+        "title": 0.20755049611878293,
+        "h1": 0.20755049611878293,
+        "heading": 0.20755049611878293,
+        "tagline": 0.20755049611878293,
+        "purple": 0.32402114277090077,
+        "local": 0.19281119509409222,
+        "ai": 0.19281119509409222,
+        "use": 0.16761419356575535,
+        "simple": 0.16761419356575535,
+        "accent": 0.20755049611878293
+      }
+    },
+    {
+      "prompt": "Build a polished single-file responsive landing page for Nexion. Present Nexion as \"Purple local AI.\" Use purple-themed styling, accessible text contrast, no external dependencies, and a clear content hierarchy.",
+      "response": "```html\n<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Nexion — Purple local AI</title>\n    <style>\n      * {\n        box-sizing: border-box;\n      }\n\n      body {\n        margin: 0;\n        min-height: 100vh;\n        display: grid;\n        place-items: center;\n        padding: 2rem;\n        background: #f5f0ff;\n        color: #1f1135;\n        font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;\n      }\n\n      .container {\n        width: min(100%, 42rem);\n        padding: clamp(2rem, 8vw, 4rem);\n        border: 1px solid #d8c9f5;\n        border-radius: 1.5rem;\n        background: #ffffff;\n        box-shadow: 0 1rem 3rem rgba(76, 29, 149, 0.12);\n      }\n\n      h1 {\n        margin: 0 0 0.75rem;\n        color: #5b21b6;\n        font-size: clamp(2.5rem, 8vw, 4.5rem);\n        letter-spacing: -0.04em;\n      }\n\n      p {\n        margin: 0;\n        color: #4c1d95;\n        font-size: clamp(1.25rem, 4vw, 1.75rem);\n        font-weight: 600;\n      }\n\n      @media (prefers-color-scheme: dark) {\n        body {\n          background: #170a2e;\n          color: #f5edff;\n        }\n\n        .container {\n          border-color: #4c1d95;\n          background: #21103c;\n        }\n\n        h1,\n        p {\n          color: #c4b5fd;\n        }\n      }\n    </style>\n  </head>\n  <body>\n    <main class=\"container\">\n      <h1>Nexion</h1>\n      <p>Purple local AI.</p>\n    </main>\n  </body>\n</html>\n```",
+      "vector": {
+        "build": 0.19914047757156603,
+        "polished": 0.19914047757156603,
+        "single": 0.1849984181690766,
+        "file": 0.14668034853506848,
+        "responsive": 0.19914047757156603,
+        "landing": 0.1849984181690766,
+        "page": 0.16718153042423714,
+        "nexion": 0.34992893468009467,
+        "present": 0.19914047757156603,
+        "purple": 0.3108916929678315,
+        "local": 0.1849984181690766,
+        "ai": 0.1849984181690766,
+        "use": 0.1608224079375579,
+        "themed": 0.19914047757156603,
+        "styling": 0.19914047757156603,
+        "accessible": 0.1849984181690766,
+        "text": 0.16718153042423714,
+        "contrast": 0.19914047757156603,
+        "no": 0.19914047757156603,
+        "external": 0.19914047757156603,
+        "dependencies": 0.19914047757156603,
+        "clear": 0.19914047757156603,
+        "content": 0.17496446734004734,
+        "hierarchy": 0.19914047757156603
+      }
+    },
+    {
+      "prompt": "How can I create a purple button using CSS with a gradient background?",
+      "response": "```css\n.button {\n  background: linear-gradient(180deg, #a855f7, #7c3aed);\n  color: #faf5ff;\n  border: 0;\n  border-radius: 12px;\n  padding: 10px 16px;\n  cursor: pointer;\n  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);\n}\n```",
+      "vector": {
+        "create": 0.3248085835196168,
+        "purple": 0.353064309282652,
+        "button": 0.37971958015718005,
+        "using": 0.3248085835196168,
+        "css": 0.3331552248726772,
+        "gradient": 0.4523079693306405,
+        "background": 0.4523079693306405
+      }
+    },
+    {
+      "prompt": "Provide a CSS snippet for a purple button that includes a hover effect and uses CSS custom properties for easy theming.",
+      "response": "```css\n:root {\n  --purple-1: #a855f7;\n  --purple-2: #7c3aed;\n  --purple-text: #faf5ff;\n}\n\n.button {\n  background: linear-gradient(180deg, var(--purple-1), var(--purple-2));\n  color: var(--purple-text);\n  border: 0;\n  border-radius: 12px;\n  padding: 10px 16px;\n  cursor: pointer;\n  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);\n  transition: background 0.2s ease, box-shadow 0.2s ease;\n}\n\n.button:hover {\n  background: linear-gradient(180deg, #c084fc, #8b5cf6);\n  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.45);\n}\n```",
+      "vector": {
+        "provide": 0.24384646802175755,
+        "css": 0.4088542715243081,
+        "snippet": 0.2578306986896193,
+        "purple": 0.21664353459886307,
+        "button": 0.23299945601635436,
+        "includes": 0.27754036481942096,
+        "hover": 0.27754036481942096,
+        "effect": 0.27754036481942096,
+        "uses": 0.27754036481942096,
+        "custom": 0.2578306986896193,
+        "properties": 0.27754036481942096,
+        "easy": 0.27754036481942096,
+        "theming": 0.27754036481942096
+      }
+    },
+    {
+      "prompt": "How can I center a flex item both horizontally and vertically inside its parent?",
+      "response": "Make the parent a flex container, then use `align-items` and `justify-content` to center the child in both directions.\n\n```css\n.parent {\n  display: flex;\n  min-height: 100vh;\n  align-items: center; /* vertical centering */\n  justify-content: center; /* horizontal centering */\n}\n```\n\nIf you only need to center one item, a full-page container often uses `min-height: 100vh` so it stretches to the viewport height.",
+      "vector": {
+        "center": 0.3217710184567185,
+        "flex": 0.34636855232782204,
+        "item": 0.3217710184567185,
+        "both": 0.34636855232782204,
+        "horizontally": 0.34636855232782204,
+        "vertically": 0.34636855232782204,
+        "inside": 0.34636855232782204,
+        "its": 0.2703697082008728,
+        "parent": 0.34636855232782204
+      }
+    },
+    {
+      "prompt": "What is the simplest CSS Flexbox setup for centering content in a div?",
+      "response": "Set the parent to `display: flex` and add `place-items: center` to center its direct children both horizontally and vertically.\n\n```css\n.parent {\n  display: flex;\n  min-height: 100vh;\n  place-items: center;\n}\n```\n\n`place-items` is shorthand for `align-items` and `justify-content`, so this is equivalent to:\n\n```css\n.parent {\n  display: flex;\n  min-height: 100vh;\n  align-items: center;\n  justify-content: center;\n}\n```",
+      "vector": {
+        "simplest": 0.402341087690962,
+        "css": 0.2963512576255632,
+        "flexbox": 0.37376863656714177,
+        "setup": 0.402341087690962,
+        "centering": 0.402341087690962,
+        "content": 0.35349615987320365,
+        "div": 0.402341087690962
+      }
+    },
+    {
+      "prompt": "Show me a React functional component that manages its own state with a counter.",
+      "response": "```jsx\nimport { useState } from 'react';\n\nexport function Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={() => setCount(count + 1)}>Increment</button>\n      <button onClick={() => setCount(count - 1)}>Decrement</button>\n      <button onClick={() => setCount(0)}>Reset</button>\n    </div>\n  );\n}\n```",
+      "vector": {
+        "show": 0.26790951373267113,
+        "react": 0.31957004352468565,
+        "functional": 0.3637271730230093,
+        "component": 0.31957004352468565,
+        "manages": 0.3637271730230093,
+        "its": 0.28391956768027915,
+        "own": 0.3637271730230093,
+        "state": 0.3637271730230093,
+        "counter": 0.337896908127002
+      }
+    },
+    {
+      "prompt": "Create a reusable Card component in React with TypeScript that accepts custom content.",
+      "response": "```tsx\nimport React from 'react';\n\ninterface CardProps {\n  title: string;\n  children: React.ReactNode;\n  className?: string;\n}\n\nexport function Card({ title, children, className = '' }: CardProps) {\n  return (\n    <div className={`card ${className}`} style={{ border: '1px solid #ddd', borderRadius: '8px', padding: '16px', maxWidth: '400px' }}>\n      <h2 style={{ marginTop: 0 }}>{title}</h2>\n      <div>{children}</div>\n    </div>\n  );\n}\n```",
+      "vector": {
+        "create": 0.2652513069246759,
+        "reusable": 0.3245298053164973,
+        "card": 0.34314110484836996,
+        "component": 0.3245298053164973,
+        "react": 0.3245298053164973,
+        "typescript": 0.3693722582616193,
+        "accepts": 0.3693722582616193,
+        "custom": 0.34314110484836996,
+        "content": 0.3245298053164973
+      }
+    },
+    {
+      "prompt": "Write a SQL query that returns the 20 most recently created active users, including only their ID, name, and creation timestamp.",
+      "response": "```sql\nSELECT id, name, created_at\nFROM users\nWHERE active = TRUE\nORDER BY created_at DESC\nLIMIT 20;\n```",
+      "vector": {
+        "write": 0.13961302821480673,
+        "sql": 0.21684452541987448,
+        "query": 0.23591293882643888,
+        "returns": 0.20331527079975964,
+        "20": 0.2494421934465538,
+        "most": 0.26851060685311817,
+        "recently": 0.26851060685311817,
+        "created": 0.26851060685311817,
+        "active": 0.2494421934465538,
+        "users": 0.2494421934465538,
+        "including": 0.26851060685311817,
+        "only": 0.2494421934465538,
+        "their": 0.23591293882643888,
+        "id": 0.2494421934465538,
+        "name": 0.21684452541987448,
+        "creation": 0.2494421934465538,
+        "timestamp": 0.26851060685311817
+      }
+    },
+    {
+      "prompt": "Write a SQL query that lists active users and their total number of orders. Include each user's ID and name, sort the results by order count from highest to lowest, and return the top 20 users.",
+      "response": "```sql\nSELECT u.id, u.name, COUNT(o.id) AS order_count\nFROM users AS u\nLEFT JOIN orders AS o ON o.user_id = u.id\nWHERE u.active = TRUE\nGROUP BY u.id, u.name\nORDER BY order_count DESC\nLIMIT 20;\n```",
+      "vector": {
+        "write": 0.10733656098722946,
+        "sql": 0.166713278302839,
+        "query": 0.18137335655423484,
+        "lists": 0.20643492585709192,
+        "active": 0.1917748476056961,
+        "users": 0.3835496952113922,
+        "their": 0.18137335655423484,
+        "total": 0.20643492585709192,
+        "number": 0.20643492585709192,
+        "orders": 0.20643492585709192,
+        "include": 0.166713278302839,
+        "each": 0.16113977522308545,
+        "user's": 0.20643492585709192,
+        "id": 0.1917748476056961,
+        "name": 0.166713278302839,
+        "sort": 0.18137335655423484,
+        "results": 0.20643492585709192,
+        "by": 0.17330533329367845,
+        "order": 0.1917748476056961,
+        "count": 0.20643492585709192,
+        "highest": 0.20643492585709192,
+        "lowest": 0.20643492585709192,
+        "return": 0.17330533329367845,
+        "top": 0.20643492585709192,
+        "20": 0.1917748476056961
+      }
+    },
+    {
+      "prompt": "How do I save changes to a Git repository with a meaningful commit message?",
+      "response": "First check what you've changed:\n```bash\ngit status\n```\n\nStage the files you want to include:\n```bash\ngit add <file1> <file2>\n# or stage everything:\ngit add .\n```\n\nVerify the staged changes look right:\n```bash\ngit diff --cached\n```\n\nThen commit with a clear message explaining the *why*, not just the *what*:\n```bash\ngit commit -m \"Fix login timeout: increase session expiry from 15 to 30 minutes\"\n```\n\nOnly commit when you're ready to record a logical snapshot. Avoid committing broken code or incomplete work.",
+      "vector": {
+        "save": 0.37719500825080227,
+        "changes": 0.37719500825080227,
+        "git": 0.34086798888258096,
+        "repository": 0.406029385678452,
+        "meaningful": 0.406029385678452,
+        "commit": 0.37719500825080227,
+        "message": 0.35673669188679513
+      }
+    },
+    {
+      "prompt": "What's the recommended Git workflow for committing changes?",
+      "response": "A safe, repeatable workflow:\n\n1. **Inspect** — See what's modified:\n   `git status`\n\n2. **Review** — Check exact diffs before staging:\n   `git diff`\n\n3. **Stage selectively** — Add only related changes:\n   `git add src/auth/login.js tests/auth/login.test.js`\n\n4. **Verify staging** — Confirm what will be committed:\n   `git diff --cached`\n\n5. **Commit with context** — Write a message future-you will understand:\n   `git commit -m \"Refactor password validation: extract reusable validator class\"`\n\n**Tip:** Keep commits atomic — one logical change per commit. If you're fixing two unrelated bugs, make two commits.",
+      "vector": {
+        "what's": 0.39863564890931114,
+        "recommended": 0.429109039344861,
+        "git": 0.36024371735659233,
+        "workflow": 0.429109039344861,
+        "committing": 0.429109039344861,
+        "changes": 0.39863564890931114
+      }
+    },
+    {
+      "prompt": "How do I start a basic HTTP server using Node.js that returns JSON responses?",
+      "response": "You can use the built-in 'http' module to create a server. Here's a simple example that listens on port 4173 and responds with JSON data including the requested URL path:\n\n```javascript\nconst http = require('http');\n\nconst server = http.createServer((req, res) => {\n  res.writeHead(200, { 'Content-Type': 'application/json' });\n  res.end(JSON.stringify({ app: 'Nexion', path: req.url }));\n});\n\nserver.listen(4173, () => console.log('Server running at http://localhost:4173'));\n```\n\nThis server will return a JSON object with the application name and the requested path for any incoming request.",
+      "vector": {
+        "start": 0.3483511774002034,
+        "basic": 0.3483511774002034,
+        "http": 0.30282786043166593,
+        "server": 0.30282786043166593,
+        "using": 0.26927874209353125,
+        "node": 0.31480205906206865,
+        "js": 0.3294572937667034,
+        "returns": 0.28393397679816607,
+        "json": 0.26927874209353125,
+        "responses": 0.37498061073524086
+      }
+    },
+    {
+      "prompt": "Write a Node.js HTTP server that responds with JSON showing the current request URL.",
+      "response": "Use Node's native HTTP module to set up a server that sends JSON responses. The following code creates a server listening on port 4173 and returns the application name along with the requested URL:\n\n```javascript\nconst http = require('http');\n\nconst server = http.createServer((req, res) => {\n  res.writeHead(200, { 'Content-Type': 'application/json' });\n  res.end(JSON.stringify({ app: 'Nexion', path: req.url }));\n});\n\nserver.listen(4173, () => console.log('http://localhost:4173'));\n```\n\nRun this script with Node.js and visit http://localhost:4173 in your browser to see the JSON response.",
+      "vector": {
+        "write": 0.1823002916931243,
+        "node": 0.29434157868324673,
+        "js": 0.30804430010694994,
+        "http": 0.28314564007077214,
+        "server": 0.28314564007077214,
+        "responds": 0.3506088405783171,
+        "json": 0.2517770382118796,
+        "showing": 0.3506088405783171,
+        "current": 0.3506088405783171,
+        "request": 0.29434157868324673,
+        "url": 0.32571018054213935
       }
     }
   ],
   "vocabulary": {
-    "write": 3.3978952727983707,
-    "python": 2.671958269415434,
-    "hello": 4.160035324845268,
-    "world": 4.71965111278069,
-    "code": 3.803360380906535,
-    "function": 3.908720896564361,
-    "reverses": 5.412798293340635,
-    "string": 5.412798293340635,
-    "add": 5.007333185232471,
-    "two": 5.007333185232471,
-    "numbers": 5.412798293340635,
-    "loop": 5.007333185232471,
-    "example": 3.2155737160044158,
-    "list": 4.71965111278069,
-    "comprehension": 5.412798293340635,
-    "dictionary": 5.412798293340635,
-    "class": 4.71965111278069,
-    "read": 5.007333185232471,
-    "file": 5.007333185232471,
-    "json": 5.007333185232471,
-    "http": 4.71965111278069,
-    "request": 5.412798293340635,
-    "flask": 5.412798293340635,
-    "route": 5.412798293340635,
-    "error": 5.412798293340635,
-    "handling": 5.412798293340635,
-    "javascript": 3.2727321298443646,
-    "array": 5.007333185232471,
-    "map": 5.412798293340635,
-    "filter": 5.412798293340635,
-    "fetch": 5.007333185232471,
-    "api": 4.49650756146648,
-    "debounce": 5.412798293340635,
-    "html": 4.314186004672526,
-    "starter": 5.412798293340635,
-    "page": 5.412798293340635,
-    "css": 4.314186004672526,
-    "purple": 5.007333185232471,
-    "button": 5.007333185232471,
-    "flexbox": 5.412798293340635,
-    "center": 5.412798293340635,
-    "react": 5.412798293340635,
-    "component": 5.412798293340635,
-    "sql": 4.71965111278069,
-    "select": 5.412798293340635,
-    "git": 5.007333185232471,
-    "commit": 5.412798293340635,
-    "commands": 5.412798293340635,
-    "node": 5.412798293340635,
-    "server": 5.412798293340635,
-    "calculator": 5.412798293340635,
-    "palindrome": 5.412798293340635,
-    "check": 5.007333185232471,
-    "todo": 5.007333185232471,
-    "form": 5.412798293340635,
-    "unittest": 5.412798293340635,
-    "sort": 5.007333185232471,
-    "objects": 5.412798293340635,
-    "grid": 5.412798293340635,
-    "columns": 5.412798293340635,
-    "argparse": 5.412798293340635,
-    "cli": 5.412798293340635,
-    "rest": 5.007333185232471,
-    "give": 4.71965111278069,
-    "timer": 5.412798293340635,
-    "insert": 5.412798293340635,
-    "update": 5.412798293340635,
-    "binary": 5.412798293340635,
-    "search": 5.412798293340635,
-    "localstorage": 5.412798293340635,
-    "landing": 5.412798293340635,
-    "card": 5.412798293340635,
-    "debug": 5.412798293340635,
-    "undefined": 5.412798293340635,
-    "generate": 5.412798293340635,
-    "password": 5.007333185232471,
-    "mode": 5.412798293340635,
-    "fibonacci": 5.412798293340635,
-    "promise": 5.412798293340635,
-    "csv": 5.412798293340635,
-    "browser": 5.412798293340635,
-    "dicts": 5.412798293340635,
-    "accessibility": 5.412798293340635,
-    "event": 5.412798293340635,
-    "listener": 5.412798293340635,
-    "type": 5.412798293340635,
-    "hints": 5.412798293340635,
-    "bash": 5.412798293340635,
-    "join": 5.412798293340635,
-    "regex": 5.412798293340635,
-    "email": 5.412798293340635,
-    "recursive": 5.412798293340635,
-    "factorial": 5.412798293340635,
-    "dark": 5.412798293340635,
-    "webpage": 5.412798293340635,
-    "copy": 5.412798293340635,
-    "text": 5.412798293340635,
-    "set": 5.412798293340635,
-    "unique": 5.412798293340635,
-    "values": 5.412798293340635,
-    "switch": 5.412798293340635,
-    "statement": 5.412798293340635,
-    "datetime": 5.412798293340635,
-    "now": 5.412798293340635,
-    "script": 5.412798293340635,
-    "counts": 5.412798293340635,
-    "words": 5.412798293340635,
-    "java": 5.412798293340635,
-    "vector": 5.412798293340635,
-    "sharp": 5.412798293340635,
-    "async": 5.412798293340635,
-    "method": 4.71965111278069,
-    "go": 5.412798293340635,
-    "handler": 5.412798293340635,
-    "rust": 5.412798293340635,
-    "kotlin": 5.412798293340635,
-    "data": 5.412798293340635,
-    "swift": 5.412798293340635,
-    "php": 5.412798293340635,
-    "response": 5.412798293340635,
-    "ruby": 5.412798293340635,
-    "powershell": 5.412798293340635,
-    "get": 5.412798293340635,
-    "files": 5.412798293340635,
-    "dart": 5.412798293340635,
-    "flutter": 5.412798293340635,
-    "widget": 5.412798293340635,
-    "solar": 5.412798293340635,
-    "system": 5.007333185232471,
-    "planets": 5.412798293340635,
-    "order": 5.412798293340635,
-    "photosynthesis": 5.412798293340635,
-    "climate": 5.412798293340635,
-    "change": 5.412798293340635,
-    "machine": 5.412798293340635,
-    "learning": 5.412798293340635,
-    "neural": 5.412798293340635,
-    "network": 5.412798293340635,
-    "database": 5.412798293340635,
-    "encryption": 5.412798293340635,
-    "protect": 5.412798293340635,
-    "keys": 5.412798293340635,
-    "strong": 5.412798293340635,
-    "phishing": 5.412798293340635,
-    "version": 5.412798293340635,
-    "control": 5.412798293340635,
-    "debugging": 5.412798293340635,
-    "good": 5.412798293340635,
-    "programming": 5.007333185232471,
-    "variable": 5.412798293340635,
-    "learn": 5.007333185232471,
-    "algorithm": 5.412798293340635,
-    "big": 5.412798293340635,
-    "notation": 5.412798293340635,
-    "test": 5.412798293340635,
-    "plan": 5.412798293340635,
-    "project": 5.412798293340635,
-    "make": 5.412798293340635,
-    "decision": 5.412798293340635,
-    "critical": 5.412798293340635,
-    "thinking": 5.412798293340635,
-    "probability": 5.412798293340635,
-    "compound": 5.412798293340635,
-    "interest": 5.007333185232471,
-    "stay": 5.412798293340635,
-    "productive": 5.412798293340635,
-    "communicate": 5.412798293340635,
-    "clearly": 5.412798293340635,
-    "democracy": 5.412798293340635,
-    "rule": 5.412798293340635,
-    "law": 5.412798293340635,
-    "inflation": 5.007333185232471,
-    "causes": 5.412798293340635,
-    "gross": 5.412798293340635,
-    "domestic": 5.412798293340635,
-    "product": 5.412798293340635,
-    "unemployment": 5.412798293340635,
-    "budget": 5.412798293340635,
-    "emergency": 5.412798293340635,
-    "fund": 5.412798293340635,
-    "diversification": 5.412798293340635,
-    "supply": 5.412798293340635,
-    "demand": 5.412798293340635,
-    "rate": 5.412798293340635,
-    "cell": 5.412798293340635,
-    "dna": 5.412798293340635,
-    "evolution": 5.412798293340635,
-    "vaccine": 5.412798293340635,
-    "virus": 5.412798293340635,
-    "nutrition": 5.412798293340635,
-    "exercise": 5.412798293340635,
-    "safely": 5.412798293340635,
-    "mental": 5.412798293340635,
-    "health": 5.412798293340635,
-    "physics": 5.412798293340635,
-    "energy": 5.412798293340635,
-    "gravity": 5.412798293340635,
-    "electricity": 5.412798293340635,
-    "chemistry": 5.412798293340635,
-    "atom": 5.412798293340635,
-    "molecule": 5.412798293340635,
-    "mathematics": 5.412798293340635,
-    "algebra": 5.412798293340635,
-    "statistics": 5.412798293340635,
-    "correlation": 5.412798293340635,
-    "history": 5.412798293340635,
-    "geography": 5.412798293340635,
-    "culture": 5.412798293340635,
-    "philosophy": 5.412798293340635,
-    "ethics": 5.412798293340635,
-    "bias": 5.412798293340635,
-    "evaluate": 5.412798293340635,
-    "source": 5.412798293340635,
-    "copyright": 5.412798293340635,
-    "privacy": 5.412798293340635,
-    "internet": 5.412798293340635,
-    "website": 5.412798293340635,
-    "operating": 5.412798293340635,
-    "cloud": 5.412798293340635,
-    "computing": 5.412798293340635,
-    "backup": 5.412798293340635,
-    "spreadsheet": 5.412798293340635,
-    "resume": 5.412798293340635,
-    "prepare": 5.412798293340635,
-    "interview": 5.412798293340635,
-    "resolve": 5.412798293340635,
-    "conflict": 5.412798293340635,
-    "effectively": 5.412798293340635,
-    "scientific": 5.412798293340635,
-    "science": 5.412798293340635,
-    "nexion": 5.412798293340635,
-    "hi": 5.412798293340635,
-    "name": 5.412798293340635,
-    "knowledge": 5.412798293340635,
-    "retrain": 5.412798293340635,
-    "private": 5.412798293340635,
-    "help": 5.412798293340635
+    "write": 2.968690177387133,
+    "python": 2.413693335308005,
+    "hello": 4.0047821090739095,
+    "world": 4.323235840192444,
+    "code": 3.8377280244107426,
+    "function": 3.569464037816063,
+    "reverses": 5.30406509320417,
+    "string": 5.0163830207523885,
+    "add": 5.0163830207523885,
+    "two": 4.793239469438179,
+    "numbers": 4.610917912644224,
+    "loop": 4.793239469438179,
+    "example": 3.3581549441488563,
+    "list": 4.20545280453606,
+    "comprehension": 5.0163830207523885,
+    "dictionary": 4.793239469438179,
+    "class": 4.610917912644224,
+    "read": 4.793239469438179,
+    "file": 4.20545280453606,
+    "json": 4.100092288878233,
+    "http": 4.610917912644224,
+    "request": 4.793239469438179,
+    "flask": 5.0163830207523885,
+    "route": 5.30406509320417,
+    "error": 5.30406509320417,
+    "handling": 5.30406509320417,
+    "javascript": 3.10684051586795,
+    "array": 4.793239469438179,
+    "map": 5.709530201312334,
+    "filter": 5.709530201312334,
+    "fetch": 4.793239469438179,
+    "api": 4.323235840192444,
+    "debounce": 5.0163830207523885,
+    "html": 4.456767232816967,
+    "starter": 5.30406509320417,
+    "page": 4.793239469438179,
+    "css": 4.20545280453606,
+    "purple": 4.456767232816967,
+    "button": 4.793239469438179,
+    "flexbox": 5.30406509320417,
+    "center": 5.30406509320417,
+    "react": 5.0163830207523885,
+    "component": 5.0163830207523885,
+    "sql": 4.610917912644224,
+    "select": 5.709530201312334,
+    "git": 4.793239469438179,
+    "commit": 5.30406509320417,
+    "commands": 5.709530201312334,
+    "node": 4.793239469438179,
+    "server": 4.610917912644224,
+    "calculator": 5.709530201312334,
+    "palindrome": 5.709530201312334,
+    "check": 5.30406509320417,
+    "todo": 5.30406509320417,
+    "form": 5.30406509320417,
+    "unittest": 5.709530201312334,
+    "sort": 5.0163830207523885,
+    "objects": 5.709530201312334,
+    "grid": 5.709530201312334,
+    "columns": 5.709530201312334,
+    "argparse": 5.709530201312334,
+    "cli": 5.709530201312334,
+    "rest": 5.0163830207523885,
+    "give": 4.610917912644224,
+    "timer": 5.709530201312334,
+    "insert": 5.709530201312334,
+    "update": 5.709530201312334,
+    "binary": 5.709530201312334,
+    "search": 5.709530201312334,
+    "localstorage": 5.709530201312334,
+    "landing": 5.30406509320417,
+    "card": 5.30406509320417,
+    "debug": 5.709530201312334,
+    "undefined": 5.709530201312334,
+    "generate": 5.709530201312334,
+    "password": 5.30406509320417,
+    "mode": 5.709530201312334,
+    "fibonacci": 5.709530201312334,
+    "promise": 5.709530201312334,
+    "csv": 5.709530201312334,
+    "browser": 5.709530201312334,
+    "dicts": 5.709530201312334,
+    "accessibility": 5.709530201312334,
+    "event": 5.30406509320417,
+    "listener": 5.709530201312334,
+    "type": 5.709530201312334,
+    "hints": 5.709530201312334,
+    "bash": 5.709530201312334,
+    "join": 5.709530201312334,
+    "regex": 5.709530201312334,
+    "email": 5.709530201312334,
+    "recursive": 5.709530201312334,
+    "factorial": 5.709530201312334,
+    "dark": 5.709530201312334,
+    "webpage": 5.709530201312334,
+    "copy": 5.709530201312334,
+    "text": 4.793239469438179,
+    "set": 5.30406509320417,
+    "unique": 5.709530201312334,
+    "values": 4.793239469438179,
+    "switch": 5.709530201312334,
+    "statement": 5.30406509320417,
+    "datetime": 5.709530201312334,
+    "now": 5.709530201312334,
+    "script": 5.0163830207523885,
+    "counts": 5.709530201312334,
+    "words": 5.709530201312334,
+    "java": 5.709530201312334,
+    "vector": 5.709530201312334,
+    "sharp": 5.709530201312334,
+    "async": 5.709530201312334,
+    "method": 5.0163830207523885,
+    "go": 5.709530201312334,
+    "handler": 5.30406509320417,
+    "rust": 5.709530201312334,
+    "kotlin": 5.709530201312334,
+    "data": 4.610917912644224,
+    "swift": 5.709530201312334,
+    "php": 5.709530201312334,
+    "response": 5.0163830207523885,
+    "ruby": 5.709530201312334,
+    "powershell": 5.709530201312334,
+    "get": 4.456767232816967,
+    "files": 5.709530201312334,
+    "dart": 5.709530201312334,
+    "flutter": 5.709530201312334,
+    "widget": 5.709530201312334,
+    "solar": 5.709530201312334,
+    "system": 5.30406509320417,
+    "planets": 5.709530201312334,
+    "order": 5.30406509320417,
+    "photosynthesis": 5.709530201312334,
+    "climate": 5.709530201312334,
+    "change": 5.709530201312334,
+    "machine": 5.709530201312334,
+    "learning": 5.709530201312334,
+    "neural": 5.709530201312334,
+    "network": 5.709530201312334,
+    "database": 5.709530201312334,
+    "encryption": 5.709530201312334,
+    "protect": 5.709530201312334,
+    "keys": 5.709530201312334,
+    "strong": 5.709530201312334,
+    "phishing": 5.709530201312334,
+    "version": 5.709530201312334,
+    "control": 5.709530201312334,
+    "debugging": 5.709530201312334,
+    "good": 4.793239469438179,
+    "programming": 5.30406509320417,
+    "variable": 5.709530201312334,
+    "learn": 5.30406509320417,
+    "algorithm": 5.709530201312334,
+    "big": 5.709530201312334,
+    "notation": 5.30406509320417,
+    "test": 5.709530201312334,
+    "plan": 5.709530201312334,
+    "project": 5.709530201312334,
+    "make": 5.709530201312334,
+    "decision": 5.709530201312334,
+    "critical": 5.709530201312334,
+    "thinking": 5.709530201312334,
+    "probability": 5.709530201312334,
+    "compound": 5.709530201312334,
+    "interest": 5.30406509320417,
+    "stay": 5.709530201312334,
+    "productive": 5.709530201312334,
+    "communicate": 5.709530201312334,
+    "clearly": 5.709530201312334,
+    "democracy": 5.709530201312334,
+    "rule": 5.709530201312334,
+    "law": 5.709530201312334,
+    "inflation": 5.30406509320417,
+    "causes": 5.709530201312334,
+    "gross": 5.709530201312334,
+    "domestic": 5.709530201312334,
+    "product": 5.709530201312334,
+    "unemployment": 5.709530201312334,
+    "budget": 5.709530201312334,
+    "emergency": 5.709530201312334,
+    "fund": 5.709530201312334,
+    "diversification": 5.709530201312334,
+    "supply": 5.709530201312334,
+    "demand": 5.709530201312334,
+    "rate": 5.30406509320417,
+    "cell": 5.709530201312334,
+    "dna": 5.709530201312334,
+    "evolution": 5.709530201312334,
+    "vaccine": 5.709530201312334,
+    "virus": 5.709530201312334,
+    "nutrition": 5.709530201312334,
+    "exercise": 5.709530201312334,
+    "safely": 5.30406509320417,
+    "mental": 5.709530201312334,
+    "health": 5.709530201312334,
+    "physics": 5.709530201312334,
+    "energy": 5.709530201312334,
+    "gravity": 5.709530201312334,
+    "electricity": 5.709530201312334,
+    "chemistry": 5.709530201312334,
+    "atom": 5.709530201312334,
+    "molecule": 5.709530201312334,
+    "mathematics": 5.709530201312334,
+    "algebra": 5.709530201312334,
+    "statistics": 5.709530201312334,
+    "correlation": 5.709530201312334,
+    "history": 5.709530201312334,
+    "geography": 5.709530201312334,
+    "culture": 5.709530201312334,
+    "philosophy": 5.709530201312334,
+    "ethics": 5.709530201312334,
+    "bias": 5.709530201312334,
+    "evaluate": 5.709530201312334,
+    "source": 5.709530201312334,
+    "copyright": 5.709530201312334,
+    "privacy": 5.709530201312334,
+    "internet": 5.709530201312334,
+    "website": 5.709530201312334,
+    "operating": 5.709530201312334,
+    "cloud": 5.709530201312334,
+    "computing": 5.709530201312334,
+    "backup": 5.709530201312334,
+    "spreadsheet": 5.709530201312334,
+    "resume": 5.709530201312334,
+    "prepare": 5.709530201312334,
+    "interview": 5.709530201312334,
+    "resolve": 5.709530201312334,
+    "conflict": 5.709530201312334,
+    "effectively": 5.709530201312334,
+    "scientific": 5.709530201312334,
+    "science": 5.709530201312334,
+    "nexion": 5.0163830207523885,
+    "hi": 5.709530201312334,
+    "hey": 5.709530201312334,
+    "morning": 5.709530201312334,
+    "afternoon": 5.709530201312334,
+    "evening": 5.709530201312334,
+    "doing": 5.709530201312334,
+    "up": 5.30406509320417,
+    "nice": 5.709530201312334,
+    "meet": 5.709530201312334,
+    "name": 4.610917912644224,
+    "knowledge": 5.709530201312334,
+    "retrain": 5.709530201312334,
+    "private": 5.709530201312334,
+    "help": 5.709530201312334,
+    "minimal": 4.610917912644224,
+    "program": 4.610917912644224,
+    "displays": 5.709530201312334,
+    "message": 5.0163830207523885,
+    "print": 5.30406509320417,
+    "greeting": 4.793239469438179,
+    "include": 4.610917912644224,
+    "command": 5.709530201312334,
+    "run": 5.30406509320417,
+    "provide": 5.0163830207523885,
+    "simple": 4.610917912644224,
+    "show": 4.20545280453606,
+    "prints": 5.0163830207523885,
+    "using": 4.100092288878233,
+    "given": 5.30406509320417,
+    "should": 5.30406509320417,
+    "handle": 5.709530201312334,
+    "edge": 5.709530201312334,
+    "cases": 5.709530201312334,
+    "such": 5.709530201312334,
+    "empty": 5.709530201312334,
+    "strings": 5.709530201312334,
+    "return": 4.793239469438179,
+    "reversed": 5.709530201312334,
+    "result": 5.30406509320417,
+    "implement": 5.30406509320417,
+    "reversal": 5.709530201312334,
+    "demonstrate": 5.30406509320417,
+    "approach": 5.709530201312334,
+    "explicitly": 5.709530201312334,
+    "iterates": 5.709530201312334,
+    "through": 5.709530201312334,
+    "indices": 5.709530201312334,
+    "rather": 5.709530201312334,
+    "than": 5.709530201312334,
+    "slice": 5.709530201312334,
+    "called": 5.30406509320417,
+    "takes": 5.30406509320417,
+    "numeric": 5.30406509320417,
+    "arguments": 5.709530201312334,
+    "returns": 4.323235840192444,
+    "their": 5.0163830207523885,
+    "sum": 5.709530201312334,
+    "brief": 5.709530201312334,
+    "call": 5.30406509320417,
+    "create": 4.100092288878233,
+    "reusable": 5.0163830207523885,
+    "adding": 5.709530201312334,
+    "numbered": 5.709530201312334,
+    "items": 5.30406509320417,
+    "use": 4.610917912644224,
+    "process": 5.709530201312334,
+    "each": 4.456767232816967,
+    "item": 5.30406509320417,
+    "its": 4.456767232816967,
+    "position": 5.709530201312334,
+    "computes": 5.709530201312334,
+    "squares": 5.30406509320417,
+    "even": 5.30406509320417,
+    "between": 5.709530201312334,
+    "10": 5.709530201312334,
+    "cubes": 5.709530201312334,
+    "divisible": 5.709530201312334,
+    "by": 4.793239469438179,
+    "value": 4.610917912644224,
+    "default": 5.0163830207523885,
+    "iterate": 5.709530201312334,
+    "over": 5.709530201312334,
+    "snippet": 5.30406509320417,
+    "demonstrates": 5.709530201312334,
+    "creation": 5.30406509320417,
+    "avoid": 5.709530201312334,
+    "keyerror": 5.709530201312334,
+    "printing": 5.709530201312334,
+    "key": 5.709530201312334,
+    "pair": 5.709530201312334,
+    "named": 5.709530201312334,
+    "counter": 5.30406509320417,
+    "start": 5.30406509320417,
+    "zero": 5.709530201312334,
+    "methods": 5.30406509320417,
+    "increase": 5.709530201312334,
+    "decrease": 5.709530201312334,
+    "updated": 5.709530201312334,
+    "after": 5.709530201312334,
+    "operation": 5.709530201312334,
+    "represents": 5.709530201312334,
+    "rectangle": 5.709530201312334,
+    "store": 5.709530201312334,
+    "width": 5.709530201312334,
+    "height": 5.709530201312334,
+    "reject": 5.709530201312334,
+    "non": 5.709530201312334,
+    "positive": 5.709530201312334,
+    "dimensions": 5.709530201312334,
+    "calculating": 5.709530201312334,
+    "area": 5.709530201312334,
+    "perimeter": 5.709530201312334,
+    "contents": 5.709530201312334,
+    "context": 5.709530201312334,
+    "manager": 5.709530201312334,
+    "what's": 5.30406509320417,
+    "pythonic": 5.709530201312334,
+    "way": 5.709530201312334,
+    "line": 5.30406509320417,
+    "into": 5.709530201312334,
+    "save": 5.30406509320417,
+    "object": 5.709530201312334,
+    "send": 5.709530201312334,
+    "post": 5.709530201312334,
+    "python's": 5.709530201312334,
+    "standard": 5.709530201312334,
+    "library": 5.709530201312334,
+    "urllib": 5.709530201312334,
+    "robust": 5.709530201312334,
+    "query": 5.0163830207523885,
+    "parameters": 5.709530201312334,
+    "framework": 5.709530201312334,
+    "web": 5.709530201312334,
+    "single": 5.30406509320417,
+    "endpoint": 5.30406509320417,
+    "root": 5.709530201312334,
+    "url": 5.30406509320417,
+    "basic": 5.30406509320417,
+    "user": 5.30406509320417,
+    "visits": 5.709530201312334,
+    "home": 5.709530201312334,
+    "helper": 5.709530201312334,
+    "converts": 5.709530201312334,
+    "provided": 5.709530201312334,
+    "integer": 5.30406509320417,
+    "none": 5.709530201312334,
+    "not": 5.709530201312334,
+    "valid": 5.709530201312334,
+    "instead": 5.709530201312334,
+    "allowing": 5.709530201312334,
+    "typeerror": 5.709530201312334,
+    "valueerror": 5.709530201312334,
+    "stop": 5.709530201312334,
+    "reads": 5.709530201312334,
+    "several": 5.709530201312334,
+    "some": 5.709530201312334,
+    "lines": 5.709530201312334,
+    "may": 5.709530201312334,
+    "contain": 5.709530201312334,
+    "invalid": 5.709530201312334,
+    "attempts": 5.709530201312334,
+    "convert": 5.709530201312334,
+    "skips": 5.709530201312334,
+    "reports": 5.709530201312334,
+    "many": 5.709530201312334,
+    "were": 5.709530201312334,
+    "skipped": 5.709530201312334,
+    "console": 5.30406509320417,
+    "outputs": 5.709530201312334,
+    "js": 5.0163830207523885,
+    "person's": 5.709530201312334,
+    "input": 5.709530201312334,
+    "personalized": 5.709530201312334,
+    "obtain": 5.709530201312334,
+    "only": 5.30406509320417,
+    "filters": 5.709530201312334,
+    "out": 5.709530201312334,
+    "odd": 5.709530201312334,
+    "then": 5.709530201312334,
+    "maps": 5.709530201312334,
+    "remaining": 5.709530201312334,
+    "cube": 5.709530201312334,
+    "retrieve": 5.709530201312334,
+    "practical": 5.709530201312334,
+    "explain": 5.709530201312334,
+    "limits": 5.709530201312334,
+    "utility": 5.709530201312334,
+    "used": 5.709530201312334,
+    "delay": 5.709530201312334,
+    "execution": 5.709530201312334,
+    "wait": 5.709530201312334,
+    "time": 5.709530201312334,
+    "250ms": 5.709530201312334,
+    "accessible": 5.30406509320417,
+    "semantic": 5.709530201312334,
+    "document": 5.709530201312334,
+    "structure": 5.709530201312334,
+    "viewport": 5.709530201312334,
+    "metadata": 5.709530201312334,
+    "title": 5.709530201312334,
+    "h1": 5.709530201312334,
+    "heading": 5.709530201312334,
+    "tagline": 5.709530201312334,
+    "local": 5.30406509320417,
+    "ai": 5.30406509320417,
+    "accent": 5.709530201312334,
+    "build": 5.709530201312334,
+    "polished": 5.709530201312334,
+    "responsive": 5.709530201312334,
+    "present": 5.709530201312334,
+    "themed": 5.709530201312334,
+    "styling": 5.709530201312334,
+    "contrast": 5.709530201312334,
+    "no": 5.709530201312334,
+    "external": 5.709530201312334,
+    "dependencies": 5.709530201312334,
+    "clear": 5.709530201312334,
+    "content": 5.0163830207523885,
+    "hierarchy": 5.709530201312334,
+    "gradient": 5.709530201312334,
+    "background": 5.709530201312334,
+    "includes": 5.709530201312334,
+    "hover": 5.709530201312334,
+    "effect": 5.709530201312334,
+    "uses": 5.709530201312334,
+    "custom": 5.30406509320417,
+    "properties": 5.709530201312334,
+    "easy": 5.709530201312334,
+    "theming": 5.709530201312334,
+    "flex": 5.709530201312334,
+    "both": 5.709530201312334,
+    "horizontally": 5.709530201312334,
+    "vertically": 5.709530201312334,
+    "inside": 5.709530201312334,
+    "parent": 5.709530201312334,
+    "simplest": 5.709530201312334,
+    "setup": 5.709530201312334,
+    "centering": 5.709530201312334,
+    "div": 5.709530201312334,
+    "functional": 5.709530201312334,
+    "manages": 5.709530201312334,
+    "own": 5.709530201312334,
+    "state": 5.709530201312334,
+    "typescript": 5.709530201312334,
+    "accepts": 5.709530201312334,
+    "20": 5.30406509320417,
+    "most": 5.709530201312334,
+    "recently": 5.709530201312334,
+    "created": 5.709530201312334,
+    "active": 5.30406509320417,
+    "users": 5.30406509320417,
+    "including": 5.709530201312334,
+    "id": 5.30406509320417,
+    "timestamp": 5.709530201312334,
+    "lists": 5.709530201312334,
+    "total": 5.709530201312334,
+    "number": 5.709530201312334,
+    "orders": 5.709530201312334,
+    "user's": 5.709530201312334,
+    "results": 5.709530201312334,
+    "count": 5.709530201312334,
+    "highest": 5.709530201312334,
+    "lowest": 5.709530201312334,
+    "top": 5.709530201312334,
+    "changes": 5.30406509320417,
+    "repository": 5.709530201312334,
+    "meaningful": 5.709530201312334,
+    "recommended": 5.709530201312334,
+    "workflow": 5.709530201312334,
+    "committing": 5.709530201312334,
+    "responses": 5.709530201312334,
+    "responds": 5.709530201312334,
+    "showing": 5.709530201312334,
+    "current": 5.709530201312334
   }
 }
