@@ -1,0 +1,172 @@
+
+
+## Getting Started with Finetuning
+
+Finetuning lets you take a model that has been trained on a very broad task and adapt it to your specific niche.
+
+For general models this works really well. To intuitively understand why, let's look at a text generation model.
+
+T5, an open-source model by Google, has been trained on around 750GB of text. The task was simply to predict some masked words within sentences. Take this sentence as an example: "The man went to the `___`, he bought a gallon of `___`." In order to correctly fill in the gaps, the model must understand enough about language and the world.
+
+It turns out that this knowledge is transferrable to other tasks, hence the term transfer learning.
+
+In this tutorial we'll be going over Backprop's basic flow of going from data to a model in production.
+
+> Run the cell below if you don't have Backprop yet (e.g on Google Colab - ensure your runtime has an Nvidia GPU (Runtime -> Change runtime type))
+
+> You will need to restart your runtime afterwards! (Runtime -> Restart runtime)
+
+# Run if you do not have backprop
+!pip install backprop
+!pip install datasets
+# DO NOT RUN THIS CELL AGAIN AFTER RESTARTING
+
+## Finetuning a text generation model
+
+Text generation is one of the many tasks that Backprop supports. Even though it is more technical than other tasks like classification, it is well worth learning as there are no limits to the tasks you can solve.
+
+The basic idea is very simple. You give the model some text as input and tell it what you expect as output.
+
+For example, to solve a classification task, your input and output data might look something like this:
+
+```python
+inp = ["I really liked the service I received!", "Meh, it was not impressive."]
+out = ["positive", "negative"]
+```
+
+The expected behaviour of a model trained with data like this is to output "positive" for positive text and "negative" for negative text.
+
+Now, let's look at an example that shows the finetuning process in detail.
+
+## Generating questions
+
+One of the tasks that Backprop supports right out of the box is question answering based on context.
+
+What if instead you wanted to do the reverse? That is generate questions based on context. That's certainly possible with text generation.
+
+With a minimal amount of code, we'll build a model that can take any paragraph of text (such as something from Elon Musk's wikipedia page) and generate questions that can be answered based on the paragraph.
+
+<img src="assets/texttask.png"/>
+
+### Preparing the data
+
+Finetuning a model needs data. The good news is that you need a lot less of it. For our proof of concept, we will use less than 1000 examples.
+
+Our examples are from the SQuAD dataset.
+
+This dataset has multiple questions and answers on different paragraphs of text. We'll get a section of text as input and a list of questions as output. Pretty simple.
+
+from datasets import load_dataset
+
+dataset = load_dataset("squad")
+
+dataset["train"][0]
+
+Just so you can see what the data looks like, each item in the list is a dictionary with context, question and answer. All we'll do is group it up.
+
+input_data = []
+output_data = []
+
+last_context = ""
+
+# Limit to 5000 items for proof of concept
+for i in range(5000):
+    context = dataset["train"][i]["context"]
+    question = dataset["train"][i]["question"]
+    if context != last_context:
+        input_data.append(context)
+        last_context = context
+        output_data.append([])
+
+    output_index = len(input_data) - 1
+    output_data[output_index].append(question)
+
+input_data[0]
+
+output_data[0]
+
+len(input_data), len(output_data)
+
+Great! Seems like we got 820 examples for training. That's just a small portion of the data, but it's enough to achieve some promising results. There is just 1 final step before finetuning.
+
+The T5 model that we are planning on using has already been finetuned on some tasks such as translation. For multiple tasks, it is useful to add a prefix to the input that can let the model know what it should do.
+
+For example, `generate questions: Some paragraph of text.`
+
+Additionally, our `output_data` is currently a list of strings. Our model expects just a string for an output example.
+
+input_data = [f"generate questions: {i}" for i in input_data]
+output_data = ["; ".join(o) for o in output_data]
+
+input_data[0]
+
+output_data[0]
+
+For output data, we chose `;` as a separator that's not too common in text. Anything similar should work fine.
+
+### Finetuning
+
+We are ready to finetune. All we'll need to do is pass the list of input and output strings to Backprop.
+
+import backprop
+
+Let's see which model we can use for this purpose.
+
+backprop.TextGeneration.list_models(display=True)
+
+# Start a local text generation task with t5-small
+tg = backprop.TextGeneration("t5-small")
+# Length here refers to number of tokens (1 token ~ 1 word)
+tg.finetune({"input_text": input_data, "output_text": output_data}, max_input_length=256, max_output_length=256)
+
+context = """generate questions: Tesla, Inc. (originally Tesla Motors) was incorporated in July 2003 by Martin Eberhard and Marc Tarpenning, who financed the company until the Series A round of funding.[90] Both men played active roles in the company's early development prior to Musk's involvement.[91] Musk led the Series A round of investment in 2004, joining Tesla's board of directors as its chairman.[92][93][94][95] Musk took an active role within the company and oversaw Roadster product design but was not deeply involved in day-to-day business operations.[96] Following a series of escalating conflicts in 2007 and the 2008 financial crisis, Eberhard was ousted from the firm.[97][98] Musk assumed leadership of the company as CEO and product architect in 2008, positions he still holds today. A 2009 lawsuit settlement with Eberhard designated Musk as a Tesla co-founder, along with Tarpenning and two others.[4][5] As of 2019, Musk is the longest tenured CEO of any automotive manufacturer globally.[99]"""
+
+# Have a look at the text generation notebook to understand these parameters
+tg(context, max_length=50, min_length=30, temperature=0.5)
+
+Not bad.
+
+We used less than 1000 training examples, and less than 1 minute for training. This is the power of transfer learning! Check out our [finetuning docs](https://backprop.readthedocs.io/en/latest/Finetuning.html) for other tasks you can finetune.
+
+Where to from here? You can save this model for later with `tg.save("my-model")` and load ready for text generation with `tg = backprop.TextGeneration("my-model")`.
+
+For production, Backprop lets you deploy your finetuned models with a single line of code.
+
+You can get an API Key by signing up on the [dashboard](https://backprop.co).
+
+The model will be private, always available, and scale to support thousands of requests a second if needed. The best part is that you only pay for what you use. If it is idle, you pay nothing at all. 
+
+# Name the model
+name = "t5-question-generation"
+# Give a description
+description = "This T5 small model was partly finetuned on SQuAD to generate questions based on given context."
+
+# Requires API Key from backprop.co
+tg.upload(name=name, description=description, api_key="abc")
+
+<img src="assets/dashboard-models.png" style="max-width: 600px"/>
+
+After the build has completed, *only* you can use the model anywhere via our API. See our [API docs](https://docs.backprop.co/).
+
+# Using backprop
+import backprop
+
+context = "generate questions: In 2016, Musk co-founded Neuralink, a neurotechnology start-up company to integrate the human brain with AI. The company is centered on creating devices that can be implanted in the human brain, with the eventual purpose of helping human beings merge with software and keep pace with advancements in artificial intelligence. These enhancements could improve memory or allow more direct interfacing with computing devices.[142][143]"
+
+tg = backprop.TextGeneration("t5-question-generation", api_key="abc")
+tg(context, temperature=0.5, max_length=40, min_length=15)
+
+# Using plain http
+import requests
+
+body = {
+    "model": "t5-question-generation",
+    "temperature": 0.5,
+    "max_length": 40,
+    "min_length": 15,
+    "text": context
+}
+
+# Requires API Key
+requests.post("https://api.backprop.co/text-generation", json=body,
+              headers={"x-api-key": "abc"}).json()

@@ -89,7 +89,86 @@ pg`) or Firestore (`npm install firebase-admin`) using the same tables and the
 same ownership rule: **resolve the user from the session cookie server-side and
 never trust a `user_id` sent by the browser.**
 
+### Firebase audit logging
+
+The current server can use Firebase Firestore as an audit database while
+continuing to use private SQLite for credentials and HTTP-only sessions. Set all
+three Firebase variables in `.env`, or point `FIREBASE_SERVICE_ACCOUNT_FILE` at
+the downloaded service-account JSON file:
+
+```env
+FIREBASE_SERVICE_ACCOUNT_FILE=./your-firebase-service-account.json
+```
+
+Alternatively:
+
+```env
+FIREBASE_PROJECT_ID=your-project-id
+FIREBASE_CLIENT_EMAIL=firebase-adminsdk-xxxxx@your-project-id.iam.gserviceaccount.com
+FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
+```
+
+To configure it:
+
+1. Open the Firebase console and create or select a project.
+2. Open **Project settings → Service accounts** and create a private key.
+3. Either set `FIREBASE_SERVICE_ACCOUNT_FILE` to the downloaded JSON path, or
+   copy its `project_id`, `client_email`, and `private_key` into the variables
+   above. Keep both the JSON file and `.env` private; never put these values in
+   browser JavaScript.
+4. Enable Firestore Database in the Firebase console.
+5. Start the server with `npm start`.
+
+Events are written to the `audit_events` collection. Documents contain the
+event category, event name, timestamp, request path, status code when
+available, user ID/email when known, IP address, and user agent. The server
+records successful and failed registration, password login, magic-link login,
+logout, and every `/api/*` request.
+
+Firebase is optional for local development. If the variables are missing, the
+server logs that Firebase audit is disabled and continues using SQLite. Audit
+writes are non-blocking and cannot make a login or API request fail. Passwords,
+session tokens, magic-link tokens, and request bodies are never written to the
+audit collection.
+
 ## Train the local brain
+
+### OpenRouter-assisted local tuning
+
+OpenRouter provides chat-completions routing, not a general model-weight
+fine-tuning endpoint. Nexion includes a safe alternative that uses OpenRouter
+to expand and improve local prompt/response examples, then trains the local
+retrieval model from those examples.
+
+1. Revoke any OpenRouter key previously pasted into chat and create a new one.
+2. Put the replacement only in `.env`:
+
+   ```env
+   OPENROUTER_API_KEY=your-new-key
+   OPENROUTER_MODEL=openrouter/free
+   OPENROUTER_VARIANTS=2
+   OPENROUTER_MAX_EXAMPLES=500
+   ```
+
+3. Generate an augmented JSONL dataset:
+
+   ```powershell
+   npm run generate:openrouter-dataset
+   ```
+
+   The command writes `training/openrouter-augmented.jsonl`, keeps a resumable
+   checkpoint beside it, and never writes the API key to disk or sends the full
+   project directory.
+4. Rebuild Nexion's local model:
+
+   ```powershell
+   .\.venv\Scripts\python.exe .\brain.py train
+   ```
+
+This workflow spends OpenRouter credits on high-quality example generation.
+It does not modify the weights of the remote OpenRouter model. Actual weight
+fine-tuning still requires a provider with a fine-tuning API or local
+Unsloth/QLoRA training.
 
 Add original, trusted question/answer rows to a `.jsonl` file in `training/`. Each row needs `prompt` and `response` fields. Code answers should use fenced markdown blocks so the chat UI can render them.
 

@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
 const auth = require('./auth');
+const audit = require('./firebase-audit');
 
 const SESSION_COOKIE = 'nexion_session';
 const IS_PRODUCTION = process.env.NODE_ENV === 'production';
@@ -69,6 +70,17 @@ function cookieValue(req, name) {
   return entry ? decodeURIComponent(entry.slice(name.length + 1)) : '';
 }
 
+function auditAuth(event, req, user, error = null) {
+  audit.recordAuth(event, {
+    userId: user?.id,
+    email: user?.email,
+    ipAddress: clientIp(req),
+    userAgent: req.headers['user-agent'],
+    path: req.url,
+    error: error?.message
+  });
+}
+
 async function handleAuth(req, res, url) {
   if (req.method === 'POST' && url.pathname === '/api/auth/register') {
     try {
@@ -80,12 +92,14 @@ async function handleAuth(req, res, url) {
         ip: clientIp(req),
         userAgent: req.headers['user-agent']
       });
+      auditAuth('register_login', req, login.user);
       res.writeHead(201, {
         'Content-Type': 'application/json; charset=utf-8',
         'Set-Cookie': sessionCookie(login.sessionToken)
       });
       res.end(JSON.stringify({ user: login.user }));
     } catch (error) {
+      auditAuth('register_failed', req, null, error);
       sendJson(res, 400, { error: error.message });
     }
     return true;
@@ -99,12 +113,14 @@ async function handleAuth(req, res, url) {
         ip: clientIp(req),
         userAgent: req.headers['user-agent']
       });
+      auditAuth('login', req, result.user);
       res.writeHead(200, {
         'Content-Type': 'application/json; charset=utf-8',
         'Set-Cookie': sessionCookie(result.sessionToken)
       });
       res.end(JSON.stringify({ user: result.user }));
     } catch (error) {
+      auditAuth('login_failed', req, null, error);
       sendJson(res, 401, { error: error.message });
     }
     return true;
@@ -122,12 +138,14 @@ async function handleAuth(req, res, url) {
   if (req.method === 'GET' && url.pathname === '/api/auth/verify') {
     try {
       const sessionToken = auth.verifyLogin(url.searchParams.get('token'));
+      auditAuth('magic_link_login', req, auth.session(sessionToken));
       res.writeHead(302, {
         Location: '/',
         'Set-Cookie': sessionCookie(sessionToken)
       });
       res.end();
     } catch (error) {
+      auditAuth('magic_link_failed', req, null, error);
       sendText(res, 400, error.message);
     }
     return true;
@@ -137,7 +155,9 @@ async function handleAuth(req, res, url) {
     return true;
   }
   if (req.method === 'POST' && url.pathname === '/api/auth/logout') {
+    const currentUser = auth.session(cookieValue(req, SESSION_COOKIE));
     auth.clearSession(cookieValue(req, SESSION_COOKIE));
+    auditAuth('logout', req, currentUser);
     res.writeHead(204, { 'Set-Cookie': sessionCookie('', 0) });
     res.end();
     return true;
@@ -223,6 +243,20 @@ const server = http.createServer((req, res) => {
   }
 
   const url = new URL(req.url || '/', `http://${req.headers.host || 'localhost'}`);
+  if (url.pathname.startsWith('/api/')) {
+    res.once('finish', () => {
+      const currentUser = auth.session(cookieValue(req, SESSION_COOKIE));
+      audit.recordApi({
+        userId: currentUser?.id,
+        email: currentUser?.email,
+        method: req.method,
+        path: url.pathname,
+        statusCode: res.statusCode,
+        ipAddress: clientIp(req),
+        userAgent: req.headers['user-agent']
+      });
+    });
+  }
 
   handleAuth(req, res, url).catch(error => sendJson(res, 500, { error: error.message }));
   if (url.pathname.startsWith('/api/auth/')) return;

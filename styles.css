@@ -101,3 +101,57 @@ body.light .code-head{background:#d8ccff;color:#32105c}
 .message-images-grid img{display:block;width:100%;height:120px;object-fit:cover;border-radius:9px;border:1px solid var(--line);background:rgba(0,0,0,.12)}
 .message-images-grid a:hover{color:var(--cyan)}
 .message-images-grid a:hover img{border-color:var(--cyan);box-shadow:0 0 12px var(--glow)}
+
+/* Neon glass workspace */
+body{background:#020205;position:relative}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 56% 37%,rgba(62,24,152,.24),transparent 28%),radial-gradient(ellipse at 78% 48%,rgba(0,89,255,.12),transparent 30%),linear-gradient(116deg,transparent 36%,rgba(75,24,210,.13) 42%,transparent 49%),linear-gradient(64deg,transparent 47%,rgba(20,89,255,.11) 53%,transparent 59%);opacity:.95}
+body.light{background:linear-gradient(145deg,#f8f4ff,#e8ddff)}
+.app-shell{height:100vh;min-height:620px;margin:0;border:0;border-radius:0;background:rgba(2,2,8,.62);box-shadow:none;backdrop-filter:blur(18px);position:relative;z-index:1}
+body.light .app-shell{background:rgba(255,255,255,.56)}
+.sidebar{width:214px;flex-basis:214px;border-right:1px solid rgba(191,146,255,.62);background:linear-gradient(180deg,rgba(64,38,140,.16),rgba(14,25,72,.08));backdrop-filter:blur(18px) saturate(160%);box-shadow:10px 0 40px rgba(0,0,0,.12),inset -1px 0 rgba(163,104,255,.2);overflow:hidden}
+.sidebar::before{content:"";position:absolute;z-index:0;left:-170px;top:12%;width:560px;height:70%;border:1px solid rgba(92,71,255,.38);border-radius:50%;transform:rotate(-17deg);box-shadow:0 26px 0 rgba(33,124,255,.25),0 54px 0 rgba(106,51,255,.22),0 82px 0 rgba(34,106,255,.2),0 110px 0 rgba(106,51,255,.16),0 138px 0 rgba(34,106,255,.14);pointer-events:none;opacity:.9}
+.sidebar>*{position:relative;z-index:1}
+body.light .sidebar{background:rgba(255,255,255,.24)}
+.brand-row{height:78px;padding:0 18px;gap:12px;border-bottom-color:rgba(141,91,255,.2);font-size:16px}
+.brand-mark{width:37px;height:37px;flex-basis:37px;border-width:2px;box-shadow:0 0 0 4px rgba(76,44,184,.16),0 0 18px 3px rgba(111,65,255,.45),inset 0 0 12px rgba(29,155,255,.2)}
+.brand-mark:before{inset:-7px}.brand-mark:after{inset:-4px}.icon-button{font-size:19px}
+.new-chat{margin:18px 12px 10px;height:38px;border-radius:9px;padding:0 10px;font-size:11px;background:linear-gradient(100deg,rgba(91,44,225,.48),rgba(35,30,93,.3));border-color:rgba(154,100,255,.7);box-shadow:0 0 18px rgba(95,47,233,.18),inset 0 1px rgba(255,255,255,.12)}
+.new-chat span{font-size:22px;margin-right:9px}
+.history{padding:0 10px}.history-group{margin:9px 0 14px}.history-date{margin:0 8px 6px;font-size:9px;letter-spacing:.16em;color:rgba(186,178,224,.66)}
+.chat-item{padding:7px 8px;border-radius:7px;font-size:10px;gap:6px}.chat-item:hover,.chat-item.active{background:rgba(131,78,255,.16);box-shadow:inset 2px 0 #8b5cf6}.chat-symbol{font-size:14px}.chat-time{font-size:9px}
+.sidebar-footer{padding:10px 12px 14px;border-top-color:rgba(141,91,255,.2)}.footer-action,.theme-toggle{gap:10px;padding:8px 7px;font-size:10px}.footer-action span{font-size:16px}
+.theme-toggle b,.voice-master b{width:31px;height:17px}.theme-toggle b:after,.voice-master b:after{width:13px;height:13px;right:2px;top:1px}.theme-toggle input:not(:checked)+b:after,.voice-master input:not(:checked)+b:after{right:14px}
+.premium-action{width:100%;display:flex;align-items:center;gap:8px;margin-top:6px;padding:7px;border:1px solid rgba(174,112,255,.34);border-radius:7px;background:rgba(112,63,226,.1);color:#c3a9ff;font-size:9px;text-align:left}.premium-action span:first-child{color:#a66bff;font-size:14px}.premium-action:hover{background:rgba(133,78,255,.22);border-color:rgba(190,144,255,.72)}
+.main-panel{background:radial-gradient(ellipse at 52% 25%,rgba(77,34,186,.19),transparent 31%),linear-gradient(180deg,rgba(2,3,13,.36),rgba(1,1,5,.62))}
+body.light .main-panel{background:rgba(255,255,255,.18)}
+.main-panel{overflow:hidden}
+.sidebar{border-radius:0 26px 26px 0;position:relative;z-index:3}
+.brand-row{position:relative}
+.brand-row::after{content:"";position:absolute;right:-1px;top:17px;bottom:17px;width:1px;background:linear-gradient(180deg,transparent,#a66bff 30%,#26a8ff 70%,transparent);box-shadow:0 0 14px #8655ff}
+.wave-field{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0;opacity:.9}
+.wave-field::before,.wave-field::after{content:"";position:absolute;left:-10%;width:120%;height:48%;border-radius:50%;border:1px solid rgba(82,70,255,.28);filter:blur(.2px);transform:rotate(-8deg);top:18%}
+.wave-field::after{top:35%;transform:rotate(8deg);border-color:rgba(16,140,255,.22)}
+.wave-line{position:absolute;left:-18%;width:138%;height:34%;border:1px solid rgba(83,44,255,.38);border-left-color:transparent;border-right-color:transparent;border-radius:50%;transform:rotate(-9deg);top:19%;box-shadow:0 0 9px rgba(81,55,255,.3),inset 0 0 8px rgba(34,111,255,.15)}
+.wave-line-b{top:23%;transform:rotate(-5deg);border-color:rgba(45,105,255,.43);box-shadow:0 0 10px rgba(28,113,255,.3)}
+.wave-line-c{top:29%;transform:rotate(5deg);border-color:rgba(117,44,255,.3)}
+.wave-line-d{top:34%;transform:rotate(10deg);border-color:rgba(28,126,255,.3)}
+.wave-line-e{top:40%;transform:rotate(14deg);border-color:rgba(77,49,255,.23)}
+.wave-core{position:absolute;left:50%;top:28%;width:112px;height:112px;transform:translate(-50%,-50%);border:2px solid rgba(163,113,255,.9);border-radius:50%;box-shadow:0 0 0 7px rgba(106,58,255,.13),0 0 0 14px rgba(37,101,255,.08),0 0 35px 8px rgba(101,57,255,.42),inset 0 0 24px rgba(54,127,255,.22)}
+.wave-core::before,.wave-core::after{content:"";position:absolute;inset:-13px;border:1px solid rgba(125,74,255,.55);border-radius:50%}.wave-core::after{inset:-22px;border-style:dashed;border-color:rgba(29,135,255,.38)}
+.top-bar,.conversation,.composer,.disclaimer{position:relative;z-index:1}
+.top-brand-mark{box-shadow:0 0 0 4px rgba(192,132,252,.16),0 0 16px 4px rgba(104,74,255,.7),inset 0 0 10px rgba(30,151,255,.36)}
+.top-bar{height:78px;padding:22px 32px;font-size:15px}.top-brand-mark{width:23px;height:23px}.login-button{padding:7px 11px;border-radius:7px;font-size:10px;background:rgba(77,43,164,.18)}
+.conversation{padding:0 28px 18px}.welcome{transform:translateY(-18px)}.nexion-orb{width:118px;height:118px;margin-bottom:28px;border-width:3px;box-shadow:0 0 0 9px rgba(192,132,252,.1),0 0 0 17px rgba(168,85,247,.05),0 0 32px 9px rgba(102,64,255,.48),inset 0 0 26px rgba(66,133,255,.2)}
+.welcome h1{font-size:28px;letter-spacing:-.04em}.welcome p{font-size:12px;line-height:1.65}
+.composer{width:min(650px,calc(100% - 56px));min-height:104px;border-radius:15px;padding:11px 14px 8px;background:rgba(12,11,40,.58);border-color:rgba(122,78,255,.62);box-shadow:0 0 30px rgba(76,44,218,.17),inset 0 1px rgba(255,255,255,.08);backdrop-filter:blur(14px)}
+body.light .composer{background:rgba(255,255,255,.65)}textarea{font-size:12px}.composer-controls{margin-top:4px}.utility-buttons{gap:11px}.small-icon{font-size:16px}.send-button{width:34px;height:34px;border-radius:9px;font-size:18px}.generation-timing{font-size:8px}.disclaimer{font-size:9px;margin:10px 0 13px}
+@media (max-width:760px){.sidebar{display:none}.app-shell{height:auto;min-height:100vh}.top-bar{padding:22px}.conversation{padding:0 20px}.composer{width:calc(100% - 30px)}}
+
+/* Continuous wave field behind the glass sidebar and workspace */
+body::before{background:radial-gradient(ellipse at 48% 35%,rgba(78,35,190,.2),transparent 30%),radial-gradient(ellipse at 80% 48%,rgba(0,89,255,.13),transparent 34%),linear-gradient(116deg,transparent 28%,rgba(75,24,210,.15) 42%,transparent 54%),linear-gradient(64deg,transparent 40%,rgba(20,89,255,.13) 53%,transparent 66%)}
+.app-shell::before{content:"";position:absolute;z-index:0;inset:0;pointer-events:none;opacity:.75;background:radial-gradient(ellipse 52% 20% at 43% 32%,transparent 57%,rgba(87,57,255,.42) 58%,transparent 59%),radial-gradient(ellipse 60% 24% at 50% 40%,transparent 61%,rgba(28,132,255,.34) 62%,transparent 63%),radial-gradient(ellipse 70% 28% at 50% 48%,transparent 64%,rgba(102,50,255,.28) 65%,transparent 66%),radial-gradient(ellipse 80% 32% at 50% 56%,transparent 67%,rgba(26,107,255,.22) 68%,transparent 69%)}
+.app-shell>*{position:relative}
+.sidebar{background:linear-gradient(180deg,rgba(44,27,100,.1),rgba(8,18,52,.045));backdrop-filter:blur(7px) saturate(165%)}
+.sidebar::before{display:none}
+.main-panel{background:linear-gradient(180deg,rgba(2,3,13,.2),rgba(1,1,5,.3))}
+body.light .sidebar{background:rgba(255,255,255,.16)}

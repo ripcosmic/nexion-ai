@@ -3,10 +3,12 @@
   "private": true,
   "type": "commonjs",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "generate:openrouter-dataset": "node scripts/generate-openrouter-dataset.js"
   },
   "dependencies": {
     "dotenv": "^16.6.1",
+    "firebase-admin": "^14.4.0",
     "nodemailer": "^7.0.3"
   }
 }
